@@ -11,7 +11,7 @@ export function setupTestEnvironment(): { db: DatabaseSync; cleanup: () => void 
   process.env.DATABASE_PATH = testDbPath;
   process.env.ENCRYPTION_KEY = 'test-master-encryption-key-32chars!';
   process.env.JWT_SECRET = 'test-jwt-secret-for-automated-tests-key';
-  process.env.GEMINI_MODEL = 'gemini-1.5-flash';
+  process.env.GEMINI_MODEL = 'gemini-2.5-flash';
   process.env.OPENAI_MODEL = 'gpt-4o-mini';
   process.env.ANTHROPIC_MODEL = 'claude-3-haiku-20240307';
 

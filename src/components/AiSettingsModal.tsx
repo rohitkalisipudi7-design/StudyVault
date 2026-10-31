@@ -53,9 +53,9 @@ export function AiSettingsModal({
 
   const providerLinks = {
     gemini: {
-      name: 'Google Gemini',
+      name: 'Google Gemini (2.5 / 2.0 Flash)',
       url: 'https://aistudio.google.com/app/apikey',
-      desc: 'Free tier available via Google AI Studio',
+      desc: 'Free tier available via Google AI Studio — Supports Gemini 2.5 Flash & 2.0 Flash',
     },
     openai: {
       name: 'OpenAI (GPT-4o Mini)',
@@ -156,8 +156,13 @@ export function AiSettingsModal({
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0" />
               <div>
-                <span className="font-bold text-[#2D3822] uppercase font-mono text-[11px]">
+                <span className="font-bold text-[#2D3822] uppercase font-mono text-[11px] flex items-center gap-1.5 flex-wrap">
                   {config.provider} Key Active
+                  {config.provider === 'gemini' && (
+                    <span className="text-[10px] bg-[#8d9d4f]/25 text-[#2D3822] px-1.5 py-0.5 rounded font-sans font-semibold normal-case">
+                      Gemini 2.5 Flash / 2.0 Flash
+                    </span>
+                  )}
                 </span>
                 <span className="font-mono text-xs text-[#5c4b3e]/70 block">
                   {config.keyHint}
@@ -187,7 +192,7 @@ export function AiSettingsModal({
             </Label>
             <div className="grid grid-cols-3 gap-2">
               {[
-                { id: 'gemini', name: 'Gemini (Default)' },
+                { id: 'gemini', name: 'Gemini (2.5 / 2.0 Flash)' },
                 { id: 'openai', name: 'OpenAI' },
                 { id: 'anthropic', name: 'Anthropic' },
               ].map((p) => (
@@ -195,7 +200,7 @@ export function AiSettingsModal({
                   key={p.id}
                   type="button"
                   onClick={() => setProvider(p.id as any)}
-                  className={`py-2 px-2.5 rounded-xl text-xs font-serif font-bold border transition-all text-center ${
+                  className={`py-2 px-2.5 rounded-xl text-xs font-serif font-bold border transition-all text-center min-h-[44px] ${
                     provider === p.id
                       ? 'bg-[#2D3822] text-white border-[#2D3822] shadow-xs'
                       : 'bg-white/60 hover:bg-white text-[#5c4b3e] border-[#b19681]/40'
@@ -221,30 +226,37 @@ export function AiSettingsModal({
 
           {/* API Key Input */}
           <div className="space-y-1.5">
-            <Label className="text-xs font-serif font-bold text-[#2D3822]">
-              {providerLinks[provider].name} API Key
-            </Label>
+            <div className="flex items-center justify-between">
+              <Label className="text-xs font-serif font-bold text-[#2D3822]">
+                {providerLinks[provider].name} API Key
+              </Label>
+              {provider === 'gemini' && (
+                <span className="text-[10px] bg-[#8d9d4f]/20 text-[#2D3822] font-semibold px-2 py-0.5 rounded-full border border-[#8d9d4f]/40 font-mono">
+                  gemini-2.5-flash / gemini-2.0-flash
+                </span>
+              )}
+            </div>
             <div className="relative flex items-center">
               <Input
                 type={showKey ? 'text' : 'password'}
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
-                placeholder={`Paste your ${provider.toUpperCase()} API key here...`}
-                className="pr-10 bg-white border-[#b19681]/50 text-xs font-mono"
+                placeholder={`Paste your ${provider === 'gemini' ? 'Gemini (AI Studio)' : provider.toUpperCase()} API key here...`}
+                className="pr-10 bg-white border-[#b19681]/50 text-xs font-mono h-10"
                 disabled={isLoading}
               />
               <button
                 type="button"
                 onClick={() => setShowKey(!showKey)}
                 aria-label={showKey ? 'Hide API key' : 'Show API key'}
-                className="absolute right-3 text-[#5c4b3e]/60 hover:text-[#2D3822] cursor-pointer"
+                className="absolute right-3 text-[#5c4b3e]/60 hover:text-[#2D3822] cursor-pointer p-1"
                 tabIndex={-1}
               >
                 {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
             <p className="text-[10px] text-[#5c4b3e]/60 font-mono">
-              Encrypted server-side using AES-256-GCM. Never sent to browser after saving.
+              Encrypted server-side using AES-256-GCM. Tested with Gemini 2.5 Flash &amp; 2.0 Flash models.
             </p>
           </div>
 

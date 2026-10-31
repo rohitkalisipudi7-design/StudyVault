@@ -25,7 +25,7 @@ export function registerAIProvider(provider: AIProvider): void {
 
 export function getAvailableProviders(): Array<{ id: AIProviderType; name: string; defaultModel: string }> {
   return [
-    { id: 'gemini', name: 'Google Gemini', defaultModel: 'gemini-1.5-flash' },
+    { id: 'gemini', name: 'Google Gemini', defaultModel: 'gemini-2.5-flash' },
     { id: 'openai', name: 'OpenAI', defaultModel: 'gpt-4o-mini' },
     { id: 'anthropic', name: 'Anthropic Claude', defaultModel: 'claude-3-haiku' },
   ];

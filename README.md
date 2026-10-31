@@ -38,7 +38,7 @@ cp .env.example .env
 | `JWT_SECRET` | *(Built-in fallback for dev)* | Secret for RFC 7519 HMAC-SHA256 session tokens |
 | `DATABASE_PATH` | `data/app.db` | Path to SQLite database file |
 | `UPLOAD_DIR` | `public/uploads` | Path to uploaded resource files |
-| `GEMINI_MODEL` | `gemini-1.5-flash` | Gemini model name for AI features |
+| `GEMINI_MODEL` | `gemini-2.5-flash` | Gemini model name for AI features (with automatic `gemini-2.0-flash` fallback) |
 | `OPENAI_MODEL` | `gpt-4o-mini` | OpenAI model name for AI features |
 | `ANTHROPIC_MODEL` | `claude-3-haiku-20240307` | Anthropic model name for AI features |
 | `NODE_ENV` | `development` | Node environment (`development` / `production`) |

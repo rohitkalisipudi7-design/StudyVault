@@ -11,18 +11,20 @@ import {
 export class GeminiAdapter implements AIProvider {
   readonly name: AIProviderType = 'gemini';
   private get model(): string {
-    return process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+    return process.env.GEMINI_MODEL || 'gemini-2.5-flash';
   }
 
   private async callGemini(prompt: string, apiKey: string): Promise<string> {
     const trimmedKey = apiKey.trim();
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${this.model}:generateContent?key=${encodeURIComponent(
-      trimmedKey
-    )}`;
+    const primaryModel = this.model;
+    const fallbackModel = primaryModel === 'gemini-2.5-flash' ? 'gemini-2.0-flash' : 'gemini-2.5-flash';
 
-    let response: Response;
-    try {
-      response = await fetch(url, {
+    const sendRequest = async (modelName: string) => {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${encodeURIComponent(
+        trimmedKey
+      )}`;
+
+      return fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         signal: AbortSignal.timeout(30000),
@@ -35,6 +37,18 @@ export class GeminiAdapter implements AIProvider {
           },
         }),
       });
+    };
+
+    let response: Response;
+    let usedModel = primaryModel;
+
+    try {
+      response = await sendRequest(primaryModel);
+      // If primary model returns 404 (e.g. model not found / deprecated) and fallback differs, try fallback
+      if (response.status === 404 && fallbackModel !== primaryModel) {
+        response = await sendRequest(fallbackModel);
+        usedModel = fallbackModel;
+      }
     } catch (networkErr: any) {
       if (networkErr.name === 'TimeoutError' || networkErr.name === 'AbortError') {
         throw new AIProviderError('Google Gemini request timed out after 30 seconds. Please try again.', 'gemini');
