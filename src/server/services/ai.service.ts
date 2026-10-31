@@ -110,6 +110,13 @@ export class AIService {
     query: string,
     filters?: { branchId?: string; courseId?: string }
   ): Promise<AISearchResult> {
+    if (!query || typeof query !== 'string' || !query.trim()) {
+      throw new Error('Search query cannot be empty.');
+    }
+    if (query.trim().length > 1000) {
+      throw new Error('Search query exceeds maximum limit of 1,000 characters.');
+    }
+
     const { apiKey, provider } = this.getDecryptedUserKey(userId);
     const aiProvider = getAIProvider(provider);
 

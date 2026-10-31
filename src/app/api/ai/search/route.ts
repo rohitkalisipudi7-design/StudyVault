@@ -18,6 +18,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    if (query.trim().length > 1000) {
+      return NextResponse.json(
+        { success: false, error: 'Search query exceeds maximum limit of 1,000 characters.' },
+        { status: 400 }
+      );
+    }
+
     // STRICT SCOPING: User's institutionId is passed
     const result = await AIService.performSearch(user.id, user.institutionId, query.trim(), {
       branchId,

@@ -10,9 +10,12 @@ import {
 
 export class OpenAIAdapter implements AIProvider {
   readonly name: AIProviderType = 'openai';
-  private model = 'gpt-4o-mini';
+  private get model(): string {
+    return process.env.OPENAI_MODEL || 'gpt-4o-mini';
+  }
 
   private async callOpenAI(systemPrompt: string, userPrompt: string, apiKey: string): Promise<string> {
+    const trimmedKey = apiKey.trim();
     const url = 'https://api.openai.com/v1/chat/completions';
 
     let response: Response;
@@ -21,8 +24,9 @@ export class OpenAIAdapter implements AIProvider {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${apiKey.trim()}`,
+          Authorization: `Bearer ${trimmedKey}`,
         },
+        signal: AbortSignal.timeout(30000),
         body: JSON.stringify({
           model: this.model,
           messages: [
@@ -34,11 +38,16 @@ export class OpenAIAdapter implements AIProvider {
         }),
       });
     } catch (networkErr: any) {
+      if (networkErr.name === 'TimeoutError' || networkErr.name === 'AbortError') {
+        throw new AIProviderError('OpenAI request timed out after 30 seconds. Please try again.', 'openai');
+      }
       throw new AIProviderError(`OpenAI network connection failure: ${networkErr.message}`, 'openai');
     }
 
     if (!response.ok) {
-      const errText = await response.text();
+      const rawText = await response.text();
+      const sanitized = rawText.replace(new RegExp(trimmedKey.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '[REDACTED_API_KEY]');
+
       if (response.status === 401) {
         throw new AIProviderError('Invalid OpenAI API key. Please check your credentials.', 'openai', {
           statusCode: 401,
@@ -46,17 +55,17 @@ export class OpenAIAdapter implements AIProvider {
         });
       }
       if (response.status === 429) {
-        throw new AIProviderError('OpenAI rate limit or balance quota exceeded.', 'openai', {
+        throw new AIProviderError('OpenAI rate limit or balance quota exceeded. Please check your OpenAI account billing.', 'openai', {
           statusCode: 429,
           isRateLimit: true,
         });
       }
       if (response.status >= 500) {
-        throw new AIProviderError('OpenAI service is temporarily experiencing downtime.', 'openai', {
+        throw new AIProviderError('OpenAI service is temporarily experiencing downtime. Please try again shortly.', 'openai', {
           statusCode: response.status,
         });
       }
-      throw new AIProviderError(`OpenAI error (${response.status}): ${errText}`, 'openai', {
+      throw new AIProviderError(`OpenAI error (${response.status}): ${sanitized.slice(0, 300)}`, 'openai', {
         statusCode: response.status,
       });
     }

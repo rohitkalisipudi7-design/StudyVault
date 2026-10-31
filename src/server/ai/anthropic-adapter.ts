@@ -10,9 +10,12 @@ import {
 
 export class AnthropicAdapter implements AIProvider {
   readonly name: AIProviderType = 'anthropic';
-  private model = 'claude-3-haiku-20240307';
+  private get model(): string {
+    return process.env.ANTHROPIC_MODEL || 'claude-3-haiku-20240307';
+  }
 
   private async callAnthropic(systemPrompt: string, userPrompt: string, apiKey: string): Promise<string> {
+    const trimmedKey = apiKey.trim();
     const url = 'https://api.anthropic.com/v1/messages';
 
     let response: Response;
@@ -21,9 +24,10 @@ export class AnthropicAdapter implements AIProvider {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': apiKey.trim(),
+          'x-api-key': trimmedKey,
           'anthropic-version': '2023-06-01',
         },
+        signal: AbortSignal.timeout(30000),
         body: JSON.stringify({
           model: this.model,
           max_tokens: 1024,
@@ -33,29 +37,34 @@ export class AnthropicAdapter implements AIProvider {
         }),
       });
     } catch (networkErr: any) {
+      if (networkErr.name === 'TimeoutError' || networkErr.name === 'AbortError') {
+        throw new AIProviderError('Anthropic request timed out after 30 seconds. Please try again.', 'anthropic');
+      }
       throw new AIProviderError(`Anthropic network connection failure: ${networkErr.message}`, 'anthropic');
     }
 
     if (!response.ok) {
-      const errText = await response.text();
+      const rawText = await response.text();
+      const sanitized = rawText.replace(new RegExp(trimmedKey.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '[REDACTED_API_KEY]');
+
       if (response.status === 401) {
-        throw new AIProviderError('Invalid Anthropic API key.', 'anthropic', {
+        throw new AIProviderError('Invalid Anthropic API key. Please check your credentials.', 'anthropic', {
           statusCode: 401,
           isInvalidKey: true,
         });
       }
       if (response.status === 429) {
-        throw new AIProviderError('Anthropic rate limit or quota exceeded.', 'anthropic', {
+        throw new AIProviderError('Anthropic rate limit or credit quota exceeded. Please check your Anthropic console.', 'anthropic', {
           statusCode: 429,
           isRateLimit: true,
         });
       }
       if (response.status >= 500) {
-        throw new AIProviderError('Anthropic service is temporarily unavailable.', 'anthropic', {
+        throw new AIProviderError('Anthropic service is temporarily unavailable. Please try again shortly.', 'anthropic', {
           statusCode: response.status,
         });
       }
-      throw new AIProviderError(`Anthropic error (${response.status}): ${errText}`, 'anthropic', {
+      throw new AIProviderError(`Anthropic error (${response.status}): ${sanitized.slice(0, 300)}`, 'anthropic', {
         statusCode: response.status,
       });
     }

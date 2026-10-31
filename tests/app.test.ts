@@ -310,5 +310,31 @@ test('11. Database: Case-insensitive Email Uniqueness and Transaction Operations
   db.prepare('DELETE FROM users WHERE id = ?').run(userId1);
 });
 
+test('12. AI Layer: Institution Scoping and Input Validation', async () => {
+  const { AIService } = require('../src/server/services/ai.service');
+
+  // Verify resources for AU are completely isolated from GVPCE
+  const auResources = ResourceService.getResources('inst-au');
+  const gvpceResources = ResourceService.getResources('inst-gvpce');
+
+  assert.ok(auResources.length > 0);
+  assert.ok(gvpceResources.length > 0);
+
+  const auIds = new Set(auResources.map((r: any) => r.id));
+  for (const gr of gvpceResources) {
+    assert.equal(auIds.has(gr.id), false, 'AU resource pool must never contain GVPCE resources');
+  }
+
+  // Input validation: query > 1000 chars throws error
+  const longQuery = 'A'.repeat(1005);
+  await assert.rejects(
+    async () => {
+      await AIService.performSearch('user-au-student', 'inst-au', longQuery);
+    },
+    /Search query exceeds maximum limit of 1,000 characters/
+  );
+});
+
+
 
 

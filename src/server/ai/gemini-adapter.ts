@@ -10,11 +10,14 @@ import {
 
 export class GeminiAdapter implements AIProvider {
   readonly name: AIProviderType = 'gemini';
-  private model = 'gemini-1.5-flash';
+  private get model(): string {
+    return process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+  }
 
   private async callGemini(prompt: string, apiKey: string): Promise<string> {
+    const trimmedKey = apiKey.trim();
     const url = `https://generativelanguage.googleapis.com/v1beta/models/${this.model}:generateContent?key=${encodeURIComponent(
-      apiKey
+      trimmedKey
     )}`;
 
     let response: Response;
@@ -22,6 +25,7 @@ export class GeminiAdapter implements AIProvider {
       response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        signal: AbortSignal.timeout(30000),
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }],
           generationConfig: {
@@ -32,6 +36,9 @@ export class GeminiAdapter implements AIProvider {
         }),
       });
     } catch (networkErr: any) {
+      if (networkErr.name === 'TimeoutError' || networkErr.name === 'AbortError') {
+        throw new AIProviderError('Google Gemini request timed out after 30 seconds. Please try again.', 'gemini');
+      }
       throw new AIProviderError(
         `Gemini network connection failure: ${networkErr.message}`,
         'gemini'
@@ -39,29 +46,32 @@ export class GeminiAdapter implements AIProvider {
     }
 
     if (!response.ok) {
-      const errText = await response.text();
+      const rawText = await response.text();
+      // Ensure API key is never exposed in error text
+      const sanitized = rawText.replace(new RegExp(trimmedKey.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '[REDACTED_API_KEY]');
+
       if (response.status === 400 || response.status === 403) {
         throw new AIProviderError(
-          'Invalid Gemini API key or unauthorized project.',
+          'Invalid Gemini API key or unauthorized project credentials.',
           'gemini',
           { statusCode: response.status, isInvalidKey: true }
         );
       }
       if (response.status === 429) {
         throw new AIProviderError(
-          'Gemini rate limit exceeded. Please try again shortly or check your Google AI quota.',
+          'Gemini rate limit or quota exceeded. Please check your Google AI Studio plan.',
           'gemini',
           { statusCode: 429, isRateLimit: true }
         );
       }
       if (response.status >= 500) {
         throw new AIProviderError(
-          'Google Gemini service is currently experiencing an outage. Please try again later.',
+          'Google Gemini service is currently experiencing a temporary outage. Please try again shortly.',
           'gemini',
           { statusCode: response.status }
         );
       }
-      throw new AIProviderError(`Gemini error (${response.status}): ${errText}`, 'gemini', {
+      throw new AIProviderError(`Gemini error (${response.status}): ${sanitized.slice(0, 300)}`, 'gemini', {
         statusCode: response.status,
       });
     }
