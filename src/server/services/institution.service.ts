@@ -70,7 +70,8 @@ export class InstitutionService {
 
   static registerInstitutionWithAdmin(data: {
     institutionName: string;
-    code: string;
+    institutionCode?: string;
+    code?: string;
     shortName?: string;
     adminName: string;
     adminEmail: string;
@@ -81,7 +82,8 @@ export class InstitutionService {
 
     db.exec('BEGIN IMMEDIATE TRANSACTION;');
     try {
-      const inst = this.createInstitution(data.institutionName, data.code, data.shortName);
+      const instCode = (data.code || data.institutionCode || data.institutionName.slice(0, 8)).toUpperCase();
+      const inst = this.createInstitution(data.institutionName, instCode, data.shortName);
       const { hash, salt } = hashPassword(data.adminPassword);
       const userId = `user-${crypto.randomUUID()}`;
       const now = new Date().toISOString();

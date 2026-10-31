@@ -92,9 +92,11 @@ export class AIService {
       .get(userId) as any;
 
     if (!row) {
-      throw new Error(
+      const err = new Error(
         'No AI API key configured. Please add your personal Gemini, OpenAI, or Anthropic API key in Settings.'
-      );
+      ) as any;
+      err.status = 400;
+      throw err;
     }
 
     const decrypted = decryptApiKey(row.encrypted_key, row.iv, row.auth_tag);

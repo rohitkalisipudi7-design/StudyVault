@@ -40,8 +40,8 @@ export interface CreateResourceInput {
   courseId: string;
   title: string;
   type: 'file' | 'link';
-  description: string;
-  url: string;
+  description?: string | null;
+  url?: string | null;
   filePath?: string | null;
   fileName?: string | null;
   fileSize?: string | null;
@@ -156,6 +156,9 @@ export class ResourceService {
 
     // 2. Validate Link if type === 'link'
     if (data.type === 'link') {
+      if (!data.url) {
+        throw new Error('Please provide a valid URL for this resource link.');
+      }
       try {
         const parsed = new URL(data.url);
         if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
@@ -181,10 +184,10 @@ export class ResourceService {
         data.institutionId,
         data.branchId,
         data.courseId,
-        data.title.trim(),
+        data.title ? data.title.trim() : '',
         data.type,
-        data.description.trim(),
-        data.url.trim(),
+        data.description ? data.description.trim() : null,
+        data.url ? data.url.trim() : (data.filePath || ''),
         data.filePath || null,
         data.fileSize || null,
         data.fileName || null,
@@ -206,21 +209,24 @@ export class ResourceService {
   static updateResource(
     id: string,
     institutionId: string,
-    data: { title: string; description: string; url?: string }
+    data: { title?: string; description?: string; url?: string }
   ): ResourceItem {
     const existing = this.getResourceById(id, institutionId);
 
     const db = getDb();
     const now = new Date().toISOString();
+    const newTitle = data.title !== undefined ? data.title.trim() : existing.title;
+    const newDesc = data.description !== undefined ? data.description.trim() : existing.description;
+    const newUrl = data.url !== undefined ? data.url.trim() : existing.url;
 
     db.prepare(`
       UPDATE resources
-      SET title = ?, description = ?, url = COALESCE(?, url), updated_at = ?
+      SET title = ?, description = ?, url = ?, updated_at = ?
       WHERE id = ? AND institution_id = ?
     `).run(
-      data.title.trim(),
-      data.description.trim(),
-      data.url ? data.url.trim() : null,
+      newTitle,
+      newDesc,
+      newUrl,
       now,
       id,
       institutionId
