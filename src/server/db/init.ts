@@ -88,8 +88,11 @@ export function initializeDatabase(db?: DatabaseSync) {
       type TEXT NOT NULL CHECK(type IN ('file', 'link')),
       description TEXT,
       url TEXT NOT NULL,
+      file_url TEXT,
       file_path TEXT,
-      file_size TEXT,
+      object_key TEXT,
+      file_size INTEGER,
+      mime_type TEXT,
       file_name TEXT,
       file_data BLOB,
       uploader_id TEXT NOT NULL,
@@ -119,9 +122,16 @@ export function initializeDatabase(db?: DatabaseSync) {
     CREATE INDEX IF NOT EXISTS idx_api_keys_user ON user_api_keys(user_id);
   `);
 
-  // Ensure file_data column exists
+  // Ensure MinIO / S3 object storage columns exist for existing databases
+  try { database.exec('ALTER TABLE resources ADD COLUMN file_url TEXT;'); } catch {}
+  try { database.exec('ALTER TABLE resources ADD COLUMN object_key TEXT;'); } catch {}
+  try { database.exec('ALTER TABLE resources ADD COLUMN mime_type TEXT;'); } catch {}
+  try { database.exec('ALTER TABLE resources ADD COLUMN file_size INTEGER;'); } catch {}
+  try { database.exec('ALTER TABLE resources ADD COLUMN file_data BLOB;'); } catch {}
+
+  // Optimize database file size: clear heavy raw BLOBs from SQLite
   try {
-    database.exec('ALTER TABLE resources ADD COLUMN file_data BLOB;');
+    database.exec('UPDATE resources SET file_data = NULL WHERE file_data IS NOT NULL;');
   } catch {}
 
   const now = new Date().toISOString();
@@ -192,17 +202,14 @@ export function initializeDatabase(db?: DatabaseSync) {
   const insertResource = database.prepare(`
     INSERT INTO resources (
       id, institution_id, branch_id, course_id, title, type, description, url,
-      file_path, file_size, file_name, file_data, uploader_id, uploader_name, created_at, updated_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      file_path, object_key, file_size, mime_type, file_name, file_data, uploader_id, uploader_name, created_at, updated_at
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ON CONFLICT(id) DO UPDATE SET
-      file_data = COALESCE(excluded.file_data, resources.file_data),
+      object_key = COALESCE(excluded.object_key, resources.object_key),
+      mime_type = COALESCE(excluded.mime_type, resources.mime_type),
       file_path = excluded.file_path,
       file_name = excluded.file_name,
       file_size = excluded.file_size
-  `);
-
-  const updateResourceBlob = database.prepare(`
-    UPDATE resources SET file_data = ? WHERE id = ? AND file_data IS NULL
   `);
 
   // Helper function to seed a course with 3 comprehensive PDF documents
@@ -258,15 +265,16 @@ export function initializeDatabase(db?: DatabaseSync) {
       `Complete unit-by-unit syllabus notes covering ${config.courseName} with core concepts, architectural models, and equations.`,
       `/uploads/${notesFileName}`,
       `public/uploads/${notesFileName}`,
-      '4.8 MB',
       notesFileName,
-      notesPdfBuffer,
+      notesPdfBuffer.length,
+      'application/pdf',
+      notesFileName,
+      null, // No raw BLOB in SQLite
       config.uploaderId,
       config.uploaderName,
       now,
       now
     );
-    updateResourceBlob.run(notesPdfBuffer, notesResId);
 
     // Document 2: Semester Exam Question Bank & Model Solutions
     const qbPdfBuffer = buildAcademicPdf({
@@ -299,15 +307,16 @@ export function initializeDatabase(db?: DatabaseSync) {
       `Previous university exam question papers, high-yield repeated questions, analytical formulations, and step-by-step solutions.`,
       `/uploads/${qbFileName}`,
       `public/uploads/${qbFileName}`,
-      '3.5 MB',
       qbFileName,
-      qbPdfBuffer,
+      qbPdfBuffer.length,
+      'application/pdf',
+      qbFileName,
+      null, // No raw BLOB in SQLite
       config.uploaderId,
       config.uploaderName,
       now,
       now
     );
-    updateResourceBlob.run(qbPdfBuffer, qbResId);
 
     // Document 3: Laboratory Manual & Practical Implementation Guide
     const labPdfBuffer = buildAcademicPdf({
@@ -340,15 +349,16 @@ export function initializeDatabase(db?: DatabaseSync) {
       `Complete laboratory experiments, tool setup, algorithm execution steps, verification test cases, and oral examination viva guide.`,
       `/uploads/${labFileName}`,
       `public/uploads/${labFileName}`,
-      '2.9 MB',
       labFileName,
-      labPdfBuffer,
+      labPdfBuffer.length,
+      'application/pdf',
+      labFileName,
+      null, // No raw BLOB in SQLite
       config.uploaderId,
       config.uploaderName,
       now,
       now
     );
-    updateResourceBlob.run(labPdfBuffer, labResId);
   }
 
   // Pre-seed mapping helper: matches course definitions to institution and branch

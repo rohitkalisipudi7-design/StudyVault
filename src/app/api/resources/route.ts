@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import path from 'node:path';
-import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { getAuthenticatedUser, enforceAdmin, createErrorResponse } from '@/server/middleware/guard';
 import { ResourceService, ResourceFilters } from '@/server/services/resource.service';
+import { validateFileBuffer } from '@/server/security/file-validator';
+import { uploadToObjectStorage } from '@/server/storage/minio';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
@@ -79,30 +80,28 @@ export async function POST(req: NextRequest) {
         );
       }
 
-      // Save file to uploads directory if writable
-      const uploadsDir = path.resolve(process.cwd(), 'public', 'uploads');
-      try {
-        if (!fs.existsSync(uploadsDir)) {
-          fs.mkdirSync(uploadsDir, { recursive: true });
-        }
-      } catch {}
-
-      const safeName = `${crypto.randomUUID()}${ext}`;
-      const relativeStoragePath = `public/uploads/${safeName}`;
-      const absolutePath = path.join(uploadsDir, safeName);
-
       const buffer = Buffer.from(await file.arrayBuffer());
-      try {
-        fs.writeFileSync(absolutePath, buffer);
-      } catch {
-        // In read-only serverless filesystems, buffer is preserved directly in the database
+
+      // Task 2: Server-side magic byte validation
+      const validation = validateFileBuffer(buffer, originalName);
+      if (!validation.isValid) {
+        console.warn(
+          `[Security Warning] File upload rejected for user ${user.id} (${user.email}): ${validation.error} | File: ${originalName} | Detected MIME: ${validation.detectedMime}`
+        );
+        return NextResponse.json(
+          {
+            success: false,
+            error: validation.error || 'Malicious or invalid file content detected.',
+          },
+          { status: 400 }
+        );
       }
 
-      const fileSizeStr =
-        file.size > 1024 * 1024
-          ? `${(file.size / (1024 * 1024)).toFixed(1)} MB`
-          : `${(file.size / 1024).toFixed(0)} KB`;
+      // Task 1: Upload directly to MinIO Object Storage (with local disk fallback)
+      const safeName = `${crypto.randomUUID()}${ext}`;
+      const uploadResult = await uploadToObjectStorage(safeName, buffer, validation.detectedMime);
 
+      // Persist only metadata, integer file size, MIME type, and object key in SQLite (no raw BLOBs)
       const resource = ResourceService.createResource({
         institutionId: user.institutionId,
         branchId,
@@ -110,11 +109,14 @@ export async function POST(req: NextRequest) {
         title,
         type: 'file',
         description,
-        url: `/uploads/${safeName}`,
-        filePath: relativeStoragePath,
+        url: uploadResult.fileUrl,
+        fileUrl: uploadResult.fileUrl,
+        filePath: `public/uploads/${safeName}`,
+        objectKey: uploadResult.objectKey,
         fileName: originalName,
-        fileSize: fileSizeStr,
-        fileData: buffer,
+        fileSize: buffer.length,
+        mimeType: validation.detectedMime,
+        fileData: null, // Strictly zero BLOB bloat in SQLite
         uploaderId: user.id,
         uploaderName: user.name,
       });

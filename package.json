@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 8004",
     "db:init": "npx tsx src/server/db/init.ts",
-    "test": "npx tsx --test tests/security.test.ts tests/tenancy.test.ts tests/db.test.ts tests/ai.test.ts tests/routes.test.ts",
+    "test": "npx tsx --test tests/security.test.ts tests/tenancy.test.ts tests/db.test.ts tests/ai.test.ts tests/routes.test.ts tests/storage.test.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -40,6 +40,7 @@
     "dotenv": "^16.5.0",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.475.0",
+    "minio": "^8.0.7",
     "next": "15.5.9",
     "patch-package": "^8.0.0",
     "react": "^19.2.1",

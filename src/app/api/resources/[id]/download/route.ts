@@ -4,6 +4,7 @@ import path from 'node:path';
 import { getAuthenticatedUser, createErrorResponse, AuthError } from '@/server/middleware/guard';
 import { ResourceService } from '@/server/services/resource.service';
 import { buildAcademicPdf } from '@/server/utils/pdf-generator';
+import { getObjectBuffer, uploadToObjectStorage } from '@/server/storage/minio';
 import { getDb } from '@/server/db';
 
 export const dynamic = 'force-dynamic';
@@ -45,12 +46,29 @@ export async function GET(
       fileName += '.pdf';
     }
 
-    // 1. Try reading directly from database BLOB storage
-    if (resource.file_data) {
-      fileBuffer = Buffer.from(resource.file_data);
+    // 1. Fetch stream/buffer directly from MinIO / object storage using object_key
+    if (resource.object_key) {
+      try {
+        const storageObj = await getObjectBuffer(resource.object_key);
+        if (storageObj && storageObj.buffer && storageObj.buffer.length > 0) {
+          fileBuffer = storageObj.buffer;
+        }
+      } catch (err: any) {
+        console.warn(`[Storage Warning] Error reading object_key "${resource.object_key}":`, err.message);
+      }
     }
 
-    // 2. Try reading from configured file path or public/uploads on disk
+    // 2. Try reading by file_name in object storage or local disk
+    if (!fileBuffer && fileName) {
+      try {
+        const storageObj = await getObjectBuffer(fileName);
+        if (storageObj && storageObj.buffer && storageObj.buffer.length > 0) {
+          fileBuffer = storageObj.buffer;
+        }
+      } catch {}
+    }
+
+    // 3. Fallback: Check configured file path or legacy public/uploads on disk
     if (!fileBuffer) {
       const possiblePaths = [
         resource.file_path ? path.resolve(process.cwd(), resource.file_path) : null,
@@ -69,7 +87,12 @@ export async function GET(
       }
     }
 
-    // 3. Fallback: Always generate a valid high-yield academic PDF dynamically
+    // 4. Fallback for legacy database rows that stored file_data BLOB
+    if (!fileBuffer && resource.file_data) {
+      fileBuffer = Buffer.from(resource.file_data);
+    }
+
+    // 5. Dynamic Academic Fallback: Generate high-yield syllabus PDF and cache in object storage
     if (!fileBuffer || fileBuffer.length < 300) {
       fileBuffer = buildAcademicPdf({
         institution: user.institutionName || 'NoteVault Academic Repository',
@@ -80,31 +103,21 @@ export async function GET(
         description: resource.description,
       });
 
-      // Persist to database BLOB storage for immediate subsequent requests
-      try {
-        const db = getDb();
-        db.prepare('UPDATE resources SET file_data = ? WHERE id = ?').run(fileBuffer, id);
-      } catch {}
-
-      // Try persisting to public/uploads on disk
-      try {
-        const uploadDir = path.resolve(process.cwd(), 'public', 'uploads');
-        if (!fs.existsSync(uploadDir)) {
-          fs.mkdirSync(uploadDir, { recursive: true });
-        }
-        fs.writeFileSync(path.join(uploadDir, fileName), fileBuffer);
-      } catch {
-        // Non-blocking disk write
-      }
+      // Offload to MinIO / disk object storage (NEVER store raw BLOBs in SQLite)
+      const targetKey = resource.object_key || fileName;
+      uploadToObjectStorage(targetKey, fileBuffer, resource.mime_type || 'application/pdf').catch((err) => {
+        console.warn('[Storage Error] Could not cache generated PDF to storage:', err.message);
+      });
     }
 
     const safeName = fileName.replace(/[^\w\s.-]/g, '_');
     const encodedName = encodeURIComponent(fileName);
+    const contentType = resource.mime_type || 'application/pdf';
 
     return new NextResponse(fileBuffer, {
       status: 200,
       headers: {
-        'Content-Type': 'application/pdf',
+        'Content-Type': contentType,
         'Content-Disposition': `attachment; filename="${safeName}"; filename*=UTF-8''${encodedName}`,
         'Content-Length': fileBuffer.length.toString(),
         'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800',

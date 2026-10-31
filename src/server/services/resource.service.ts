@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { getDb } from '../db';
 import { AuthError } from '../middleware/guard';
+import { deleteFromObjectStorage } from '../storage/minio';
 
 export interface ResourceItem {
   id: string;
@@ -17,8 +18,11 @@ export interface ResourceItem {
   type: 'file' | 'link';
   description: string;
   url: string;
+  file_url?: string | null;
+  object_key?: string | null;
   file_path: string | null;
-  file_size: string | null;
+  file_size: number | string | null;
+  mime_type?: string | null;
   file_name: string | null;
   file_data?: Buffer | Uint8Array | null;
   uploader_id: string;
@@ -42,9 +46,12 @@ export interface CreateResourceInput {
   type: 'file' | 'link';
   description?: string | null;
   url?: string | null;
+  fileUrl?: string | null;
+  objectKey?: string | null;
   filePath?: string | null;
   fileName?: string | null;
-  fileSize?: string | null;
+  fileSize?: number | string | null;
+  mimeType?: string | null;
   fileData?: Buffer | Uint8Array | null;
   uploaderId: string;
   uploaderName: string;
@@ -172,13 +179,17 @@ export class ResourceService {
     const id = `res-${crypto.randomUUID()}`;
     const now = new Date().toISOString();
 
+    const numericFileSize = typeof data.fileSize === 'number' 
+      ? data.fileSize 
+      : (data.fileSize ? parseInt(String(data.fileSize), 10) || null : null);
+
     db.exec('BEGIN IMMEDIATE TRANSACTION;');
     try {
       db.prepare(`
         INSERT INTO resources (
           id, institution_id, branch_id, course_id, title, type, description,
-          url, file_path, file_size, file_name, file_data, uploader_id, uploader_name, created_at, updated_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+          url, file_url, file_path, object_key, file_size, mime_type, file_name, file_data, uploader_id, uploader_name, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `).run(
         id,
         data.institutionId,
@@ -187,11 +198,14 @@ export class ResourceService {
         data.title ? data.title.trim() : '',
         data.type,
         data.description ? data.description.trim() : null,
-        data.url ? data.url.trim() : (data.filePath || ''),
+        data.url ? data.url.trim() : (data.fileUrl || data.filePath || ''),
+        data.fileUrl || data.url || null,
         data.filePath || null,
-        data.fileSize || null,
+        data.objectKey || null,
+        numericFileSize,
+        data.mimeType || 'application/pdf',
         data.fileName || null,
-        data.fileData || null,
+        null, // Offload binary storage from SQLite BLOB to MinIO / object storage
         data.uploaderId,
         data.uploaderName,
         now,
@@ -250,7 +264,11 @@ export class ResourceService {
       throw err;
     }
 
-    // 2. When a resource is deleted, delete its stored file on disk too
+    // 2. When a resource is deleted, delete its stored file from MinIO and disk
+    if (resource.object_key) {
+      deleteFromObjectStorage(resource.object_key).catch(() => {});
+    }
+
     if (resource.file_path) {
       const fullPath = path.resolve(process.cwd(), resource.file_path);
       if (fs.existsSync(fullPath)) {
