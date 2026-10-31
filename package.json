@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 8004",
+    "dev": "next dev -H 0.0.0.0 -p 8004",
     "db:init": "npx tsx src/server/db/init.ts",
     "test": "npx tsx --test tests/security.test.ts tests/tenancy.test.ts tests/db.test.ts tests/ai.test.ts tests/routes.test.ts",
     "build": "next build",

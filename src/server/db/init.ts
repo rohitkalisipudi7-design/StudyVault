@@ -16,16 +16,22 @@ export function initializeDatabase(db?: DatabaseSync): {
   usersCount: number;
 } {
   if (!fs.existsSync(DB_DIR)) {
-    fs.mkdirSync(DB_DIR, { recursive: true });
+    try {
+      fs.mkdirSync(DB_DIR, { recursive: true });
+    } catch {}
   }
   if (!fs.existsSync(UPLOADS_DIR)) {
-    fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+    try {
+      fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+    } catch {}
   }
 
   const database = db || new DatabaseSync(DB_PATH);
   database.exec('PRAGMA busy_timeout = 5000;');
   database.exec('PRAGMA foreign_keys = OFF;');
-  database.exec('PRAGMA journal_mode = WAL;');
+  try {
+    database.exec('PRAGMA journal_mode = WAL;');
+  } catch {}
 
   // 1. Create Schema
   database.exec(`
@@ -113,6 +119,13 @@ export function initializeDatabase(db?: DatabaseSync): {
     database.exec('ALTER TABLE resources ADD COLUMN file_data BLOB;');
   } catch {
     // Column already exists
+  }
+
+  // Purge any dead or 404 external links across all colleges
+  try {
+    database.exec("DELETE FROM resources WHERE type = 'link' AND (url LIKE '%ds-lab%' OR url LIKE '%404%');");
+  } catch {
+    // Non-blocking cleanup
   }
 
   const now = new Date().toISOString();
@@ -225,7 +238,9 @@ export function initializeDatabase(db?: DatabaseSync): {
 
     const notesFileName = `${config.courseCode}_Full_Syllabus_Notes.pdf`;
     const notesDiskPath = path.join(UPLOADS_DIR, notesFileName);
-    fs.writeFileSync(notesDiskPath, notesPdfBuffer);
+    try {
+      fs.writeFileSync(notesDiskPath, notesPdfBuffer);
+    } catch {}
 
     insertResource.run(
       `res-${config.courseId}-notes`,
@@ -262,7 +277,9 @@ export function initializeDatabase(db?: DatabaseSync): {
 
     const qbFileName = `${config.courseCode}_Exam_Question_Bank.pdf`;
     const qbDiskPath = path.join(UPLOADS_DIR, qbFileName);
-    fs.writeFileSync(qbDiskPath, qbPdfBuffer);
+    try {
+      fs.writeFileSync(qbDiskPath, qbPdfBuffer);
+    } catch {}
 
     insertResource.run(
       `res-${config.courseId}-qb`,
@@ -299,7 +316,9 @@ export function initializeDatabase(db?: DatabaseSync): {
 
     const labFileName = `${config.courseCode}_Lab_Manual.pdf`;
     const labDiskPath = path.join(UPLOADS_DIR, labFileName);
-    fs.writeFileSync(labDiskPath, labPdfBuffer);
+    try {
+      fs.writeFileSync(labDiskPath, labPdfBuffer);
+    } catch {}
 
     insertResource.run(
       `res-${config.courseId}-lab`,

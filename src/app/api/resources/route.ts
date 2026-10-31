@@ -79,18 +79,24 @@ export async function POST(req: NextRequest) {
         );
       }
 
-      // Save file to public/uploads directory
+      // Save file to uploads directory if writable
       const uploadsDir = path.resolve(process.cwd(), 'public', 'uploads');
-      if (!fs.existsSync(uploadsDir)) {
-        fs.mkdirSync(uploadsDir, { recursive: true });
-      }
+      try {
+        if (!fs.existsSync(uploadsDir)) {
+          fs.mkdirSync(uploadsDir, { recursive: true });
+        }
+      } catch {}
 
       const safeName = `${crypto.randomUUID()}${ext}`;
       const relativeStoragePath = `public/uploads/${safeName}`;
       const absolutePath = path.join(uploadsDir, safeName);
 
       const buffer = Buffer.from(await file.arrayBuffer());
-      fs.writeFileSync(absolutePath, buffer);
+      try {
+        fs.writeFileSync(absolutePath, buffer);
+      } catch {
+        // In read-only serverless filesystems, buffer is preserved directly in the database
+      }
 
       const fileSizeStr =
         file.size > 1024 * 1024

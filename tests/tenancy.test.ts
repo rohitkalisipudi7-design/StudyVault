@@ -34,7 +34,7 @@ test('2. Multi-Tenancy: Cross-college resource lookup throws 403 Forbidden', () 
     title: 'GVPCE Data Structures Lab Manual',
     type: 'link',
     description: 'Internal lab syllabus for GVPCE students only.',
-    url: 'https://gvpce.ac.in/ds-lab',
+    url: 'https://example.com/ds-lab',
     uploaderId: 'user-gvpce-admin',
     uploaderName: 'GVPCE Admin',
   });

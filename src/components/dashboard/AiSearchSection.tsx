@@ -154,7 +154,8 @@ export function AiSearchSection({
                       key={r.id}
                       type="button"
                       onClick={() => {
-                        window.open(r.url, '_blank');
+                        const targetUrl = r.type === 'file' ? `/api/resources/${r.id}/download` : r.url;
+                        window.open(targetUrl, '_blank');
                       }}
                       className="px-3 py-1.5 rounded-lg bg-[#8d9d4f]/15 hover:bg-[#8d9d4f]/30 border border-[#8d9d4f]/40 text-xs text-[#2D3822] font-semibold flex items-center gap-1.5 cursor-pointer"
                     >
