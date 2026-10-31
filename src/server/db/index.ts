@@ -15,6 +15,7 @@ export function getDb(): DatabaseSync {
     }
     dbInstance = new DatabaseSync(DB_PATH);
     dbInstance.exec('PRAGMA foreign_keys = ON;');
+    dbInstance.exec('PRAGMA busy_timeout = 5000;');
     dbInstance.exec('PRAGMA journal_mode = WAL;');
     initSchema(dbInstance);
   }

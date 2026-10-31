@@ -1,5 +1,6 @@
 import crypto from 'node:crypto';
 import { getDb } from '../db';
+import { hashPassword } from '../security/auth';
 
 export interface Institution {
   id: string;
@@ -65,6 +66,46 @@ export class InstitutionService {
       code: cleanCode,
       created_at: now,
     };
+  }
+
+  static registerInstitutionWithAdmin(data: {
+    institutionName: string;
+    code: string;
+    shortName?: string;
+    adminName: string;
+    adminEmail: string;
+    adminPassword: string;
+  }): { institution: Institution; adminUser: { id: string; email: string; name: string; role: 'admin'; institutionId: string } } {
+    const db = getDb();
+    const cleanEmail = data.adminEmail.toLowerCase().trim();
+
+    db.exec('BEGIN IMMEDIATE TRANSACTION;');
+    try {
+      const inst = this.createInstitution(data.institutionName, data.code, data.shortName);
+      const { hash, salt } = hashPassword(data.adminPassword);
+      const userId = `user-${crypto.randomUUID()}`;
+      const now = new Date().toISOString();
+
+      db.prepare(`
+        INSERT INTO users (id, institution_id, name, email, password_hash, password_salt, role, created_at)
+        VALUES (?, ?, ?, ?, ?, ?, 'admin', ?)
+      `).run(userId, inst.id, data.adminName.trim(), cleanEmail, hash, salt, now);
+
+      db.exec('COMMIT;');
+      return {
+        institution: inst,
+        adminUser: {
+          id: userId,
+          email: cleanEmail,
+          name: data.adminName.trim(),
+          role: 'admin',
+          institutionId: inst.id,
+        },
+      };
+    } catch (err) {
+      db.exec('ROLLBACK;');
+      throw err;
+    }
   }
 
   static getBranches(institutionId: string): Branch[] {

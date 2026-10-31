@@ -23,6 +23,7 @@ export function initializeDatabase(db?: DatabaseSync): {
   }
 
   const database = db || new DatabaseSync(DB_PATH);
+  database.exec('PRAGMA busy_timeout = 5000;');
   database.exec('PRAGMA foreign_keys = OFF;');
   database.exec('PRAGMA journal_mode = WAL;');
 
@@ -102,6 +103,7 @@ export function initializeDatabase(db?: DatabaseSync): {
     CREATE INDEX IF NOT EXISTS idx_courses_inst_branch ON courses(institution_id, branch_id);
     CREATE INDEX IF NOT EXISTS idx_resources_inst_branch_course ON resources(institution_id, branch_id, course_id);
     CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
+    CREATE UNIQUE INDEX IF NOT EXISTS idx_users_email_nocase ON users(email COLLATE NOCASE);
     CREATE INDEX IF NOT EXISTS idx_users_inst ON users(institution_id);
     CREATE INDEX IF NOT EXISTS idx_api_keys_user ON user_api_keys(user_id);
   `);
@@ -113,14 +115,11 @@ export function initializeDatabase(db?: DatabaseSync): {
     // Column already exists
   }
 
-  // Remove obsolete 404 link resources so only bulk notes PDFs are retained
-  database.exec("DELETE FROM resources WHERE type = 'link';");
-
   const now = new Date().toISOString();
 
-  // 2. Insert Institutions Across India
+  // 2. Insert Institutions Across India (Safe seed: only insert missing)
   const insertInst = database.prepare(`
-    INSERT OR REPLACE INTO institutions (id, name, short_name, code, created_at)
+    INSERT OR IGNORE INTO institutions (id, name, short_name, code, created_at)
     VALUES (?, ?, ?, ?, ?)
   `);
 
@@ -170,19 +169,19 @@ export function initializeDatabase(db?: DatabaseSync): {
     insertInst.run(id, name, shortName, code, now);
   }
 
-  // 3. Statements for Branches, Courses, and Resources
+  // 3. Statements for Branches, Courses, and Resources (Safe seed)
   const insertBranch = database.prepare(`
-    INSERT OR REPLACE INTO branches (id, institution_id, name, code, created_at)
+    INSERT OR IGNORE INTO branches (id, institution_id, name, code, created_at)
     VALUES (?, ?, ?, ?, ?)
   `);
 
   const insertCourse = database.prepare(`
-    INSERT OR REPLACE INTO courses (id, institution_id, branch_id, name, code, description, created_at)
+    INSERT OR IGNORE INTO courses (id, institution_id, branch_id, name, code, description, created_at)
     VALUES (?, ?, ?, ?, ?, ?, ?)
   `);
 
   const insertResource = database.prepare(`
-    INSERT OR REPLACE INTO resources (
+    INSERT OR IGNORE INTO resources (
       id, institution_id, branch_id, course_id, title, type, description, url,
       file_path, file_size, file_name, file_data, uploader_id, uploader_name, created_at, updated_at
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -1265,7 +1264,7 @@ export function initializeDatabase(db?: DatabaseSync): {
   // 4. Initialize Login Authentication Accounts (Passwords: 'Password@123')
   const defaultPw = hashPassword('Password@123');
   const insertUser = database.prepare(`
-    INSERT OR REPLACE INTO users (id, institution_id, branch_id, course_id, name, email, password_hash, password_salt, role, created_at)
+    INSERT OR IGNORE INTO users (id, institution_id, branch_id, course_id, name, email, password_hash, password_salt, role, created_at)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `);
 

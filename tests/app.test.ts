@@ -285,4 +285,30 @@ test('10. Multi-Tenant: Pan-India College Registration', () => {
   db.prepare('DELETE FROM institutions WHERE id = ?').run(inst.id);
 });
 
+test('11. Database: Case-insensitive Email Uniqueness and Transaction Operations', () => {
+  const db = getDb();
+  const testEmail = `case_test_${Date.now()}@college.edu`;
+  const { hash, salt } = hashPassword('Secret123');
+  const userId1 = `user-case-1-${Date.now()}`;
+  const userId2 = `user-case-2-${Date.now()}`;
+
+  // Insert original email
+  db.prepare(`
+    INSERT INTO users (id, institution_id, name, email, password_hash, password_salt, role, created_at)
+    VALUES (?, 'inst-au', 'Case Student', ?, ?, ?, 'student', ?)
+  `).run(userId1, testEmail.toLowerCase(), hash, salt, new Date().toISOString());
+
+  // Attempt to insert duplicate with UPPERCASE email
+  assert.throws(() => {
+    db.prepare(`
+      INSERT INTO users (id, institution_id, name, email, password_hash, password_salt, role, created_at)
+      VALUES (?, 'inst-au', 'Case Student Duplicate', ?, ?, ?, 'student', ?)
+    `).run(userId2, testEmail.toUpperCase(), hash, salt, new Date().toISOString());
+  }, /UNIQUE constraint failed/);
+
+  // Clean up
+  db.prepare('DELETE FROM users WHERE id = ?').run(userId1);
+});
+
+
 

@@ -169,29 +169,36 @@ export class ResourceService {
     const id = `res-${crypto.randomUUID()}`;
     const now = new Date().toISOString();
 
-    db.prepare(`
-      INSERT INTO resources (
-        id, institution_id, branch_id, course_id, title, type, description,
-        url, file_path, file_size, file_name, file_data, uploader_id, uploader_name, created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    `).run(
-      id,
-      data.institutionId,
-      data.branchId,
-      data.courseId,
-      data.title.trim(),
-      data.type,
-      data.description.trim(),
-      data.url.trim(),
-      data.filePath || null,
-      data.fileSize || null,
-      data.fileName || null,
-      data.fileData || null,
-      data.uploaderId,
-      data.uploaderName,
-      now,
-      now
-    );
+    db.exec('BEGIN IMMEDIATE TRANSACTION;');
+    try {
+      db.prepare(`
+        INSERT INTO resources (
+          id, institution_id, branch_id, course_id, title, type, description,
+          url, file_path, file_size, file_name, file_data, uploader_id, uploader_name, created_at, updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `).run(
+        id,
+        data.institutionId,
+        data.branchId,
+        data.courseId,
+        data.title.trim(),
+        data.type,
+        data.description.trim(),
+        data.url.trim(),
+        data.filePath || null,
+        data.fileSize || null,
+        data.fileName || null,
+        data.fileData || null,
+        data.uploaderId,
+        data.uploaderName,
+        now,
+        now
+      );
+      db.exec('COMMIT;');
+    } catch (err) {
+      db.exec('ROLLBACK;');
+      throw err;
+    }
 
     return this.getResourceById(id, data.institutionId);
   }
@@ -227,7 +234,17 @@ export class ResourceService {
 
     const db = getDb();
 
-    // If it's a file, remove it from disk
+    // 1. Delete record inside transaction
+    db.exec('BEGIN IMMEDIATE TRANSACTION;');
+    try {
+      db.prepare('DELETE FROM resources WHERE id = ? AND institution_id = ?').run(id, institutionId);
+      db.exec('COMMIT;');
+    } catch (err) {
+      db.exec('ROLLBACK;');
+      throw err;
+    }
+
+    // 2. When a resource is deleted, delete its stored file on disk too
     if (resource.file_path) {
       const fullPath = path.resolve(process.cwd(), resource.file_path);
       if (fs.existsSync(fullPath)) {
@@ -238,8 +255,17 @@ export class ResourceService {
         }
       }
     }
+    if (resource.file_name) {
+      const uploadsFullPath = path.resolve(process.cwd(), 'public', 'uploads', resource.file_name);
+      if (fs.existsSync(uploadsFullPath)) {
+        try {
+          fs.unlinkSync(uploadsFullPath);
+        } catch {
+          // ignore
+        }
+      }
+    }
 
-    db.prepare('DELETE FROM resources WHERE id = ? AND institution_id = ?').run(id, institutionId);
     return true;
   }
 }
