@@ -1,0 +1,112 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+7 0 obj
+<< /Length 2095 >>
+stream
+BT
+/F1 16 Tf
+45 785 Td
+(Andhra University College of Engineering) Tj
+/F2 10.5 Tf
+0 -20 Td
+(Computer Science and Engineering | Course Code: CS302) Tj
+/F1 13 Tf
+0 -24 Td
+(Database Management Systems - Relational Schema Design & Normalization 1NF ) Tj
+0 -10 Td
+ET
+0.75 0.75 0.75 RG
+1.5 w
+45 720 m 550 720 l S
+BT
+/F2 9.5 Tf
+45 700 Td
+(Overview: Functional dependencies, closure sets, canonical cover algorithm, lossless join decom) Tj
+0 -24 Td
+/F1 11.5 Tf
+(I. UNIT-WISE SYLLABUS BREAKDOWN & HIGH-YIELD TOPICS) Tj
+/F2 9 Tf
+0 -18 Td
+/F1 9.5 Tf
+(Unit 1: Relational Data Model & Calculus) Tj
+0 -13 Td
+/F2 9 Tf
+(Relational algebra operators, Tuple relational calculus, Domain relational calculus, and SQL-99 stan) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 2: Normalization & Functional Dependencies) Tj
+0 -13 Td
+/F2 9 Tf
+(Armstrong axioms, Attribute closure, 1NF, 2NF, 3NF, BCNF, and 4NF synthesis algorithms) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 3: Transaction Processing & Concurrency) Tj
+0 -13 Td
+/F2 9 Tf
+(ACID properties, Serializability, Two-Phase Locking 2PL, Timestamp ordering, and Deadlock resolution) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 4: Indexing & Storage Structures) Tj
+0 -13 Td
+/F2 9 Tf
+(B-Trees, B+ Trees indexing, Static & Dynamic Hashing, Query execution plan optimization) Tj
+0 -16 Td
+0 -6 Td
+/F1 11.5 Tf
+(II. HIGH-YIELD SEMESTER EXAMINATION QUESTIONS) Tj
+0 -16 Td
+/F2 9 Tf
+(1. Prove whether a given relational schema decomposition is lossless-join and dependency-preserving.) Tj
+0 -14 Td
+(2. Compare strict two-phase locking Rigorous 2PL with conservative 2PL in transactional concurrency.) Tj
+0 -14 Td
+(3. Construct a B+ Tree index with order 4 for a given set of search keys and illustrate node splits.) Tj
+0 -14 Td
+0 -6 Td
+/F1 11.5 Tf
+(III. PRESCRIBED TEXTBOOKS & ACADEMIC REPOSITORIES) Tj
+0 -16 Td
+/F2 9 Tf
+(* Raghu Ramakrishnan, Johannes Gehrke - Database Management Systems McGraw-Hill) Tj
+0 -13 Td
+(* Silberschatz, Korth, Sudarshan - Database System Concepts McGraw-Hill 7th Ed) Tj
+0 -13 Td
+0 -18 Td
+/F3 8.5 Tf
+(Verified NoteVault Institutional Archive - Authorized for Registered Student Use Only) Tj
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000125 00000 n 
+0000000271 00000 n 
+0000000346 00000 n 
+0000000416 00000 n 
+0000000494 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2641
+%%EOF

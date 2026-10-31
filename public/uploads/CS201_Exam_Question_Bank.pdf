@@ -1,0 +1,152 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+7 0 obj
+<< /Length 1137 >>
+stream
+BT
+/F1 15 Tf
+45 785 Td
+(Gayatri Vidya Parishad College of Engineering Autonomous) Tj
+/F2 10.5 Tf
+0 -18 Td
+(Computer Science and Engineering | Course Code: CS201) Tj
+/F1 13 Tf
+0 -22 Td
+(Data Structures and Algorithms - Semester Exam Question Bank & Worked So) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 730 m 550 730 l S
+BT
+/F2 9.5 Tf
+45 712 Td
+(Syllabus Focus: CS201 High-Yield Semester Exam Question Bank & Model Solutions) Tj
+0 -15 Td
+(Summary: Comprehensive question bank with previous semester university examination questions, m) Tj
+0 -22 Td
+/F1 11 Tf
+(I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 1: Asymptotic Analysis & Linear Structures) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Big-O, Omega, Theta asymptotic bounds, Master Theorem, Amortized analysis, Stacks, Queu) Tj
+0 -12 Td
+0 -6 Td
+/F1 9.5 Tf
+(Unit 2: Balanced Search Trees & Heaps) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Binary Search Trees, AVL rotations, Red-Black tree coloring rules, Binary Heaps, Priori) Tj
+0 -12 Td
+0 -6 Td
+0 -12 Td
+/F3 8 Tf
+(NoteVault Institutional Study Repository - Page 1 of 2 - Continuous Course Guide) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+9 0 obj
+<< /Length 1783 >>
+stream
+BT
+/F1 13 Tf
+45 785 Td
+(CS201: Data Structures and Algorithms - Advanced Topics & Assessment) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Academic Track: Computer Science and Engineering - Units 3, 4, 5 & Examination Matrix) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 755 m 550 755 l S
+BT
+45 738 Td
+/F1 10.5 Tf
+(II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
+0 -14 Td
+/F1 9 Tf
+(Unit 3: Graph Traversal & Minimum Spanning Trees) Tj
+0 -11 Td
+/F2 8 Tf
+(" Graph representations, BFS, DFS, Topological sorting, Prim and Kruskal Minimum Spanning Tree algorithms, Dis) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 4: Shortest Path Algorithms) Tj
+0 -11 Td
+/F2 8 Tf
+(" Dijkstra single-source shortest path with priority queues, Bellman-Ford algorithm for negative weights, Floy) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 5: Dynamic Programming & Greedy Design) Tj
+0 -11 Td
+/F2 8 Tf
+(" Optimal substructure, 0/1 Knapsack, Longest Common Subsequence LCS, Matrix Chain Multiplication, Huffman cod) Tj
+0 -12 Td
+0 -6 Td
+/F1 10.5 Tf
+(III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
+/F2 8 Tf
+0 -13 Td
+(1. Solve the recurrence relation Tn = 3Tn/2 + On log n using the Master Theorem.) Tj
+0 -11 Td
+(2. Insert the keys [15, 20, 24, 10, 13, 7, 30, 36] into an empty AVL tree and show all intermediate rotat) Tj
+0 -11 Td
+(3. Formulate the dynamic programming recurrence and bottom-up matrix construction for the 0/1 Knapsack pr) Tj
+0 -11 Td
+0 -6 Td
+/F1 10.5 Tf
+(IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
+/F2 8 Tf
+0 -12 Td
+(* Thomas H. Cormen, Charles E. Leiserson - Introduction to Algorithms MIT Press 3rd Ed) Tj
+0 -11 Td
+(* Mark Allen Weiss - Data Structures and Algorithm Analysis in C++ Pearson 4th Ed) Tj
+0 -11 Td
+0 -10 Td
+/F3 8 Tf
+(Authorized NoteVault Educational Document " Verified for Registered University Students) Tj
+ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000131 00000 n 
+0000000206 00000 n 
+0000000276 00000 n 
+0000000354 00000 n 
+0000000500 00000 n 
+0000001689 00000 n 
+0000001835 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+3670
+%%EOF

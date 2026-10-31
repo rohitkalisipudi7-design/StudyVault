@@ -1,0 +1,152 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+7 0 obj
+<< /Length 1124 >>
+stream
+BT
+/F1 15 Tf
+45 785 Td
+(GITAM Deemed to be University) Tj
+/F2 10.5 Tf
+0 -18 Td
+(Electronics and Communication Engineering | Course Code: EC305) Tj
+/F1 13 Tf
+0 -22 Td
+(Electromagnetic Waves & Transmission Lines - Semester Exam Question Bank) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 730 m 550 730 l S
+BT
+/F2 9.5 Tf
+45 712 Td
+(Syllabus Focus: EC305 High-Yield Semester Exam Question Bank & Model Solutions) Tj
+0 -15 Td
+(Summary: Comprehensive question bank with previous semester university examination questions, m) Tj
+0 -22 Td
+/F1 11 Tf
+(I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 1: Maxwell Equations & Electromagnetic Statics) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Gauss, Faraday, and Ampere laws in differential and integral forms, Displacement curren) Tj
+0 -12 Td
+0 -6 Td
+/F1 9.5 Tf
+(Unit 2: Uniform Plane Wave Propagation) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Helmholtz wave equation, Propagation constant, Attenuation and phase constants, Intrins) Tj
+0 -12 Td
+0 -6 Td
+0 -12 Td
+/F3 8 Tf
+(NoteVault Institutional Study Repository - Page 1 of 2 - Continuous Course Guide) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+9 0 obj
+<< /Length 1825 >>
+stream
+BT
+/F1 13 Tf
+45 785 Td
+(EC305: Electromagnetic Waves & Transmission Lines - Advanced Topics & Assessment) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Academic Track: Electronics and Communication Engineering - Units 3, 4, 5 & Examination Matrix) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 755 m 550 755 l S
+BT
+45 738 Td
+/F1 10.5 Tf
+(II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
+0 -14 Td
+/F1 9 Tf
+(Unit 3: Reflection & Refraction at Media Boundaries) Tj
+0 -11 Td
+/F2 8 Tf
+(" Normal and oblique incidence, Snell law, Fresnel reflection and transmission coefficients, Brewster angle, T) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 4: Transmission Line Equations) Tj
+0 -11 Td
+/F2 8 Tf
+(" Transmission line differential equations, Characteristic impedance Z0, Propagation constant, Reflection coef) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 5: Smith Chart & Impedance Matching) Tj
+0 -11 Td
+/F2 8 Tf
+(" Smith chart coordinate geometry, Input impedance computation, Quarter-wave transformers, Single and double s) Tj
+0 -12 Td
+0 -6 Td
+/F1 10.5 Tf
+(III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
+/F2 8 Tf
+0 -13 Td
+(1. Derive the wave equation in a conducting medium from Maxwell equations and obtain expressions for alph) Tj
+0 -11 Td
+(2. Using a Smith chart, design a single-stub parallel tuner to match a load of Z_L = 100 + j80 ohms to a ) Tj
+0 -11 Td
+(3. State and prove Poynting Theorem for electromagnetic energy conservation in a finite volume.) Tj
+0 -11 Td
+0 -6 Td
+/F1 10.5 Tf
+(IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
+/F2 8 Tf
+0 -12 Td
+(* Matthew N.O. Sadiku - Elements of Electromagnetics Oxford University Press 7th Ed) Tj
+0 -11 Td
+(* E.C. Jordan, K.G. Balmain - Electromagnetic Waves and Radiating Systems Prentice Hall) Tj
+0 -11 Td
+0 -10 Td
+/F3 8 Tf
+(Authorized NoteVault Educational Document " Verified for Registered University Students) Tj
+ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000131 00000 n 
+0000000206 00000 n 
+0000000276 00000 n 
+0000000354 00000 n 
+0000000500 00000 n 
+0000001676 00000 n 
+0000001822 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+3699
+%%EOF

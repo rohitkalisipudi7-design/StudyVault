@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Source+Sans+3:wght@400;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-primary-fixed-variant":"#3f4a33","background":"#fbf9f5","secondary-fixed":"#d6eab1","on-tertiary-fixed-variant":"#574500","primary-fixed":"#dae7c7","on-error-container":"#93000a","surface-tint":"#566249","surface-bright":"#fbf9f5","on-primary-container":"#95a285","outline":"#75786f","on-secondary":"#ffffff","on-primary-fixed":"#141e0b","on-surface":"#1b1c1a","primary-fixed-dim":"#becbac","tertiary":"#735c00","on-secondary-container":"#57683b","error":"#ba1a1a","surface-container-high":"#eae8e4","surface-container-lowest":"#ffffff","primary":"#18220e","tertiary-container":"#cba72f","surface-dim":"#dbdad6","on-tertiary-container":"#4e3d00","on-background":"#1b1c1a","surface-container":"#efeeea","tertiary-fixed-dim":"#e9c349","on-surface-variant":"#454840","surface-container-highest":"#e4e2de","on-tertiary-fixed":"#241a00","secondary-fixed-dim":"#bace97","on-secondary-fixed-variant":"#3c4c21","primary-container":"#2d3822","on-error":"#ffffff","surface-container-low":"#f5f3ef","on-primary":"#ffffff","error-container":"#ffdad6","secondary":"#536437","inverse-primary":"#becbac","on-tertiary":"#ffffff","surface-variant":"#e4e2de","inverse-surface":"#30312e","tertiary-fixed":"#ffe088","inverse-on-surface":"#f2f0ed","surface":"#fbf9f5","outline-variant":"#c5c7bd","on-secondary-fixed":"#121f00","secondary-container":"#d3e7ae"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","margin":"3rem","gutter-sm":"1rem","space-md":"1rem","space-sm":"0.5rem","space-xl":"2.5rem","gutter":"1.5rem","margin-sm":"1.25rem","space-2xl":"4rem"},"fontFamily":{"headline-xl-mobile":["\"Source Serif 4\""],"body-lg":["\"Source Sans 3\""],"body-sm":["\"Source Sans 3\""],"headline-lg":["\"Source Serif 4\""],"body-md":["\"Source Sans 3\""],"headline-lg-mobile":["\"Source Serif 4\""],"label-code":["JetBrains Mono"],"headline-md":["\"Source Serif 4\""],"label-ui":["\"Source Sans 3\""],"label-code-sm":["JetBrains Mono"],"headline-sm":["\"Source Serif 4\""],"headline-xl":["\"Source Serif 4\""]},"fontSize":{"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-code":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-ui":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"label-code-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-space-xs px-gutter-sm text-center"><p class="font-label-ui text-label-ui flex items-center justify-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-tertiary-fixed">bolt</span><span>Search course code, select unit, and download verified notes instantly.</span></p></div><div class="h-16 max-w-7xl mx-auto px-gutter-sm lg:px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-baseline gap-space-xs group" data-path="home-finder" href="#"><span class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">NoteVault</span><span class="font-label-code-sm text-label-code-sm bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded">Vizag B.Tech v1.0</span></a><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors py-space-sm" data-path="home-finder" href="#">Home / Finder</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors py-space-sm" data-path="courses-units" href="#">Courses &amp; Units</a><a aria-current="page" class="transition-colors py-space-sm text-primary font-semibold border-b-2 border-primary" data-path="document-viewer" href="#">Document Viewer</a><a class="font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors py-space-sm" data-path="about-mission" href="#">About &amp; Mission</a></nav></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container text-on-surface font-label-ui text-label-ui hover:bg-surface-container-high transition-colors" type="button"><span class="font-label-code text-label-code">TE</span><span>తెలుగు</span></button><button class="hidden sm:flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container-low text-on-surface-variant font-label-ui text-label-ui hover:bg-error-container hover:text-on-error-container transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">delete_sweep</span><span>Clear Data</span></button><a class="flex items-center gap-space-xs px-space-md py-2 rounded bg-primary-container text-on-primary font-label-ui text-label-ui hover:bg-primary transition-all shadow-[0_2px_8px_rgba(45,56,34,0.15)]" data-path="contribute-note" href="#"><span class="material-symbols-outlined text-[16px]">add_circle</span><span>+ Contribute Note</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-24 bg-surface flex-1"><div class="flex flex-col w-full pb-space-2xl">
+<!-- Document Metadata & Breadcrumb Header -->
+<div class="w-full bg-surface-container-low px-gutter-sm lg:px-gutter py-space-md shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap font-label-code-sm text-label-code-sm text-on-surface-variant">
+<span class="bg-surface-container-highest px-space-xs py-0.5 rounded text-primary font-semibold">AU &amp; JNTU-GV</span>
+<span>•</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-semibold px-space-xs py-0.5 rounded">R20 / R22 REGULATION</span>
+<span>•</span>
+<span class="text-tertiary font-semibold">COURSE CS301</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-primary truncate">
+          CS301: Operating Systems — Unit 2: Process Synchronization &amp; Semaphores
+        </h1>
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+            Contributor: <strong class="text-on-surface font-semibold">Rahul Sharma</strong> (Sample - Verified)
+          </span>
+<span>•</span>
+<span class="font-label-code-sm text-label-code-sm text-outline">Updated: Oct 2024</span>
+<span>•</span>
+<span class="bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded font-label-code-sm text-label-code-sm">Rank 1 AU CSE Notes</span>
+</div>
+</div>
+<!-- Top Main Callout Button -->
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button class="group flex items-center gap-space-xs px-space-md py-2.5 rounded bg-primary text-on-primary font-label-ui text-label-ui hover:bg-primary-container shadow-md transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed group-hover:rotate-12 transition-transform">search_check</span>
+<span>Search course code, select unit, and download verified notes instantly.</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Document Action Toolbar -->
+<div class="w-full bg-surface-container px-gutter-sm lg:px-gutter py-space-xs sticky top-16 z-40 shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+<!-- Viewer Controls -->
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-lowest rounded shadow-sm px-space-xs py-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="btnPrevPage" title="Previous Page" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-space-xs font-label-code text-label-code text-on-surface font-semibold" id="pageIndicator">Page 12 of 48</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="btnNextPage" title="Next Page" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center bg-surface-container-lowest rounded shadow-sm px-space-xs py-1">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="btnZoomOut" title="Zoom Out" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<span class="px-space-xs font-label-code text-label-code text-on-surface-variant" id="zoomLabel">100%</span>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="btnZoomIn" title="Zoom In" type="button">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+</div>
+<button class="hidden sm:flex items-center gap-1 px-space-sm py-1.5 rounded bg-surface-container-lowest text-on-surface font-label-ui text-label-ui hover:bg-surface-container-high transition-colors shadow-sm" id="btnFitWidth" type="button">
+<span class="material-symbols-outlined text-[16px]">fit_screen</span>
+<span>Fit Width</span>
+</button>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-ui text-label-ui hover:bg-tertiary-container hover:text-on-tertiary-container shadow-sm transition-all" id="btnTeluguToggle" type="button">
+<span class="material-symbols-outlined text-[16px]">translate</span>
+<span id="teluguBtnLabel">Toggle Telugu Summary</span>
+</button>
+<button class="hidden md:flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container-lowest text-on-surface font-label-ui text-label-ui hover:bg-surface-container-high shadow-sm transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print</span>
+</button>
+<a class="flex items-center gap-space-xs px-space-md py-1.5 rounded bg-primary-container text-on-primary font-label-ui text-label-ui hover:bg-primary shadow-sm transition-colors" href="#download">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download PDF (4.2 MB)</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Main Dual-Column Content Grid -->
+<div class="w-full max-w-7xl mx-auto px-gutter-sm lg:px-gutter mt-space-md">
+<!-- Telugu Dynamic Banner (Collapsible) -->
+<div class="hidden w-full mb-space-md bg-secondary-fixed text-on-secondary-fixed p-space-md rounded shadow-sm" id="teluguSummaryBanner">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-secondary mt-0.5">menu_book</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">తెలుగు సారాంశం — యూనిట్ 2: ప్రాసెస్ సింక్రొనైజేషన్ (OS)</h2>
+<p class="font-body-md text-body-md text-on-primary-fixed mt-1">
+              సెమాఫోర్ అనేది ఒక పూర్ణాంక చరరాశి (Integer variable). ఇది పరస్పర మినహాయింపు (Mutual Exclusion) సాధించడానికి <code class="font-label-code text-label-code bg-surface/70 px-1 py-0.5 rounded">wait()</code> మరియు <code class="font-label-code text-label-code bg-surface/70 px-1 py-0.5 rounded">signal()</code> ఆపరేషన్లతో పనిచేస్తుంది. క్రిటికల్ సెక్షన్ మూడు నిబంధనలను పాటించాలి: మ్యూచువల్ ఎక్స్‌క్లూజన్, ప్రోగ్రెస్, బౌండెడ్ వెయిటింగ్.
+            </p>
+</div>
+</div>
+<button class="text-on-secondary-fixed-variant hover:text-primary" id="closeTeluguBanner" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- 60/40 Split Architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- ================= LEFT COLUMN: 60% (col-span-7) ================= -->
+<section class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Document Canvas Container -->
+<div class="w-full bg-surface-container-lowest rounded shadow-md overflow-hidden flex flex-col">
+<!-- Mock PDF Page Header Ribbon -->
+<div class="bg-surface-container-high px-space-md py-space-xs flex items-center justify-between text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span>ANDHRA UNIVERSITY COLL. OF ENGG (AUTONOMOUS) • CSE DEPT</span>
+<span class="flex items-center gap-1 font-semibold text-primary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              VERIFIED FACULTY REVIEWED
+            </span>
+</div>
+<!-- Document Sheet (Simulated High-Fidelity Typeset & Handwritten Engineering Note) -->
+<div class="p-space-lg sm:p-space-xl flex flex-col gap-space-md transition-transform duration-200 origin-top" id="documentCanvas">
+<!-- Document Title Block inside Note -->
+<div class="bg-surface-container-low p-space-md rounded flex items-start justify-between gap-space-sm">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-secondary font-bold uppercase tracking-wider">Lecture 14 • Unit 2 Notes</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-1">
+                  Section 2.4: The Critical-Section Problem &amp; Semaphores
+                </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                  Textbook Ref: Silberschatz, Galvin, Gagne (9th Ed.) • JNTU-GV Syllabus Unit II
+                </p>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="bg-primary-container text-on-primary font-label-code-sm text-label-code-sm px-space-xs py-0.5 rounded">Page 12</span>
+<span class="font-label-code-sm text-label-code-sm text-outline mt-1">CS301-U2-P12.pdf</span>
+</div>
+</div>
+<!-- Notes Section 1: Definition -->
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs">
+<span class="w-1.5 h-4 bg-tertiary rounded-sm"></span>
+<span>1. Classical Definition of Semaphore</span>
+</h3>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                A <mark class="bg-tertiary-fixed text-on-tertiary-fixed px-1 py-0.5 rounded">Semaphore <code class="font-label-code text-label-code font-bold">S</code></mark> is an integer synchronization tool that, apart from initialization, is accessed strictly through two standard atomic operations: <code class="font-label-code text-label-code font-bold text-primary bg-surface-container px-1.5 py-0.5 rounded">wait()</code> (or <em>P</em>, from Dutch <em>proberen</em>, "to test") and <code class="font-label-code text-label-code font-bold text-primary bg-surface-container px-1.5 py-0.5 rounded">signal()</code> (or <em>V</em>, from <em>verhogen</em>, "to increment").
+              </p>
+<!-- Formula Callout -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col md:flex-row gap-space-md">
+<div class="flex-1 bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="font-label-code-sm text-label-code-sm text-on-surface-variant uppercase font-semibold">Atomic wait(S) Operation</div>
+<pre class="font-label-code text-label-code text-primary mt-1 overflow-x-auto"><code>wait(S) {
+    while (S &lt;= 0)
+        ; // busy wait (spin-lock)
+    S--;
+}</code></pre>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-space-sm rounded shadow-sm">
+<div class="font-label-code-sm text-label-code-sm text-on-surface-variant uppercase font-semibold">Atomic signal(S) Operation</div>
+<pre class="font-label-code text-label-code text-primary mt-1 overflow-x-auto"><code>signal(S) {
+    S++;
+}</code></pre>
+</div>
+</div>
+</div>
+<!-- Diagram 1: Semaphore State Machine (Inline Rich SVG) -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm font-semibold text-secondary">FIGURE 2.3: SEMAPHORE WAIT / SIGNAL TRANSITION GRAPH</span>
+<span class="font-label-code-sm text-label-code-sm bg-surface-container-highest px-space-xs py-0.5 rounded text-on-surface-variant">Exam Mandatory Diagram</span>
+</div>
+<div class="w-full flex justify-center py-space-sm bg-surface-container-lowest rounded">
+<svg class="w-full max-w-lg h-auto" viewbox="0 0 540 180" xmlns="http://www.w3.org/2000/svg">
+<!-- Node: Available -->
+<rect class="fill-surface-container-high" height="70" rx="4" width="130" x="20" y="55"></rect>
+<text class="fill-primary font-sans font-semibold text-[13px]" text-anchor="middle" x="85" y="85">Resource S &gt; 0</text>
+<text class="fill-secondary font-mono text-[11px]" text-anchor="middle" x="85" y="105">Free state (S = 1)</text>
+<!-- Node: Critical Section -->
+<rect class="fill-primary-container" height="70" rx="4" width="130" x="210" y="55"></rect>
+<text class="fill-on-primary font-sans font-semibold text-[13px]" text-anchor="middle" x="275" y="85">Critical Section</text>
+<text class="fill-secondary-fixed font-mono text-[11px]" text-anchor="middle" x="275" y="105">Process executes</text>
+<!-- Node: Blocked/Waiting Queue -->
+<rect class="fill-surface-container-high" height="70" rx="4" width="130" x="390" y="55"></rect>
+<text class="fill-primary font-sans font-semibold text-[13px]" text-anchor="middle" x="455" y="85">Waiting Queue</text>
+<text class="fill-tertiary font-mono text-[11px]" text-anchor="middle" x="455" y="105">Blocked (S &lt;= 0)</text>
+<!-- Arrow 1: Available to CS via wait() -->
+<path class="stroke-primary" d="M 150 75 L 205 75" fill="none" marker-end="url(#arrow)" stroke-width="2"></path>
+<text class="fill-primary font-mono text-[10px]" text-anchor="middle" x="180" y="68">wait()</text>
+<!-- Arrow 2: CS to Available via signal() -->
+<path class="stroke-secondary" d="M 275 125 C 275 160, 85 160, 85 125" fill="none" stroke-width="2"></path>
+<text class="fill-secondary font-mono text-[10px]" text-anchor="middle" x="180" y="155">signal(S) [releases resource]</text>
+<!-- Arrow 3: Another process attempting wait() when busy -->
+<path class="stroke-error" d="M 340 75 L 385 75" fill="none" stroke-dasharray="4" stroke-width="2"></path>
+<text class="fill-error font-mono text-[10px]" text-anchor="middle" x="365" y="68">S &lt;= 0</text>
+<!-- Marker def -->
+<defs>
+<marker id="arrow" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="6" refy="5" viewbox="0 0 10 10">
+<path class="fill-primary" d="M 0 1 L 8 5 L 0 9 z"></path>
+</marker>
+</defs>
+</svg>
+</div>
+</div>
+<!-- Notes Section 2: Peterson's Solution Flowchart -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs">
+<span class="w-1.5 h-4 bg-secondary rounded-sm"></span>
+<span>2. Peterson's Solution (Software Synchronization)</span>
+</h3>
+<p class="font-body-md text-body-md text-on-surface">
+                Peterson's solution is a restricted classic software solution for two processes (<code class="font-label-code text-label-code">P0</code> and <code class="font-label-code text-label-code">P1</code>). It shares two shared data variables:
+              </p>
+<ul class="list-disc list-inside font-body-md text-body-md text-on-surface-variant flex flex-col gap-1 pl-2">
+<li><code class="font-label-code text-label-code font-semibold text-primary">int turn;</code> — Indicates whose turn it is to enter critical section.</li>
+<li><code class="font-label-code text-label-code font-semibold text-primary">boolean flag[2];</code> — Indicates if a process is ready to enter critical section (<code class="font-label-code text-label-code">flag[i] = true</code>).</li>
+</ul>
+<!-- Hand-drawn Style Flowchart representation of Peterson's Solution -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col gap-2 mt-space-xs shadow-sm">
+<div class="font-label-code-sm text-label-code-sm font-semibold text-on-surface-variant">FIGURE 2.4: PETERSON'S ALGORITHM FLOW FOR PROCESS P[i]</div>
+<div class="w-full flex justify-center py-2 bg-surface-container-lowest rounded">
+<svg class="w-full max-w-md h-auto" viewbox="0 0 480 140" xmlns="http://www.w3.org/2000/svg">
+<!-- Step 1 -->
+<rect class="fill-surface-container-high" height="50" rx="3" width="105" x="15" y="45"></rect>
+<text class="fill-primary font-mono text-[10px] font-semibold" text-anchor="middle" x="67" y="68">flag[i] = true;</text>
+<text class="fill-outline font-mono text-[9px]" text-anchor="middle" x="67" y="82">turn = j;</text>
+<!-- Arrow 1 -->
+<line class="stroke-primary" stroke-width="1.5" x1="120" x2="155" y1="70" y2="70"></line>
+<!-- Step 2: Busy Wait Diamond -->
+<polygon class="fill-tertiary-fixed" points="210,40 260,70 210,100 160,70"></polygon>
+<text class="fill-on-tertiary-fixed font-mono text-[9px] font-semibold" text-anchor="middle" x="210" y="68">flag[j] &amp;&amp;</text>
+<text class="fill-on-tertiary-fixed font-mono text-[9px] font-semibold" text-anchor="middle" x="210" y="80">turn == j ?</text>
+<!-- Arrow Loop for Busy wait -->
+<path class="stroke-tertiary" d="M 210 40 Q 210 20 220 20 Q 240 20 235 50" fill="none" stroke-dasharray="3" stroke-width="1"></path>
+<text class="fill-tertiary font-mono text-[8px]" text-anchor="middle" x="225" y="15">true (Spin)</text>
+<!-- Arrow 2: false -> enter CS -->
+<line class="stroke-secondary" stroke-width="1.5" x1="260" x2="295" y1="70" y2="70"></line>
+<text class="fill-secondary font-mono text-[8px]" text-anchor="middle" x="277" y="65">false</text>
+<!-- Step 3: Critical Section -->
+<rect class="fill-primary" height="50" rx="3" width="85" x="295" y="45"></rect>
+<text class="fill-on-primary font-sans text-[11px] font-semibold" text-anchor="middle" x="337" y="74">CRITICAL</text>
+<text class="fill-secondary-fixed font-mono text-[9px]" text-anchor="middle" x="337" y="86">SECTION</text>
+<!-- Arrow 3 -->
+<line class="stroke-primary" stroke-width="1.5" x1="380" x2="400" y1="70" y2="70"></line>
+<!-- Step 4: Exit Section -->
+<rect class="fill-surface-container-high" height="50" rx="3" width="70" x="400" y="45"></rect>
+<text class="fill-primary font-mono text-[9px] font-semibold" text-anchor="middle" x="435" y="68">flag[i]=</text>
+<text class="fill-primary font-mono text-[9px] font-semibold" text-anchor="middle" x="435" y="80">false;</text>
+</svg>
+</div>
+</div>
+</div>
+<!-- Notes Section 3: Bounded Buffer Problem -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs">
+<span class="w-1.5 h-4 bg-outline rounded-sm"></span>
+<span>3. The Bounded-Buffer (Producer-Consumer) Problem</span>
+</h3>
+<p class="font-body-md text-body-md text-on-surface">
+                Uses three semaphores to maintain consistency across a buffer pool of <code class="font-label-code text-label-code font-bold">N</code> slots:
+              </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs font-label-code-sm text-label-code-sm mt-1">
+<div class="bg-surface-container p-space-sm rounded">
+<span class="text-secondary font-bold">mutex = 1</span>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Binary semaphore protects buffer access.</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<span class="text-secondary font-bold">empty = N</span>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Counting semaphore for available empty slots.</p>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<span class="text-secondary font-bold">full = 0</span>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Counting semaphore for filled data slots.</p>
+</div>
+</div>
+</div>
+<!-- Contributor Hand-Note Watermark & Footer -->
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded flex items-center justify-between text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">edit_note</span>
+                AU Gold-Medalist Reference Copy • Verified JNTU-GV CS301 Curriculum
+              </span>
+<span>Doc Hash: #AU-2024-OS-0294</span>
+</div>
+</div>
+<!-- Document Canvas Bottom Pager Bar -->
+<div class="bg-surface-container px-space-md py-space-sm flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Showing Page 12 of 48 pages (Unit 2 complete)</span>
+<div class="flex items-center gap-2">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface font-label-ui text-label-ui hover:bg-surface-container-high shadow-sm">
+                ← Page 11
+              </button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface font-label-ui text-label-ui hover:bg-surface-container-high shadow-sm">
+                Page 13 →
+              </button>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= RIGHT COLUMN: 40% (col-span-5) ================= -->
+<!-- THE AI FEATURE: Gemini AI Document Key-Concept Extractor -->
+<aside class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Main AI Panel Card -->
+<div class="w-full bg-surface-container-lowest rounded shadow-md overflow-hidden flex flex-col">
+<!-- AI Panel Header -->
+<div class="bg-primary text-on-primary p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed text-[22px]">auto_awesome</span>
+<span class="font-headline-sm text-headline-sm text-on-primary">Gemini AI Document Key-Concept Extractor</span>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-code-sm text-label-code-sm font-bold px-space-xs py-0.5 rounded">v2.5 Flash</span>
+</div>
+<p class="font-label-code-sm text-label-code-sm text-primary-fixed mt-1">
+              Synthesized with Gemini API — Structured Exam Key-Concepts
+            </p>
+</div>
+<!-- Feature Nav Tabs -->
+<div class="flex items-center bg-surface-container-high p-1 gap-1 font-label-ui text-label-ui">
+<button class="flex-1 py-1.5 px-2 rounded bg-surface-container-lowest text-primary font-bold shadow-sm text-center transition-all" id="tabSummaryBtn" type="button">
+              AI Concept Summary
+            </button>
+<button class="flex-1 py-1.5 px-2 rounded text-on-surface-variant hover:text-on-surface text-center transition-all" id="tabPyqBtn" type="button">
+              Past Exam Questions (PYQ)
+            </button>
+<button class="flex-1 py-1.5 px-2 rounded text-on-surface-variant hover:text-on-surface text-center transition-all" id="tabFlashcardsBtn" type="button">
+              Flashcards (6)
+            </button>
+</div>
+<!-- Tab Content 1: AI Concept Summary (Active by default) -->
+<div class="p-space-md flex flex-col gap-space-md" id="contentSummary">
+<!-- Exact Specification Items -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Core Definition of Semaphore -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col gap-1 shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm font-bold text-secondary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+                    1. Core Definition of Semaphore
+                  </span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-code-sm text-label-code-sm px-1.5 py-0.5 rounded">AU High Frequency</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1 leading-relaxed">
+                  An integer variable accessed strictly via atomic <code class="font-label-code text-label-code font-bold bg-surface-container px-1 py-0.5 rounded">wait()</code> and <code class="font-label-code text-label-code font-bold bg-surface-container px-1 py-0.5 rounded">signal()</code> operations used to control access to shared concurrent resources.
+                </p>
+<div class="mt-2 pt-2 bg-surface-container-lowest p-2 rounded flex items-center justify-between text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span>Types: Binary (0,1) • Counting (&gt;1)</span>
+<span class="text-tertiary font-semibold">Weightage: 4-6 Marks</span>
+</div>
+</div>
+<!-- Item 2: Critical Section Conditions -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col gap-1 shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm font-bold text-secondary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">rule</span>
+                    2. Critical Section Conditions
+                  </span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-code-sm text-label-code-sm px-1.5 py-0.5 rounded font-semibold">100% Exam Match</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1 leading-relaxed">
+                  Must satisfy Mutual Exclusion (single process inside), Progress (no deadlock on entry), and Bounded Waiting (finite waiting limit).
+                </p>
+<div class="grid grid-cols-3 gap-1 mt-2 text-center font-label-code-sm text-label-code-sm">
+<div class="bg-surface-container-lowest p-1.5 rounded text-primary font-semibold">Mutual Exclusion</div>
+<div class="bg-surface-container-lowest p-1.5 rounded text-primary font-semibold">Progress</div>
+<div class="bg-surface-container-lowest p-1.5 rounded text-primary font-semibold">Bounded Wait</div>
+</div>
+</div>
+<!-- Item 3: Peterson's Solution Algorithm Summary -->
+<div class="bg-surface-container-low p-space-md rounded flex flex-col gap-1 shadow-sm hover:shadow transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm font-bold text-secondary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+                    3. Peterson's Solution Algorithm Summary
+                  </span>
+<span class="bg-primary-container text-on-primary font-label-code-sm text-label-code-sm px-1.5 py-0.5 rounded">Silberschatz Ch. 5</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1 leading-relaxed">
+                  Two-process software synchronization using <code class="font-label-code text-label-code font-bold bg-surface-container px-1 py-0.5 rounded">turn</code> variable and <code class="font-label-code text-label-code font-bold bg-surface-container px-1 py-0.5 rounded">flag[2]</code> boolean array ensuring mutual exclusion without special hardware instructions.
+                </p>
+<div class="mt-2 pt-2 bg-surface-container-lowest p-2 rounded flex items-center justify-between font-label-code-sm text-label-code-sm text-on-surface-variant">
+<span>Limitation: Restricted to 2 concurrent threads</span>
+<span class="text-secondary font-semibold">Provably Correct</span>
+</div>
+</div>
+</div>
+<!-- Gemini Interactive Controls & Action Buttons -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="flex-1 flex items-center justify-center gap-1 px-space-sm py-2 rounded bg-surface-container-high text-primary font-label-ui text-label-ui hover:bg-surface-container-highest transition-colors active:scale-95 shadow-sm" id="btnReExtract" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Re-extract Concepts</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-1 px-space-sm py-2 rounded bg-surface-container-high text-primary font-label-ui text-label-ui hover:bg-surface-container-highest transition-colors active:scale-95 shadow-sm" id="btnCopyKeyPoints" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span id="copyPointsLabel">Copy Key Points</span>
+</button>
+</div>
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded bg-primary-container text-on-primary font-label-ui text-label-ui hover:bg-primary transition-all shadow-md active:scale-95" id="btnDownloadCheatSheet" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">summarize</span>
+<span>Download Cheat Sheet (PDF • 1-Page Exam Ready)</span>
+</button>
+</div>
+<!-- Error and Retry State Banner -->
+<div class="bg-error-container text-on-error-container p-space-sm rounded flex items-center justify-between gap-space-sm shadow-sm" id="errorRetryBanner">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-error">info</span>
+<span class="font-body-sm text-body-sm font-medium">If extraction times out, click Try Again</span>
+</div>
+<button class="px-space-sm py-1 rounded bg-error text-on-error font-label-ui text-label-ui hover:opacity-90 transition-opacity active:scale-95 flex-shrink-0" id="btnTryAgain" type="button">
+                Try Again
+              </button>
+</div>
+<!-- Gemini Verification Watermark -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
+                Trained on AU 2018-2023 End-Sem Pattern
+              </span>
+<span>Response: 142ms</span>
+</div>
+</div>
+<!-- Tab Content 2: Past Exam Questions (PYQ Analysis) -->
+<div class="hidden p-space-md flex flex-col gap-space-sm" id="contentPyq">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">JNTU-GV &amp; AU PYQ Frequency</h3>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-code-sm text-label-code-sm px-space-xs py-0.5 rounded font-semibold">Last 5 Years</span>
+</div>
+<div class="space-y-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center justify-between font-label-code-sm text-label-code-sm">
+<span class="font-bold text-primary">Q1. Define Semaphore &amp; explain wait() and signal().</span>
+<span class="text-tertiary font-bold">10 Marks • 2023 AU</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Appeared in AU Dec 2023, JNTU-GV May 2022, Nov 2021.</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center justify-between font-label-code-sm text-label-code-sm">
+<span class="font-bold text-primary">Q2. State Peterson's Solution and prove how it satisfies mutual exclusion.</span>
+<span class="text-tertiary font-bold">8 Marks • 2022 AU</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Must draw entry and exit code blocks as shown in Page 12 notes.</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded">
+<div class="flex items-center justify-between font-label-code-sm text-label-code-sm">
+<span class="font-bold text-primary">Q3. Solve the Bounded-Buffer synchronization problem using semaphores.</span>
+<span class="text-tertiary font-bold">12 Marks • 2023 JNTU</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Specify initialization values of mutex, full, and empty semaphores.</p>
+</div>
+</div>
+<button class="w-full py-2 rounded bg-surface-container-high text-primary font-label-ui text-label-ui hover:bg-surface-container-highest transition-colors" type="button">
+              View All 18 Past Exam Questions →
+            </button>
+</div>
+<!-- Tab Content 3: Flashcards -->
+<div class="hidden p-space-md flex flex-col gap-space-sm" id="contentFlashcards">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">Quick Revision Flashcards</h3>
+<span class="font-label-code-sm text-label-code-sm text-outline">Card 1 of 6</span>
+</div>
+<div class="bg-surface-container p-space-lg rounded flex flex-col items-center justify-center text-center gap-space-sm min-h-[160px] cursor-pointer hover:bg-surface-container-high transition-colors shadow-sm" id="flashcardBox">
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase font-semibold">Term: Semaphore</span>
+<p class="font-body-lg text-body-lg text-primary font-semibold" id="flashcardText">
+                “An integer variable accessed strictly through atomic wait() and signal() operations.”
+              </p>
+<span class="font-label-code-sm text-label-code-sm text-outline">Click card to reveal exam tip</span>
+</div>
+<div class="flex items-center justify-between gap-space-xs">
+<button class="flex-1 py-1.5 rounded bg-surface-container-low text-on-surface font-label-ui text-label-ui hover:bg-surface-container transition-colors" id="btnPrevFlashcard" type="button">
+                Previous
+              </button>
+<button class="flex-1 py-1.5 rounded bg-primary-container text-on-primary font-label-ui text-label-ui hover:bg-primary transition-colors" id="btnNextFlashcard" type="button">
+                Next Card
+              </button>
+</div>
+</div>
+</div>
+<!-- Academic Trust / Contributor Metadata Box -->
+<div class="w-full bg-surface-container-low p-space-md rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm font-semibold text-primary">COMMUNITY TRUST SCORE</span>
+<span class="font-label-code-sm text-label-code-sm bg-secondary-fixed text-on-secondary-fixed font-bold px-1.5 py-0.5 rounded">99.4% Verified</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold font-headline-sm text-headline-sm">
+              RS
+            </div>
+<div>
+<p class="font-headline-sm text-headline-sm text-primary">Rahul Sharma</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">B.Tech CSE, Andhra University (Batch 2021-25) • 9.42 CGPA</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Notes cross-checked against JNTU-GV &amp; Andhra University end-semester answer keys. 1,480 Vizag engineering students downloaded this unit this month.
+          </p>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic Tab Switcher for Gemini AI Panel
+  const tabSummaryBtn = document.getElementById('tabSummaryBtn');
+  const tabPyqBtn = document.getElementById('tabPyqBtn');
+  const tabFlashcardsBtn = document.getElementById('tabFlashcardsBtn');
+
+  const contentSummary = document.getElementById('contentSummary');
+  const contentPyq = document.getElementById('contentPyq');
+  const contentFlashcards = document.getElementById('contentFlashcards');
+
+  function setActiveTab(activeBtn, activeContent) {
+    [tabSummaryBtn, tabPyqBtn, tabFlashcardsBtn].forEach(btn => {
+      btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+      btn.classList.add('text-on-surface-variant');
+    });
+    [contentSummary, contentPyq, contentFlashcards].forEach(content => {
+      content.classList.add('hidden');
+    });
+
+    activeBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'font-bold', 'shadow-sm');
+    activeBtn.classList.remove('text-on-surface-variant');
+    activeContent.classList.remove('hidden');
+  }
+
+  if (tabSummaryBtn && tabPyqBtn && tabFlashcardsBtn) {
+    tabSummaryBtn.addEventListener('click', () => setActiveTab(tabSummaryBtn, contentSummary));
+    tabPyqBtn.addEventListener('click', () => setActiveTab(tabPyqBtn, contentPyq));
+    tabFlashcardsBtn.addEventListener('click', () => setActiveTab(tabFlashcardsBtn, contentFlashcards));
+  }
+
+  // Telugu Summary Toggle
+  const btnTeluguToggle = document.getElementById('btnTeluguToggle');
+  const teluguSummaryBanner = document.getElementById('teluguSummaryBanner');
+  const closeTeluguBanner = document.getElementById('closeTeluguBanner');
+  const teluguBtnLabel = document.getElementById('teluguBtnLabel');
+
+  if (btnTeluguToggle && teluguSummaryBanner) {
+    btnTeluguToggle.addEventListener('click', () => {
+      const isHidden = teluguSummaryBanner.classList.contains('hidden');
+      if (isHidden) {
+        teluguSummaryBanner.classList.remove('hidden');
+        teluguBtnLabel.textContent = 'Hide Telugu Summary';
+      } else {
+        teluguSummaryBanner.classList.add('hidden');
+        teluguBtnLabel.textContent = 'Toggle Telugu Summary';
+      }
+    });
+
+    if (closeTeluguBanner) {
+      closeTeluguBanner.addEventListener('click', () => {
+        teluguSummaryBanner.classList.add('hidden');
+        teluguBtnLabel.textContent = 'Toggle Telugu Summary';
+      });
+    }
+  }
+
+  // Copy Key Points Action
+  const btnCopyKeyPoints = document.getElementById('btnCopyKeyPoints');
+  const copyPointsLabel = document.getElementById('copyPointsLabel');
+  if (btnCopyKeyPoints && copyPointsLabel) {
+    btnCopyKeyPoints.addEventListener('click', () => {
+      const pointsText = `CS301 OS Unit 2 Key Concepts:
+1. Core Definition of Semaphore: An integer variable accessed strictly via atomic wait() and signal() operations used to control access to shared concurrent resources.
+2. Critical Section Conditions: Must satisfy Mutual Exclusion (single process inside), Progress (no deadlock on entry), and Bounded Waiting (finite waiting limit).
+3. Peterson's Solution Algorithm Summary: Two-process software synchronization using turn variable and flag[2] boolean array ensuring mutual exclusion without special hardware instructions.`;
+      
+      navigator.clipboard.writeText(pointsText).then(() => {
+        const original = copyPointsLabel.textContent;
+        copyPointsLabel.textContent = 'Copied to Clipboard!';
+        setTimeout(() => {
+          copyPointsLabel.textContent = original;
+        }, 2200);
+      }).catch(() => {
+        copyPointsLabel.textContent = 'Copied!';
+        setTimeout(() => { copyPointsLabel.textContent = 'Copy Key Points'; }, 2000);
+      });
+    });
+  }
+
+  // Zoom Simulation
+  let currentZoom = 100;
+  const zoomLabel = document.getElementById('zoomLabel');
+  const docCanvas = document.getElementById('documentCanvas');
+  const btnZoomIn = document.getElementById('btnZoomIn');
+  const btnZoomOut = document.getElementById('btnZoomOut');
+  const btnFitWidth = document.getElementById('btnFitWidth');
+
+  function updateZoom(val) {
+    currentZoom = Math.min(Math.max(val, 75), 140);
+    if (zoomLabel) zoomLabel.textContent = `${currentZoom}%`;
+    if (docCanvas) {
+      docCanvas.style.transform = `scale(${currentZoom / 100})`;
+    }
+  }
+
+  if (btnZoomIn) btnZoomIn.addEventListener('click', () => updateZoom(currentZoom + 10));
+  if (btnZoomOut) btnZoomOut.addEventListener('click', () => updateZoom(currentZoom - 10));
+  if (btnFitWidth) btnFitWidth.addEventListener('click', () => updateZoom(100));
+
+  // Page Indicator Simulation
+  let currentPage = 12;
+  const totalPages = 48;
+  const pageIndicator = document.getElementById('pageIndicator');
+  const btnPrevPage = document.getElementById('btnPrevPage');
+  const btnNextPage = document.getElementById('btnNextPage');
+
+  if (btnPrevPage && btnNextPage && pageIndicator) {
+    btnPrevPage.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
+      }
+    });
+    btnNextPage.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
+      }
+    });
+  }
+
+  // Re-extract Concepts Animation
+  const btnReExtract = document.getElementById('btnReExtract');
+  if (btnReExtract) {
+    btnReExtract.addEventListener('click', () => {
+      const origContent = btnReExtract.innerHTML;
+      btnReExtract.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Extracting...</span>';
+      setTimeout(() => {
+        btnReExtract.innerHTML = origContent;
+      }, 1200);
+    });
+  }
+
+  // Try Again Retry Banner
+  const btnTryAgain = document.getElementById('btnTryAgain');
+  const errorRetryBanner = document.getElementById('errorRetryBanner');
+  if (btnTryAgain && errorRetryBanner) {
+    btnTryAgain.addEventListener('click', () => {
+      btnTryAgain.textContent = 'Retrying...';
+      setTimeout(() => {
+        btnTryAgain.textContent = 'Success!';
+        setTimeout(() => {
+          btnTryAgain.textContent = 'Try Again';
+        }, 1500);
+      }, 1000);
+    });
+  }
+
+  // Flashcard Deck Simulation
+  const flashcards = [
+    {
+      term: "Term: Semaphore",
+      desc: "“An integer variable accessed strictly through atomic wait() and signal() operations.”",
+      tip: "Exam Tip: Always mention atomic/indivisible execution in the 2-mark answer."
+    },
+    {
+      term: "Term: Mutual Exclusion",
+      desc: "“If process Pi is executing in its critical section, no other processes can execute in their critical sections.”",
+      tip: "Exam Tip: Primary condition of critical section problem. Mandatory for progress."
+    },
+    {
+      term: "Term: Peterson’s Turn Variable",
+      desc: "“int turn determines who has prioritized privilege to enter when both processes express interest simultaneously.”",
+      tip: "Exam Tip: flag[i]=true sets intent; turn=j grants grace to the neighbor."
+    }
+  ];
+
+  let cardIndex = 0;
+  const flashcardText = document.getElementById('flashcardText');
+  const flashcardBox = document.getElementById('flashcardBox');
+  const btnNextFlashcard = document.getElementById('btnNextFlashcard');
+  const btnPrevFlashcard = document.getElementById('btnPrevFlashcard');
+  let showingTip = false;
+
+  function renderCard() {
+    if (!flashcardText) return;
+    showingTip = false;
+    flashcardText.textContent = flashcards[cardIndex].desc;
+  }
+
+  if (flashcardBox) {
+    flashcardBox.addEventListener('click', () => {
+      if (!showingTip) {
+        flashcardText.textContent = flashcards[cardIndex].tip;
+        showingTip = true;
+      } else {
+        flashcardText.textContent = flashcards[cardIndex].desc;
+        showingTip = false;
+      }
+    });
+  }
+
+  if (btnNextFlashcard) {
+    btnNextFlashcard.addEventListener('click', () => {
+      cardIndex = (cardIndex + 1) % flashcards.length;
+      renderCard();
+    });
+  }
+
+  if (btnPrevFlashcard) {
+    btnPrevFlashcard.addEventListener('click', () => {
+      cardIndex = (cardIndex - 1 + flashcards.length) % flashcards.length;
+      renderCard();
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-auto"><div class="max-w-7xl mx-auto px-gutter-sm lg:px-gutter py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-left"><div class="flex flex-col gap-1"><p class="font-label-ui text-label-ui text-on-surface">Vizag B.Tech Academic Repository</p><p class="font-body-sm text-body-sm text-on-surface-variant">Crafted with pride by <span class="font-semibold text-primary">Team CodeForgers</span> for Andhra University, GVPCE, and GITAM.</p></div><div class="flex items-center gap-space-md font-label-code-sm text-label-code-sm"><span class="bg-surface-container-highest px-space-xs py-0.5 rounded text-on-surface">R20 / R22 Verified</span><span class="text-on-surface-variant">Peer Reviewed Archive</span></div></div></footer></body></html>

@@ -1,0 +1,152 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+7 0 obj
+<< /Length 1131 >>
+stream
+BT
+/F1 15 Tf
+45 785 Td
+(GITAM Deemed to be University) Tj
+/F2 10.5 Tf
+0 -18 Td
+(Artificial Intelligence and Machine Learning | Course Code: AI201) Tj
+/F1 13 Tf
+0 -22 Td
+(Artificial Intelligence & Search Strategies - Semester Exam Question Ban) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 730 m 550 730 l S
+BT
+/F2 9.5 Tf
+45 712 Td
+(Syllabus Focus: AI201 High-Yield Semester Exam Question Bank & Model Solutions) Tj
+0 -15 Td
+(Summary: Comprehensive question bank with previous semester university examination questions, m) Tj
+0 -22 Td
+/F1 11 Tf
+(I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 1: Intelligent Agents & State Space Search) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Agent architectures, PEAS definitions, Breadth-First, Uniform Cost, Depth-First, and It) Tj
+0 -12 Td
+0 -6 Td
+/F1 9.5 Tf
+(Unit 2: Informed Heuristic Search & Optimality) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Greedy best-first search, A* search algorithm, Admissible and consistent heuristics, Me) Tj
+0 -12 Td
+0 -6 Td
+0 -12 Td
+/F3 8 Tf
+(NoteVault Institutional Study Repository - Page 1 of 2 - Continuous Course Guide) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+9 0 obj
+<< /Length 1816 >>
+stream
+BT
+/F1 13 Tf
+45 785 Td
+(AI201: Artificial Intelligence & Search Strategies - Advanced Topics & Assessment) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Academic Track: Artificial Intelligence and Machine Learning - Units 3, 4, 5 & Examination Matrix) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 755 m 550 755 l S
+BT
+45 738 Td
+/F1 10.5 Tf
+(II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
+0 -14 Td
+/F1 9 Tf
+(Unit 3: Adversarial Search & Games) Tj
+0 -11 Td
+/F2 8 Tf
+(" Game theory formulation, Minimax decision algorithm, Alpha-Beta pruning optimality, Evaluation functions for) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 4: Constraint Satisfaction Problems CSP) Tj
+0 -11 Td
+/F2 8 Tf
+(" Constraint propagation, AC-3 algorithm, Backtracking with Minimum Remaining Values MRV heuristic, Forward ch) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 5: Knowledge Representation & Logic) Tj
+0 -11 Td
+/F2 8 Tf
+(" Propositional logic, First-order predicate logic, Inference rules, Forward and backward chaining, Resolution) Tj
+0 -12 Td
+0 -6 Td
+/F1 10.5 Tf
+(III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
+/F2 8 Tf
+0 -13 Td
+(1. Prove that A* search is optimal when the heuristic function hn is admissible for tree search and consi) Tj
+0 -11 Td
+(2. Apply Alpha-Beta pruning on a specified 4-ply minimax game tree and show the branches that are pruned.) Tj
+0 -11 Td
+(3. Solve the 4-Queens Constraint Satisfaction Problem using backtracking search and arc-consistency AC-3 ) Tj
+0 -11 Td
+0 -6 Td
+/F1 10.5 Tf
+(IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
+/F2 8 Tf
+0 -12 Td
+(* Stuart Russell, Peter Norvig - Artificial Intelligence: A Modern Approach Pearson 4th Ed) Tj
+0 -11 Td
+(* Elaine Rich, Kevin Knight - Artificial Intelligence McGraw-Hill) Tj
+0 -11 Td
+0 -10 Td
+/F3 8 Tf
+(Authorized NoteVault Educational Document " Verified for Registered University Students) Tj
+ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000131 00000 n 
+0000000206 00000 n 
+0000000276 00000 n 
+0000000354 00000 n 
+0000000500 00000 n 
+0000001683 00000 n 
+0000001829 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+3697
+%%EOF

@@ -1,0 +1,112 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+7 0 obj
+<< /Length 2059 >>
+stream
+BT
+/F1 16 Tf
+45 785 Td
+(Andhra University College of Engineering) Tj
+/F2 10.5 Tf
+0 -20 Td
+(Civil Engineering | Course Code: CE301) Tj
+/F1 13 Tf
+0 -24 Td
+(Structural Analysis - Indeterminate Structural Analysis & Energy Methods Ma) Tj
+0 -10 Td
+ET
+0.75 0.75 0.75 RG
+1.5 w
+45 720 m 550 720 l S
+BT
+/F2 9.5 Tf
+45 700 Td
+(Overview: Deflection of determinate and indeterminate frames, Moment distribution iteration, Ka) Tj
+0 -24 Td
+/F1 11.5 Tf
+(I. UNIT-WISE SYLLABUS BREAKDOWN & HIGH-YIELD TOPICS) Tj
+/F2 9 Tf
+0 -18 Td
+/F1 9.5 Tf
+(Unit 1: Deflection & Strain Energy Methods) Tj
+0 -13 Td
+/F2 9 Tf
+(Castigliano first and second theorems, Unit load method, Virtual work method for trusses and beams) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 2: Slope Deflection Method) Tj
+0 -13 Td
+/F2 9 Tf
+(Derivation of slope deflection equations, Analysis of continuous beams with sinking of supports, Rig) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 3: Moment Distribution Method) Tj
+0 -13 Td
+/F2 9 Tf
+(Stiffness factors, Carry-over factors, Distribution factors, Analysis of continuous beams and frames) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 4: Moving Loads & Influence Line Diagrams) Tj
+0 -13 Td
+/F2 9 Tf
+(Influence lines for bending moments and shear forces in simple beams, Muller-Breslau principle) Tj
+0 -16 Td
+0 -6 Td
+/F1 11.5 Tf
+(II. HIGH-YIELD SEMESTER EXAMINATION QUESTIONS) Tj
+0 -16 Td
+/F2 9 Tf
+(1. Analyze a continuous two-span beam with fixed ends subjected to uniformly distributed loads using Mome) Tj
+0 -14 Td
+(2. Apply Castigliano second theorem to calculate vertical and horizontal deflections at the free end of a) Tj
+0 -14 Td
+(3. Draw the influence line diagram for shear force and bending moment at a quarter-span section of a simp) Tj
+0 -14 Td
+0 -6 Td
+/F1 11.5 Tf
+(III. PRESCRIBED TEXTBOOKS & ACADEMIC REPOSITORIES) Tj
+0 -16 Td
+/F2 9 Tf
+(* C.S. Reddy - Basic Structural Analysis Tata McGraw-Hill 3rd Ed) Tj
+0 -13 Td
+(* R.C. Hibbeler - Structural Analysis Pearson 10th Ed) Tj
+0 -13 Td
+0 -18 Td
+/F3 8.5 Tf
+(Verified NoteVault Institutional Archive - Authorized for Registered Student Use Only) Tj
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000125 00000 n 
+0000000271 00000 n 
+0000000346 00000 n 
+0000000416 00000 n 
+0000000494 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2605
+%%EOF

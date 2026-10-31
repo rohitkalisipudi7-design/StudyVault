@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-error":"#ffffff","on-error-container":"#93000a","error":"#ba1a1a","background":"#fbf9f5","surface-tint":"#566249","tertiary-fixed":"#ffe088","on-background":"#1b1c1a","outline-variant":"#c5c7bd","outline":"#75786f","secondary":"#536437","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#3c4c21","on-surface-variant":"#454840","on-primary-fixed-variant":"#3f4a33","primary":"#18220e","tertiary-container":"#cba72f","on-secondary":"#ffffff","secondary-fixed":"#d6eab1","tertiary-fixed-dim":"#e9c349","inverse-primary":"#becbac","surface-bright":"#fbf9f5","inverse-on-surface":"#f2f0ed","on-secondary-container":"#57683b","on-tertiary-fixed-variant":"#574500","surface-variant":"#e4e2de","on-primary-fixed":"#141e0b","on-secondary-fixed":"#121f00","surface-dim":"#dbdad6","on-primary-container":"#95a285","inverse-surface":"#30312e","on-surface":"#1b1c1a","surface":"#fbf9f5","primary-container":"#2d3822","on-tertiary-fixed":"#241a00","surface-container-lowest":"#ffffff","secondary-fixed-dim":"#bace97","primary-fixed":"#dae7c7","surface-container":"#efeeea","surface-container-high":"#eae8e4","surface-container-low":"#f5f3ef","primary-fixed-dim":"#becbac","surface-container-highest":"#e4e2de","error-container":"#ffdad6","tertiary":"#735c00","on-tertiary-container":"#4e3d00","secondary-container":"#d3e7ae","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-sm":"1rem","margin":"3rem","space-sm":"0.5rem","gutter":"1.5rem","space-2xl":"4rem","space-xl":"2.5rem","margin-sm":"1.25rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem"},"fontFamily":{"headline-lg-mobile":["\"Source Serif 4\""],"headline-lg":["\"Source Serif 4\""],"headline-md":["\"Source Serif 4\""],"headline-sm":["\"Source Serif 4\""],"body-sm":["\"Source Sans 3\""],"body-md":["\"Source Sans 3\""],"label-ui":["\"Source Sans 3\""],"headline-xl":["\"Source Serif 4\""],"body-lg":["\"Source Sans 3\""],"label-code-sm":["JetBrains Mono"],"headline-xl-mobile":["\"Source Serif 4\""],"label-code":["JetBrains Mono"]},"fontSize":{"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"label-ui":["13px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-code-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"500"}],"headline-xl-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-code":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between"><header class="w-full py-space-lg px-space-lg"><div class="max-w-7xl mx-auto flex items-center justify-between"><a class="inline-flex items-center gap-space-xs font-label-ui text-label-ui text-on-surface-variant hover:text-on-surface transition-colors" data-path="academic-catalog" href="#"><span class="material-symbols-outlined text-[18px]">arrow_back</span><span>Return to Library</span></a><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-surface"><span class="material-symbols-outlined text-[20px]">school</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-primary">EDUFIND AI</span></div><div class="font-label-code-sm text-label-code-sm text-on-surface-variant uppercase tracking-wider hidden sm:block">Peer-Reviewed Archive</div></div></header><main class="flex-1 flex items-center justify-center p-space-md bg-background"><div class="flex flex-col w-full">
+<div class="w-full max-w-[960px] mx-auto px-space-sm sm:px-space-md py-space-sm sm:py-space-md">
+<!-- Top Admin Identification Bar -->
+<section class="bg-surface-container-low rounded-xl p-space-md sm:p-space-lg mb-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-code-sm text-label-code-sm tracking-wider uppercase">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+            Authenticated Academic Overseer
+          </div>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">
+            Welcome, Dr. Aris Thorne
+          </h1>
+<div class="inline-flex items-center gap-space-xs bg-secondary-fixed/50 text-on-secondary-fixed-variant px-space-sm py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span class="font-label-ui text-label-ui">Massachusetts Institute of Technology (MIT)</span>
+<span class="font-label-code-sm text-label-code-sm opacity-80">[INST-MIT-01]</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs md:pt-0">
+<button class="inline-flex items-center gap-space-xs bg-surface-container-lowest hover:bg-surface-variant text-primary px-space-md py-2 rounded-lg font-label-ui text-label-ui shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+<span>Switch institution</span>
+</button>
+<button class="inline-flex items-center gap-space-xs bg-surface-variant hover:bg-surface-dim text-on-surface-variant hover:text-on-surface px-space-md py-2 rounded-lg font-label-ui text-label-ui transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">logout</span>
+<span>Log out</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Admin Actions 2x2 Grid -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-widest block">Operational Controls</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Academic Management Suite</h2>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant bg-surface-container px-space-sm py-1 rounded">R22 / ABET Ready</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Card 1: Active Upload -->
+<div class="relative bg-surface-container-lowest p-space-lg rounded-xl shadow-md cursor-pointer transition-all hover:shadow-lg">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">upload_file</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm uppercase px-2 py-0.5 rounded bg-primary text-surface font-medium">Selected</span>
+</div>
+<div class="mt-space-md">
+<h3 class="font-headline-sm text-headline-sm text-primary">Upload Resource</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Add a verified file or canonical syllabus link to this institution's repository.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center text-secondary font-label-ui text-label-ui gap-1">
+<span>Editor active below</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</div>
+</div>
+<!-- Card 2: Manage -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">folder_managed</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">384 Items</span>
+</div>
+<div class="mt-space-md">
+<h3 class="font-headline-sm text-headline-sm text-primary">Manage Resources</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Edit, replace, or archive uploaded curriculum items and syllabus maps.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center text-on-surface-variant font-label-ui text-label-ui gap-1">
+<span>Open catalog inspector</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3: Review Status -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-semibold">14 Pending</span>
+</div>
+<div class="mt-space-md">
+<h3 class="font-headline-sm text-headline-sm text-primary">Review Status</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Audit 14 Pending, 128 Verified, and 3 Outdated items awaiting certification.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center text-on-surface-variant font-label-ui text-label-ui gap-1">
+<span>Enter moderation queue</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4: Add Courses & Units -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">account_tree</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Syllabus Engine</span>
+</div>
+<div class="mt-space-md">
+<h3 class="font-headline-sm text-headline-sm text-primary">Add Courses &amp; Units</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Organise the institution's course list, regulation frameworks (R20/R22), and modules.
+            </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center text-on-surface-variant font-label-ui text-label-ui gap-1">
+<span>Configure curriculum taxonomy</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Compact Resource Upload Form -->
+<section class="bg-surface-container-lowest rounded-xl shadow-md p-space-md sm:p-space-xl mb-space-xl">
+<div class="flex items-center justify-between pb-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">post_add</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Upload Resource Deposition</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complete metadata fields to publish verified curriculum assets</p>
+</div>
+</div>
+<span class="font-label-code-sm text-label-code-sm bg-secondary-fixed text-on-secondary-fixed-variant px-space-sm py-1 rounded">
+          FORM ID: MIT-CUR-904
+        </span>
+</div>
+<form class="space-y-space-lg" id="resourceForm" onsubmit="event.preventDefault(); showSuccessToast();">
+<!-- Institution Lock Field -->
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-1">Assigned Target Institution</label>
+<div class="flex items-center justify-between bg-surface-container px-space-md py-space-sm rounded-lg text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">account_balance</span>
+<span class="font-body-md text-body-md font-semibold text-primary">Massachusetts Institute of Technology</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">[INST-MIT-01]</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Locked to your accreditation scope</span>
+</div>
+</div>
+</div>
+<!-- Department, Course, Unit Triad Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="space-y-1">
+<label class="block font-label-ui text-label-ui text-on-surface-variant" for="deptSelect">Department</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest transition-colors pr-10" id="deptSelect">
+<option selected="">Electrical Engg &amp; Computer Science</option>
+<option>Mechanical Engineering</option>
+<option>Materials Science and Engineering</option>
+<option>Aeronautics &amp; Astronautics</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-[18px] text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-ui text-label-ui text-on-surface-variant" for="courseSelect">Course &amp; Identifier</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest transition-colors pr-10" id="courseSelect">
+<option selected="">6.004 Computation Structures [CS6004]</option>
+<option>6.006 Introduction to Algorithms [CS6006]</option>
+<option>6.033 Computer System Engineering [CS6033]</option>
+<option>6.036 Introduction to Machine Learning [CS6036]</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-[18px] text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-ui text-label-ui text-on-surface-variant" for="unitSelect">Unit / Module Focus</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest transition-colors pr-10" id="unitSelect">
+<option selected="">Unit 3: Cache Memory &amp; Pipelining</option>
+<option>Unit 1: Digital Abstractions &amp; CMOS</option>
+<option>Unit 2: Processor Architecture &amp; ISA</option>
+<option>Unit 4: Virtual Memory &amp; Operating Systems</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-3 top-3 text-[18px] text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Resource Type Selection Pills -->
+<div class="space-y-space-xs">
+<label class="block font-label-ui text-label-ui text-on-surface-variant">Resource Classification Type</label>
+<div class="flex flex-wrap gap-2" id="resourcePills">
+<button class="pill-btn font-label-ui text-label-ui px-space-md py-1.5 rounded-full transition-colors bg-surface-container text-on-surface hover:bg-surface-variant" type="button">
+              Video Lecture
+            </button>
+<button class="pill-btn font-label-ui text-label-ui px-space-md py-1.5 rounded-full transition-colors bg-surface-container text-on-surface hover:bg-surface-variant" type="button">
+              Class Notes
+            </button>
+<button class="pill-btn font-label-ui text-label-ui px-space-md py-1.5 rounded-full transition-colors bg-primary text-on-primary font-semibold shadow-sm" type="button">
+              Revision PDF (Selected)
+            </button>
+<button class="pill-btn font-label-ui text-label-ui px-space-md py-1.5 rounded-full transition-colors bg-surface-container text-on-surface hover:bg-surface-variant" type="button">
+              Past Paper (PYQ)
+            </button>
+<button class="pill-btn font-label-ui text-label-ui px-space-md py-1.5 rounded-full transition-colors bg-surface-container text-on-surface hover:bg-surface-variant" type="button">
+              Textbook Reference
+            </button>
+</div>
+</div>
+<!-- Metadata Row (Title, Description, Semester, Exam Year) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md">
+<div class="md:col-span-2 space-y-1">
+<label class="block font-label-ui text-label-ui text-on-surface-variant" for="resourceTitle">Canonical Resource Title</label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest" id="resourceTitle" type="text" value="Spring 2024 Cache Coherence &amp; Pipelined Execution Notes"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-ui text-label-ui text-on-surface-variant" for="semester">Semester</label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest" id="semester" type="text" value="Semester IV"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-ui text-label-ui text-on-surface-variant" for="examYear">Exam / Academic Year</label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest" id="examYear" type="text" value="2024"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="block font-label-ui text-label-ui text-on-surface-variant" for="desc">Annotated Abstract / Topic Overview</label>
+<textarea class="w-full bg-surface-container-low text-on-surface px-space-md py-2 rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest resize-none" id="desc" rows="2">Comprehensive derivation of 5-stage pipelining hazards, branch prediction benchmarks, and MSI cache snooping protocols according to the 6.004 syllabus.</textarea>
+</div>
+<!-- Scholarly Drag & Drop Upload Zone -->
+<div class="space-y-space-xs">
+<label class="block font-label-ui text-label-ui text-on-surface-variant">Document Ingestion Zone</label>
+<div class="p-space-lg rounded-xl bg-surface-container-low/70 flex flex-col items-center justify-center text-center transition-all hover:bg-surface-container-low">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary mb-1">
+              Drag verified document or browse file system
+            </p>
+<p class="font-label-code-sm text-label-code-sm text-on-surface-variant mb-space-md">
+              Supported Formats: PDF, MP4, DOCX · Max 50MB per document
+            </p>
+<!-- Malware Scanning Active Status -->
+<div class="w-full max-w-md bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-1.5 font-label-code-sm text-label-code-sm">
+<span class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">security</span>
+                  Scanning with EduFind Sentinel...
+                </span>
+<span class="font-semibold text-primary">82% complete</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary transition-all duration-500" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Alternative URL ingestion -->
+<div class="mt-space-md flex items-center gap-space-sm w-full max-w-md">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant uppercase">Or Link:</span>
+<input class="flex-1 bg-surface-container px-space-md py-1.5 rounded font-body-sm text-body-sm text-on-surface focus:bg-surface-container-lowest" placeholder="https://ocw.mit.edu/courses/..." type="url"/>
+</div>
+</div>
+</div>
+<!-- Action Control Buttons -->
+<div class="pt-space-sm flex flex-col sm:flex-row items-center justify-end gap-space-md">
+<button class="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-ui text-label-ui transition-colors" type="button">
+            Save draft
+          </button>
+<button class="w-full sm:w-auto px-space-xl py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-ui text-label-ui shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-xs" type="submit">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Upload to Massachusetts Institute of Technology</span>
+</button>
+</div>
+</form>
+</section>
+<!-- Floating Success Toast Notification (Visible on trigger, simulated preview) -->
+<aside class="bg-primary text-on-primary p-space-md rounded-xl shadow-xl flex items-center justify-between gap-space-md mb-space-xl transition-all" id="successToast">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-surface">
+            Resource uploaded to Massachusetts Institute of Technology — Stored under Unit 3 [CS6004]
+          </p>
+<p class="font-label-code-sm text-label-code-sm text-on-primary-container">
+            Index Hash: #MIT-2024-C3-8994 · Canonical record updated
+          </p>
+</div>
+</div>
+<button class="text-on-primary-container hover:text-surface" onclick="document.getElementById('successToast').style.display='none'" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</aside>
+<!-- Recent Uploads Mini List Section -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md sm:p-space-lg mb-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-code-sm text-label-code-sm text-secondary uppercase tracking-widest block">Audit Trail</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Recent Institutional Uploads</h2>
+</div>
+<a class="font-label-ui text-label-ui text-secondary hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span>View all audit logs</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-ui text-label-ui uppercase tracking-wider">
+<th class="py-2.5 px-space-md rounded-l-lg">Document / Resource Title</th>
+<th class="py-2.5 px-space-md">Course Reference</th>
+<th class="py-2.5 px-space-md">Verification Status</th>
+<th class="py-2.5 px-space-md rounded-r-lg">Timestamp &amp; Auditor</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div>
+<span class="font-headline-sm text-[16px] text-primary block leading-tight">CS301 Process Synchronization Notes</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Revision Syllabus 2024 · 14 Pages</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-code-sm text-label-code-sm text-on-surface-variant">
+                CS301 · Operating Systems
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 bg-secondary-fixed/50 text-on-secondary-fixed-variant px-space-sm py-1 rounded-full font-label-ui text-label-ui">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                  Verified
+                </span>
+</td>
+<td class="py-space-md px-space-md font-label-code-sm text-label-code-sm text-on-surface-variant">
+                Uploaded 2 hrs ago by Dr. Thorne
+              </td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container text-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<div>
+<span class="font-headline-sm text-[16px] text-primary block leading-tight">EE204 Signals &amp; Discrete Systems PYQ 2023</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">End-Term Assessment Paper</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-code-sm text-label-code-sm text-on-surface-variant">
+                EE204 · Signals Analysis
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed px-space-sm py-1 rounded-full font-label-ui text-label-ui">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+                  Pending Review
+                </span>
+</td>
+<td class="py-space-md px-space-md font-label-code-sm text-label-code-sm text-on-surface-variant">
+                Uploaded Yesterday
+              </td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">link</span>
+</div>
+<div>
+<span class="font-headline-sm text-[16px] text-primary block leading-tight">AI802 Reinforcement Learning Syllabus Map</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">Canonical URL Resource</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-label-code-sm text-label-code-sm text-on-surface-variant">
+                AI802 · Advanced Intelligence
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 bg-secondary-fixed/50 text-on-secondary-fixed-variant px-space-sm py-1 rounded-full font-label-ui text-label-ui">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                  Verified
+                </span>
+</td>
+<td class="py-space-md px-space-md font-label-code-sm text-label-code-sm text-on-surface-variant">
+                Uploaded 3 days ago
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Scholarly Trust Seal & Metadata Badge -->
+<div class="text-center py-space-sm text-on-surface-variant font-label-code-sm text-label-code-sm">
+<span>INSTITUTION AUTH TOKEN: ED-MIT-9082-AUTH · ENCRYPTED UNDER TLS 1.3 · R22 COMPLIANT REPOSITORY</span>
+</div>
+</div>
+</div>
+<script>
+  function showSuccessToast() {
+    const toast = document.getElementById('successToast');
+    if (toast) {
+      toast.style.display = 'flex';
+      toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  // Interactive Resource Classification Selection
+  const pills = document.querySelectorAll('.pill-btn');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => {
+        p.className = 'pill-btn font-label-ui text-label-ui px-space-md py-1.5 rounded-full transition-colors bg-surface-container text-on-surface hover:bg-surface-variant';
+      });
+      pill.className = 'pill-btn font-label-ui text-label-ui px-space-md py-1.5 rounded-full transition-colors bg-primary text-on-primary font-semibold shadow-sm';
+    });
+  });
+</script></main><footer class="w-full py-space-md px-space-lg border-t border-outline-variant/20 bg-surface-container-low"><div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-xs text-center"><span class="font-label-ui text-label-ui text-on-surface-variant">EduFind AI · Verified academic resources</span><span class="font-label-code-sm text-label-code-sm text-on-surface-variant uppercase tracking-wider">Scholarly Authentication Gate</span></div></footer></body></html>

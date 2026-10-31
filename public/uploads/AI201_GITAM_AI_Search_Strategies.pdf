@@ -1,0 +1,112 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+7 0 obj
+<< /Length 2121 >>
+stream
+BT
+/F1 16 Tf
+45 785 Td
+(GITAM Deemed to be University) Tj
+/F2 10.5 Tf
+0 -20 Td
+(Artificial Intelligence and Machine Learning | Course Code: AI201) Tj
+/F1 13 Tf
+0 -24 Td
+(Artificial Intelligence & Search Strategies - AI Problem Solving, Heuristic) Tj
+0 -10 Td
+ET
+0.75 0.75 0.75 RG
+1.5 w
+45 720 m 550 720 l S
+BT
+/F2 9.5 Tf
+45 700 Td
+(Overview: Completeness and optimality proofs of A*, admissible heuristics, Alpha-Beta pruning, ) Tj
+0 -24 Td
+/F1 11.5 Tf
+(I. UNIT-WISE SYLLABUS BREAKDOWN & HIGH-YIELD TOPICS) Tj
+/F2 9 Tf
+0 -18 Td
+/F1 9.5 Tf
+(Unit 1: Intelligent Agents & State Space Search) Tj
+0 -13 Td
+/F2 9 Tf
+(Agent architectures, PEAS definitions, Breadth-First, Uniform Cost, Depth-First, and Iterative Deepe) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 2: Informed Heuristic Search) Tj
+0 -13 Td
+/F2 9 Tf
+(Greedy best-first search, A* search algorithm, Admissible and consistent heuristics, Memory-bounded ) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 3: Adversarial Search & Games) Tj
+0 -13 Td
+/F2 9 Tf
+(Game theory formulation, Minimax decision algorithm, Alpha-Beta pruning optimality, Evaluation funct) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 4: Constraint Satisfaction & Logic) Tj
+0 -13 Td
+/F2 9 Tf
+(Constraint propagation, AC-3 algorithm, Backtracking with MRV heuristic, Propositional and First-Ord) Tj
+0 -16 Td
+0 -6 Td
+/F1 11.5 Tf
+(II. HIGH-YIELD SEMESTER EXAMINATION QUESTIONS) Tj
+0 -16 Td
+/F2 9 Tf
+(1. Prove that A* search is optimal when the heuristic function hn is admissible for tree search and consi) Tj
+0 -14 Td
+(2. Apply Alpha-Beta pruning on a specified 4-ply minimax game tree and show the branches that are pruned.) Tj
+0 -14 Td
+(3. Solve the 4-Queens Constraint Satisfaction Problem using backtracking search and arc-consistency AC-3 ) Tj
+0 -14 Td
+0 -6 Td
+/F1 11.5 Tf
+(III. PRESCRIBED TEXTBOOKS & ACADEMIC REPOSITORIES) Tj
+0 -16 Td
+/F2 9 Tf
+(* Stuart Russell, Peter Norvig - Artificial Intelligence: A Modern Approach Pearson 4th Ed) Tj
+0 -13 Td
+(* Elaine Rich, Kevin Knight - Artificial Intelligence McGraw-Hill) Tj
+0 -13 Td
+0 -18 Td
+/F3 8.5 Tf
+(Verified NoteVault Institutional Archive - Authorized for Registered Student Use Only) Tj
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000125 00000 n 
+0000000271 00000 n 
+0000000346 00000 n 
+0000000416 00000 n 
+0000000494 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2667
+%%EOF

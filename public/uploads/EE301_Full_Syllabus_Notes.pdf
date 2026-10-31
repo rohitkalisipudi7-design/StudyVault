@@ -1,0 +1,152 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+7 0 obj
+<< /Length 1107 >>
+stream
+BT
+/F1 15 Tf
+45 785 Td
+(Andhra University College of Engineering) Tj
+/F2 10.5 Tf
+0 -18 Td
+(Electrical and Electronics Engineering | Course Code: EE301) Tj
+/F1 13 Tf
+0 -22 Td
+(Power Systems Engineering - Comprehensive Syllabus Lecture Notes) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 730 m 550 730 l S
+BT
+/F2 9.5 Tf
+45 712 Td
+(Syllabus Focus: EE301 Full Syllabus Comprehensive Lecture Notes Units 1-5) Tj
+0 -15 Td
+(Summary: Complete syllabus lecture notes covering Power Systems Engineering. Includes detailed ) Tj
+0 -22 Td
+/F1 11 Tf
+(I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 1: Transmission Line Parameters) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Inductance and capacitance calculation for 1-phase and 3-phase lines, GMD and GMR formu) Tj
+0 -12 Td
+0 -6 Td
+/F1 9.5 Tf
+(Unit 2: Performance of Transmission Lines) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Short, Medium Nominal T and Pi, and Long lines, ABCD parameter derivation, Surge impeda) Tj
+0 -12 Td
+0 -6 Td
+0 -12 Td
+/F3 8 Tf
+(NoteVault Institutional Study Repository - Page 1 of 2 - Continuous Course Guide) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+9 0 obj
+<< /Length 1763 >>
+stream
+BT
+/F1 13 Tf
+45 785 Td
+(EE301: Power Systems Engineering - Advanced Topics & Assessment) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Academic Track: Electrical and Electronics Engineering - Units 3, 4, 5 & Examination Matrix) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 755 m 550 755 l S
+BT
+45 738 Td
+/F1 10.5 Tf
+(II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
+0 -14 Td
+/F1 9 Tf
+(Unit 3: Symmetrical Fault Analysis) Tj
+0 -11 Td
+/F2 8 Tf
+(" Transients on transmission lines, Short circuit of synchronous machine, Selection of circuit breakers, Curre) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 4: Symmetrical Components & Unsymmetrical Faults) Tj
+0 -11 Td
+/F2 8 Tf
+(" Fortescue theorem, Sequence networks Positive, Negative, Zero, Single Line-to-Ground LG, Line-to-Line LL, an) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 5: Power Flow Analysis) Tj
+0 -11 Td
+/F2 8 Tf
+(" Bus classification Slack, PQ, PV, Formation of Y-bus matrix, Gauss-Seidel and Newton-Raphson power flow algo) Tj
+0 -12 Td
+0 -6 Td
+/F1 10.5 Tf
+(III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
+/F2 8 Tf
+0 -13 Td
+(1. Derive ABCD parameters for a Nominal-Pi transmission line network and draw receiving end phasor diagra) Tj
+0 -11 Td
+(2. Formulate sequence impedance networks for a single line-to-ground LG fault and determine fault subtran) Tj
+0 -11 Td
+(3. Formulate the Newton-Raphson power flow algorithm and derive elements of the Jacobian matrix in polar ) Tj
+0 -11 Td
+0 -6 Td
+/F1 10.5 Tf
+(IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
+/F2 8 Tf
+0 -12 Td
+(* I.J. Nagrath, D.P. Kothari - Modern Power System Analysis McGraw-Hill 4th Ed) Tj
+0 -11 Td
+(* Hadi Saadat - Power System Analysis PSA Publishing) Tj
+0 -11 Td
+0 -10 Td
+/F3 8 Tf
+(Authorized NoteVault Educational Document " Verified for Registered University Students) Tj
+ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000131 00000 n 
+0000000206 00000 n 
+0000000276 00000 n 
+0000000354 00000 n 
+0000000500 00000 n 
+0000001659 00000 n 
+0000001805 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+3620
+%%EOF

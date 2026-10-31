@@ -1,0 +1,152 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+7 0 obj
+<< /Length 1152 >>
+stream
+BT
+/F1 15 Tf
+45 785 Td
+(Gayatri Vidya Parishad College of Engineering Autonomous) Tj
+/F2 10.5 Tf
+0 -18 Td
+(Artificial Intelligence and Machine Learning | Course Code: AI301) Tj
+/F1 13 Tf
+0 -22 Td
+(Machine Learning Foundations - Comprehensive Syllabus Lecture Notes) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 730 m 550 730 l S
+BT
+/F2 9.5 Tf
+45 712 Td
+(Syllabus Focus: AI301 Full Syllabus Comprehensive Lecture Notes Units 1-5) Tj
+0 -15 Td
+(Summary: Complete syllabus lecture notes covering Machine Learning Foundations. Includes detail) Tj
+0 -22 Td
+/F1 11 Tf
+(I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 1: Mathematical Foundations & Linear Regression) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Linear algebra, Maximum Likelihood Estimation MLE, Ordinary least squares, Ridge L2 and) Tj
+0 -12 Td
+0 -6 Td
+/F1 9.5 Tf
+(Unit 2: Classification & Probabilistic Models) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Logistic regression, Sigmoid derivation, Cross-entropy loss, Naive Bayes classifier, Ga) Tj
+0 -12 Td
+0 -6 Td
+0 -12 Td
+/F3 8 Tf
+(NoteVault Institutional Study Repository - Page 1 of 2 - Continuous Course Guide) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+9 0 obj
+<< /Length 1824 >>
+stream
+BT
+/F1 13 Tf
+45 785 Td
+(AI301: Machine Learning Foundations - Advanced Topics & Assessment) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Academic Track: Artificial Intelligence and Machine Learning - Units 3, 4, 5 & Examination Matrix) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 755 m 550 755 l S
+BT
+45 738 Td
+/F1 10.5 Tf
+(II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
+0 -14 Td
+/F1 9 Tf
+(Unit 3: Support Vector Machines & Kernel Methods) Tj
+0 -11 Td
+/F2 8 Tf
+(" Maximum margin classifiers, Primal and Dual optimization, Karush-Kuhn-Tucker KKT conditions, Polynomial and ) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 4: Decision Trees & Ensemble Learning) Tj
+0 -11 Td
+/F2 8 Tf
+(" Information gain, Gini impurity, ID3, C4.5, CART, Bootstrap Aggregation Bagging, Random Forests, AdaBoost, G) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 5: Unsupervised Learning & Dimensionality Reduction) Tj
+0 -11 Td
+/F2 8 Tf
+(" K-Means clustering, Hierarchical clustering, Expectation-Maximization EM, Principal Component Analysis PCA e) Tj
+0 -12 Td
+0 -6 Td
+/F1 10.5 Tf
+(III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
+/F2 8 Tf
+0 -13 Td
+(1. Derive the closed-form normal equation theta = X^T X^-1 X^T y for multiple linear regression and prove) Tj
+0 -11 Td
+(2. Formulate the dual optimization problem for Support Vector Machines with soft margins and explain slac) Tj
+0 -11 Td
+(3. Formulate the mathematical derivation of Principal Component Analysis PCA using sample covariance matr) Tj
+0 -11 Td
+0 -6 Td
+/F1 10.5 Tf
+(IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
+/F2 8 Tf
+0 -12 Td
+(* Christopher M. Bishop - Pattern Recognition and Machine Learning Springer) Tj
+0 -11 Td
+(* Kevin P. Murphy - Machine Learning: A Probabilistic Perspective MIT Press) Tj
+0 -11 Td
+0 -10 Td
+/F3 8 Tf
+(Authorized NoteVault Educational Document " Verified for Registered University Students) Tj
+ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000131 00000 n 
+0000000206 00000 n 
+0000000276 00000 n 
+0000000354 00000 n 
+0000000500 00000 n 
+0000001704 00000 n 
+0000001850 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+3726
+%%EOF

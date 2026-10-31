@@ -1,0 +1,154 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+7 0 obj
+<< /Length 1122 >>
+stream
+BT
+/F1 15 Tf
+45 785 Td
+(Andhra University College of Engineering) Tj
+/F2 10.5 Tf
+0 -18 Td
+(Computer Science and Engineering | Course Code: CS302) Tj
+/F1 13 Tf
+0 -22 Td
+(Database Management Systems - Semester Exam Question Bank & Worked Solut) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 730 m 550 730 l S
+BT
+/F2 9.5 Tf
+45 712 Td
+(Syllabus Focus: CS302 High-Yield Semester Exam Question Bank & Model Solutions) Tj
+0 -15 Td
+(Summary: Comprehensive question bank with previous semester university examination questions, m) Tj
+0 -22 Td
+/F1 11 Tf
+(I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Unit 1: Relational Data Model & Formal Languages) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: Database system architectures, Entity-Relationship ER modeling, Relational algebra oper) Tj
+0 -12 Td
+0 -6 Td
+/F1 9.5 Tf
+(Unit 2: Relational Query Language SQL) Tj
+0 -13 Td
+/F2 8.5 Tf
+(" Syllabus Scope: DDL, DML, DCL commands, Nested subqueries, Correlated subqueries, Aggregate functions, ) Tj
+0 -12 Td
+0 -6 Td
+0 -12 Td
+/F3 8 Tf
+(NoteVault Institutional Study Repository - Page 1 of 2 - Continuous Course Guide) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
+endobj
+9 0 obj
+<< /Length 1951 >>
+stream
+BT
+/F1 13 Tf
+45 785 Td
+(CS302: Database Management Systems - Advanced Topics & Assessment) Tj
+/F2 9.5 Tf
+0 -16 Td
+(Academic Track: Computer Science and Engineering - Units 3, 4, 5 & Examination Matrix) Tj
+0 -8 Td
+ET
+0.7 0.7 0.7 RG
+1.5 w
+45 755 m 550 755 l S
+BT
+45 738 Td
+/F1 10.5 Tf
+(II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
+0 -14 Td
+/F1 9 Tf
+(Unit 3: Relational Database Design & Normalization) Tj
+0 -11 Td
+/F2 8 Tf
+(" Functional dependencies, Armstrong axioms, Attribute closure, 1NF, 2NF, 3NF, Boyce-Codd Normal Form BCNF, 4N) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 4: Transaction Processing & Concurrency Control) Tj
+0 -11 Td
+/F2 8 Tf
+(" ACID properties, Serializability, Conflict vs View serializability, Two-Phase Locking 2PL, Strict 2PL, Times) Tj
+0 -12 Td
+/F1 9 Tf
+(Unit 5: Storage, Indexing & Query Processing) Tj
+0 -11 Td
+/F2 8 Tf
+(" RAID levels, B-Trees, B+ Trees node splitting and deletion, Static and Dynamic hashing, Cost-based query exe) Tj
+0 -12 Td
+0 -6 Td
+/F1 10.5 Tf
+(III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
+/F2 8 Tf
+0 -13 Td
+(1. Given a relation RA, B, C, D, E with functional dependencies, compute candidate keys and decompose R i) Tj
+0 -11 Td
+(2. Prove whether a given concurrent transaction schedule is conflict serializable by constructing its pre) Tj
+0 -11 Td
+(3. Construct a B+ Tree index of order 4 for a sequence of 10 search keys, illustrating all node splitting) Tj
+0 -11 Td
+(4. Explain the Two-Phase Locking 2PL protocol and prove how it guarantees conflict serializable schedules) Tj
+0 -11 Td
+0 -6 Td
+/F1 10.5 Tf
+(IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
+/F2 8 Tf
+0 -12 Td
+(* Raghu Ramakrishnan, Johannes Gehrke - Database Management Systems McGraw-Hill 3rd Ed) Tj
+0 -11 Td
+(* Abraham Silberschatz, Henry F. Korth - Database System Concepts McGraw-Hill 7th Ed) Tj
+0 -11 Td
+0 -10 Td
+/F3 8 Tf
+(Authorized NoteVault Educational Document " Verified for Registered University Students) Tj
+ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000131 00000 n 
+0000000206 00000 n 
+0000000276 00000 n 
+0000000354 00000 n 
+0000000500 00000 n 
+0000001674 00000 n 
+0000001820 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+3823
+%%EOF
