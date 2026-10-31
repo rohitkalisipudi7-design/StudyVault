@@ -4,6 +4,19 @@ import { useState } from 'react';
 import { Loader2, FileText, Link as LinkIcon, Sparkles, Download, ExternalLink, AlertCircle } from 'lucide-react';
 import { ResourceItem } from '@/server/services/resource.service';
 
+function formatFileSize(size: number | string | null | undefined): string {
+  if (!size) return 'File';
+  if (typeof size === 'string') {
+    if (size.endsWith('B') || size.endsWith('KB') || size.endsWith('MB')) return size;
+    const parsed = parseFloat(size);
+    if (!isNaN(parsed)) return formatFileSize(parsed);
+    return size;
+  }
+  if (size < 1024) return `${size} B`;
+  if (size < 1024 * 1024) return `${Math.round(size / 1024)} KB`;
+  return `${(size / (1024 * 1024)).toFixed(1)} MB`;
+}
+
 interface ResourceGridProps {
   resources: ResourceItem[];
   isLoading: boolean;
@@ -145,7 +158,7 @@ export function ResourceGrid({
                 }`}
               >
                 {res.type === 'file' ? <FileText className="w-3 h-3" /> : <LinkIcon className="w-3 h-3" />}
-                <span>{res.type === 'file' ? res.file_size || 'File' : 'Link'}</span>
+                <span>{res.type === 'file' ? formatFileSize(res.file_size) : 'Link'}</span>
               </span>
             </div>
 
