@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1103 >>
+<< /Length 1122 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(GITAM Deemed to be University) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Computer Science and Engineering | Course Code: CS101) Tj
 /F1 13 Tf
 0 -22 Td
-(Object-Oriented Programming & Principles - Laboratory Manual & Practical) Tj
+(Programming for Problem Solving & Object-Oriented Principles - Laborator) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -47,17 +47,17 @@ BT
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Paradigms & Object-Oriented Fundamentals) Tj
+(Unit 1: Imperative Foundations & Memory Layout) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Procedural vs Object-Oriented paradigms, Data encapsulation, Access specifiers, Constru) Tj
+(" Syllabus Scope: Data representations, bitwise operators, execution models, control flow, functions, cal) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Inheritance & Dynamic Binding) Tj
+(Unit 2: Pointers & Dynamic Memory Management) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Single, multiple, and hierarchical inheritance, Diamond problem, Virtual base classes, ) Tj
+(" Syllabus Scope: Pointer arithmetic, arrays, heap allocation malloc/free/new/delete, memory leak prevent) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1812 >>
+<< /Length 1818 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(CS101: Object-Oriented Programming & Principles - Advanced Topics & Assessment) Tj
+(CS101: Programming for Problem Solving & Object-Oriented Principles - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Computer Science and Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,35 +90,35 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Memory Architecture & RAII) Tj
+(Unit 3: Object-Oriented Architecture) Tj
 0 -11 Td
 /F2 8 Tf
-(" Stack vs Heap memory allocation, RAII idiom, Smart pointers unique_ptr, shared_ptr, weak_ptr, Generic templa) Tj
+(" Encapsulation, abstraction, constructor/destructor chains, operator overloading, deep vs shallow copying) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Exception Hierarchies & Stream I/O) Tj
+(Unit 4: Inheritance & Dynamic Polymorphism) Tj
 0 -11 Td
 /F2 8 Tf
-(" Try-catch-throw mechanisms, Custom exception classes, File streams, Serialization, Binary and formatted disk) Tj
+(" Single and multiple inheritance, virtual function tables vtable, abstract base classes, runtime type identif) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: Modern Language Idioms & Design) Tj
+(Unit 5: Templates, Generic Programming & STL) Tj
 0 -11 Td
 /F2 8 Tf
-(" Lambda expressions, Move semantics, Rvalue references, Operator overloading, Thread concurrency primitives) Tj
+(" Function and class templates, Standard Template Library vector, map, set, custom iterators, exception handli) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(Lab 1: Implementation of Classes, Static Members, and Overloaded Constructors in C++) Tj
+(Lab 1: Memory Layout and Pointer Arithmetic Analysis using GDB debugger) Tj
 0 -11 Td
-(Lab 2: Polymorphic Hierarchy Demonstration with Virtual Functions and Abstract Base Classes) Tj
+(Lab 2: Object-Oriented Banking Simulation with Polymorphic Transaction Processing) Tj
 0 -11 Td
-(Lab 3: Custom Generic Stack and Queue Template Classes with Exception Handling) Tj
+(Lab 3: Custom String Class Implementation with Rule of Five and Move Semantics) Tj
 0 -11 Td
-(Lab 4: Binary File Persistence and Object Serialization using C++ File Streams) Tj
+(Lab 4: Generic Dictionary Implementation using Hash Maps with Collision Resolution) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
@@ -145,10 +145,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001655 00000 n 
-0000001801 00000 n 
+0000001674 00000 n 
+0000001820 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3665
+3690
 %%EOF

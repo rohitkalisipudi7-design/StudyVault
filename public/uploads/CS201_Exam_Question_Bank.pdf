@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1137 >>
+<< /Length 1136 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(Gayatri Vidya Parishad College of Engineering Autonomous) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Computer Science and Engineering | Course Code: CS201) Tj
 /F1 13 Tf
 0 -22 Td
-(Data Structures and Algorithms - Semester Exam Question Bank & Worked So) Tj
+(Data Structures and Algorithmic Analysis - Semester Exam Question Bank &) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -47,17 +47,17 @@ BT
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Asymptotic Analysis & Linear Structures) Tj
+(Unit 1: Linear Structures & Computational Complexity) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Big-O, Omega, Theta asymptotic bounds, Master Theorem, Amortized analysis, Stacks, Queu) Tj
+(" Syllabus Scope: Asymptotic notation O, Omega, Theta, dynamic arrays, singly and doubly linked lists, am) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Balanced Search Trees & Heaps) Tj
+(Unit 2: Stacks, Queues & Recursion Mechanics) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Binary Search Trees, AVL rotations, Red-Black tree coloring rules, Binary Heaps, Priori) Tj
+(" Syllabus Scope: Stack evaluation, infix-to-postfix conversion, circular queues, double-ended queues deq) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1783 >>
+<< /Length 1820 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(CS201: Data Structures and Algorithms - Advanced Topics & Assessment) Tj
+(CS201: Data Structures and Algorithmic Analysis - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Computer Science and Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,33 +90,33 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Graph Traversal & Minimum Spanning Trees) Tj
+(Unit 3: Hierarchical Trees & Balanced Search Trees) Tj
 0 -11 Td
 /F2 8 Tf
-(" Graph representations, BFS, DFS, Topological sorting, Prim and Kruskal Minimum Spanning Tree algorithms, Dis) Tj
+(" Binary Search Trees BST, AVL rotations, Red-Black tree properties, B-Trees and B+ Trees node splitting) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Shortest Path Algorithms) Tj
+(Unit 4: Priority Queues, Heaps & Hashing) Tj
 0 -11 Td
 /F2 8 Tf
-(" Dijkstra single-source shortest path with priority queues, Bellman-Ford algorithm for negative weights, Floy) Tj
+(" Binary min/max heaps, heap sort, hash functions, open addressing linear, quadratic, chaining with linked lis) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: Dynamic Programming & Greedy Design) Tj
+(Unit 5: Graph Traversal & Greedy Networks) Tj
 0 -11 Td
 /F2 8 Tf
-(" Optimal substructure, 0/1 Knapsack, Longest Common Subsequence LCS, Matrix Chain Multiplication, Huffman cod) Tj
+(" Adjacency list/matrix, Breadth-First Search BFS, Depth-First Search DFS, Dijkstra shortest path, Prim and Kr) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(1. Solve the recurrence relation Tn = 3Tn/2 + On log n using the Master Theorem.) Tj
+(1. Prove the time complexity of QuickSort average-case On log n versus worst-case On^2, explaining pivot ) Tj
 0 -11 Td
-(2. Insert the keys [15, 20, 24, 10, 13, 7, 30, 36] into an empty AVL tree and show all intermediate rotat) Tj
+(2. Construct an AVL tree by sequentially inserting elements [15, 20, 24, 10, 13, 7, 30, 36, 25], illustra) Tj
 0 -11 Td
-(3. Formulate the dynamic programming recurrence and bottom-up matrix construction for the 0/1 Knapsack pr) Tj
+(3. Apply Dijkstra Single Source Shortest Path algorithm on a directed weighted graph with 6 vertices, sho) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
@@ -143,10 +143,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001689 00000 n 
-0000001835 00000 n 
+0000001688 00000 n 
+0000001834 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3670
+3706
 %%EOF

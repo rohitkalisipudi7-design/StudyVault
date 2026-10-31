@@ -18,7 +18,10 @@ export function getAuthenticatedUser(req: NextRequest): AuthUser {
   const authHeader = req.headers.get('authorization');
   const bearerToken = authHeader?.startsWith('Bearer ') ? authHeader.slice(7) : null;
 
-  const token = cookieToken || bearerToken;
+  // 3. Try URL Query Param (?token=...) for direct downloads/media
+  const queryToken = req.nextUrl?.searchParams?.get('token') || null;
+
+  const token = cookieToken || bearerToken || queryToken;
 
   if (!token) {
     throw new AuthError('Authentication required. Please log in.', 401);

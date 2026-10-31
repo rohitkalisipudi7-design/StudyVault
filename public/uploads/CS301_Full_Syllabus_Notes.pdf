@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1112 >>
+<< /Length 1131 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(Andhra University College of Engineering) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Computer Science and Engineering | Course Code: CS301) Tj
 /F1 13 Tf
 0 -22 Td
-(Operating Systems - Comprehensive Syllabus Lecture Notes) Tj
+(Operating Systems & System Programming - Comprehensive Syllabus Lecture ) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -41,23 +41,23 @@ BT
 45 712 Td
 (Syllabus Focus: CS301 Full Syllabus Comprehensive Lecture Notes Units 1-5) Tj
 0 -15 Td
-(Summary: Complete syllabus lecture notes covering Operating Systems. Includes detailed unit-by-) Tj
+(Summary: Complete syllabus lecture notes covering Operating Systems & System Programming. Inclu) Tj
 0 -22 Td
 /F1 11 Tf
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Process Management & CPU Scheduling) Tj
+(Unit 1: Kernel Architecture & Process Scheduling) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Process states, Process Control Block PCB, Context switching overhead, Scheduling algor) Tj
+(" Syllabus Scope: Microkernel vs Monolithic, process states, PCB, context switching, CPU scheduling: FCFS) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Inter-Process Communication & Synchronization) Tj
+(Unit 2: Concurrency & Synchronization Primitives) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Critical section problem, Peterson solution, Hardware test-and-set, Counting and binary) Tj
+(" Syllabus Scope: Critical section problem, Peterson algorithm, hardware test-and-set, semaphores, classi) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1987 >>
+<< /Length 1800 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(CS301: Operating Systems - Advanced Topics & Assessment) Tj
+(CS301: Operating Systems & System Programming - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Computer Science and Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,35 +90,33 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Deadlocks & Mitigation Strategies) Tj
+(Unit 3: Deadlock Characterization & Prevention) Tj
 0 -11 Td
 /F2 8 Tf
-(" Deadlock conditions, Resource allocation graphs, Bankers algorithm for safety and avoidance, Detection algor) Tj
+(" Necessary conditions, resource allocation graphs, Banker algorithm for safety and avoidance, detection and r) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Memory Management & Demand Paging) Tj
+(Unit 4: Memory Hierarchies & Virtual Memory) Tj
 0 -11 Td
 /F2 8 Tf
-(" Logical vs physical address space, Contiguous allocation, Paging, Inverted page tables, Segmentation, Demand) Tj
+(" Address translation, paging, segmentation, TLB, demand paging, page replacement FIFO, LRU, Optimal, thrashin) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: File Systems & Storage Subsystems) Tj
+(Unit 5: Storage Subsystems & File Layouts) Tj
 0 -11 Td
 /F2 8 Tf
-(" File concepts, Directory structures, Inode allocation methods contiguous, linked, indexed, Free-space manage) Tj
+(" Inode structures, contiguous/linked/indexed file allocation, free-space bitmaps, disk scheduling SSTF, SCAN,) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(1. Derive the average turnaround time and waiting time for SJF and Round Robin CPU scheduling on a specif) Tj
+(1. Derive the average turnaround and waiting times for Round Robin quantum=4ms on a given 5-process burst) Tj
 0 -11 Td
-(2. Prove the correctness of Peterson solution for two-process mutual exclusion and verify all three synch) Tj
+(2. Prove how the Banker Algorithm guarantees deadlock avoidance by verifying safe state conditions on an ) Tj
 0 -11 Td
-(3. Execute the Bankers Algorithm safety routine on a multi-resource allocation matrix and determine wheth) Tj
-0 -11 Td
-(4. Explain demand paging, page fault service routine, and calculate Effective Access Time EAT under varyi) Tj
+(3. Calculate the Effective Memory Access Time EMAT given TLB hit ratio 95%, TLB lookup 10ns, and main mem) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
@@ -128,8 +126,6 @@ BT
 (* Abraham Silberschatz, Peter B. Galvin - Operating System Concepts Wiley 10th Ed) Tj
 0 -11 Td
 (* Andrew S. Tanenbaum - Modern Operating Systems Pearson 4th Ed) Tj
-0 -11 Td
-(* William Stallings - Operating Systems: Internals and Design Principles Pearson) Tj
 0 -11 Td
 0 -10 Td
 /F3 8 Tf
@@ -147,10 +143,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001664 00000 n 
-0000001810 00000 n 
+0000001683 00000 n 
+0000001829 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3849
+3681
 %%EOF

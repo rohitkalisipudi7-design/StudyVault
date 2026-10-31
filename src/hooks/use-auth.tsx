@@ -70,6 +70,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       throw new Error(data.error || 'Authentication failed');
     }
 
+    if (typeof window !== 'undefined' && data.token) {
+      localStorage.setItem('auth_token', data.token);
+    }
+
     setUser(data.user);
     return data.user;
   };
@@ -78,6 +82,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     try {
       await fetch('/api/auth/logout', { method: 'POST' });
     } finally {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('auth_token');
+      }
       setUser(null);
       window.location.href = '/login';
     }

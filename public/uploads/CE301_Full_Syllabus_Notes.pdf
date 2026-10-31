@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1071 >>
+<< /Length 1119 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(Andhra University College of Engineering) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Civil Engineering | Course Code: CE301) Tj
 /F1 13 Tf
 0 -22 Td
-(Structural Analysis - Comprehensive Syllabus Lecture Notes) Tj
+(Structural Analysis & Indeterminate Systems - Comprehensive Syllabus Lec) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -41,23 +41,23 @@ BT
 45 712 Td
 (Syllabus Focus: CE301 Full Syllabus Comprehensive Lecture Notes Units 1-5) Tj
 0 -15 Td
-(Summary: Complete syllabus lecture notes covering Structural Analysis. Includes detailed unit-b) Tj
+(Summary: Complete syllabus lecture notes covering Structural Analysis & Indeterminate Systems. ) Tj
 0 -22 Td
 /F1 11 Tf
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Energy Theorems & Deflections) Tj
+(Unit 1: Structural Indeterminacy & Energy Methods) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Castigliano first and second theorems, Unit load method, Strain energy in bending and t) Tj
+(" Syllabus Scope: Static and kinematic indeterminacy of beams, frames, and trusses, strain energy, Castig) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Slope Deflection Method) Tj
+(Unit 2: Slope-Deflection Method for Beams & Frames) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Derivation of slope deflection equations, Analysis of continuous beams with support set) Tj
+(" Syllabus Scope: Slope-deflection equations, continuous beams with support settlements, non-sway and swa) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1722 >>
+<< /Length 1758 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(CE301: Structural Analysis - Advanced Topics & Assessment) Tj
+(CE301: Structural Analysis & Indeterminate Systems - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Civil Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,42 +90,42 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Moment Distribution Method) Tj
+(Unit 3: Moment Distribution Method Hardy Cross) Tj
 0 -11 Td
 /F2 8 Tf
-(" Stiffness and carry-over factors, Distribution factors, Analysis of continuous beams and portal frames witho) Tj
+(" Stiffness factors, carry-over factors, distribution factors, continuous beams with sinking supports, single-) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Moving Loads & Influence Line Diagrams) Tj
+(Unit 4: Influence Lines for Moving Loads) Tj
 0 -11 Td
 /F2 8 Tf
-(" Influence lines for reaction, shear force, and bending moment in simply supported girders, Muller-Breslau pr) Tj
+(" Influence line diagrams ILD for reactions, shear force, and bending moments in determinate beams, Muller-Bre) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: Arches & Cable Structures) Tj
+(Unit 5: Matrix Methods of Structural Analysis) Tj
 0 -11 Td
 /F2 8 Tf
-(" Three-hinged and two-hinged circular and parabolic arches, Normal thrust, Radial shear, Bending moment diagr) Tj
+(" Flexibility matrix method force method, Stiffness matrix method displacement method, element coordinate tran) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(1. Analyze a continuous two-span beam with fixed ends subjected to uniformly distributed loads using Mome) Tj
+(1. Analyze a continuous beam ABC having a settlement of 5 mm at support B using the Slope-Deflection Meth) Tj
 0 -11 Td
-(2. Apply Castigliano second theorem to calculate vertical deflection at the loaded node of an indetermina) Tj
+(2. Apply the Moment Distribution Method to analyze a two-span continuous beam with fixed end supports and) Tj
 0 -11 Td
-(3. Draw the influence line diagram for bending moment at the center of a 20-meter span girder and find ma) Tj
+(3. State Muller-Breslaus Principle and draw the Influence Line Diagram ILD for the bending moment at mid-) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
 (IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
 /F2 8 Tf
 0 -12 Td
-(* C.S. Reddy - Basic Structural Analysis Tata McGraw-Hill 3rd Ed) Tj
+(* C.S. Reddy - Basic Structural Analysis McGraw-Hill 3rd Ed) Tj
 0 -11 Td
-(* R.C. Hibbeler - Structural Analysis Pearson 10th Ed) Tj
+(* R.C. Hibbeler - Structural Analysis Pearson 9th Ed) Tj
 0 -11 Td
 0 -10 Td
 /F3 8 Tf
@@ -143,10 +143,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001623 00000 n 
-0000001769 00000 n 
+0000001671 00000 n 
+0000001817 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3543
+3627
 %%EOF

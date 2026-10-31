@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1111 >>
+<< /Length 1117 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(Andhra University College of Engineering) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Computer Science and Engineering | Course Code: CS302) Tj
 /F1 13 Tf
 0 -22 Td
-(Database Management Systems - Comprehensive Syllabus Lecture Notes) Tj
+(Database Management Systems & Distributed Transactions - Comprehensive S) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -41,23 +41,23 @@ BT
 45 712 Td
 (Syllabus Focus: CS302 Full Syllabus Comprehensive Lecture Notes Units 1-5) Tj
 0 -15 Td
-(Summary: Complete syllabus lecture notes covering Database Management Systems. Includes detaile) Tj
+(Summary: Complete syllabus lecture notes covering Database Management Systems & Distributed Tra) Tj
 0 -22 Td
 /F1 11 Tf
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Relational Data Model & Formal Languages) Tj
+(Unit 1: Relational Formalisms & Schema Design) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Database system architectures, Entity-Relationship ER modeling, Relational algebra oper) Tj
+(" Syllabus Scope: Relational algebra operators, tuple relational calculus, ER-to-relational schema mappin) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Relational Query Language SQL) Tj
+(Unit 2: Structured Query Language SQL) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: DDL, DML, DCL commands, Nested subqueries, Correlated subqueries, Aggregate functions, ) Tj
+(" Syllabus Scope: Complex joins, correlated subqueries, aggregate grouping, window functions, views, trig) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1951 >>
+<< /Length 1850 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(CS302: Database Management Systems - Advanced Topics & Assessment) Tj
+(CS302: Database Management Systems & Distributed Transactions - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Computer Science and Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,35 +90,33 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Relational Database Design & Normalization) Tj
+(Unit 3: Functional Dependencies & Normalization) Tj
 0 -11 Td
 /F2 8 Tf
-(" Functional dependencies, Armstrong axioms, Attribute closure, 1NF, 2NF, 3NF, Boyce-Codd Normal Form BCNF, 4N) Tj
+(" Armstrong axioms, canonical cover, attribute closure, 1NF, 2NF, 3NF, BCNF, lossless join, dependency preserv) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Transaction Processing & Concurrency Control) Tj
+(Unit 4: Transaction ACID & Concurrency Control) Tj
 0 -11 Td
 /F2 8 Tf
-(" ACID properties, Serializability, Conflict vs View serializability, Two-Phase Locking 2PL, Strict 2PL, Times) Tj
+(" Serializability, conflict graph testing, Two-Phase Locking 2PL, Strict 2PL, timestamp ordering, deadlock det) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: Storage, Indexing & Query Processing) Tj
+(Unit 5: Storage Engines, Indexing & Query Tuning) Tj
 0 -11 Td
 /F2 8 Tf
-(" RAID levels, B-Trees, B+ Trees node splitting and deletion, Static and Dynamic hashing, Cost-based query exe) Tj
+(" B+ Tree index insertion and deletion, hash indexes, query execution trees, cost-based optimizer estimates) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(1. Given a relation RA, B, C, D, E with functional dependencies, compute candidate keys and decompose R i) Tj
+(1. Given relation RA,B,C,D,E and FDs {A->B, BC->D, D->E, E->A}, compute all candidate keys and decompose ) Tj
 0 -11 Td
-(2. Prove whether a given concurrent transaction schedule is conflict serializable by constructing its pre) Tj
+(2. Construct a precedence graph for a concurrent transaction schedule of 4 transactions to determine conf) Tj
 0 -11 Td
-(3. Construct a B+ Tree index of order 4 for a sequence of 10 search keys, illustrating all node splitting) Tj
-0 -11 Td
-(4. Explain the Two-Phase Locking 2PL protocol and prove how it guarantees conflict serializable schedules) Tj
+(3. Trace the node splitting operations of a B+ Tree of order 3 when inserting keys [10, 20, 30, 40, 50, 6) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
@@ -145,10 +143,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001663 00000 n 
-0000001809 00000 n 
+0000001669 00000 n 
+0000001815 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3812
+3717
 %%EOF

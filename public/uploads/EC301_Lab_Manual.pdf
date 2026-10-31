@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1114 >>
+<< /Length 1132 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(Andhra University College of Engineering) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Electronics and Communication Engineering | Course Code: EC301) Tj
 /F1 13 Tf
 0 -22 Td
-(Digital Signal Processing - Laboratory Manual & Practical Guide) Tj
+(Digital Signal Processing & Filter Design - Laboratory Manual & Practica) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -50,14 +50,14 @@ BT
 (Unit 1: Discrete Fourier Transform & FFT) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Properties of DFT, Circular convolution, Radix-2 Decimation-In-Time DIT and Decimation-) Tj
+(" Syllabus Scope: DFT properties, circular convolution vs linear convolution, Decimation-In-Time DIT and ) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Infinite Impulse Response IIR Filters) Tj
+(Unit 2: Infinite Impulse Response IIR Filter Design) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Analog filter approximations Butterworth, Chebyshev, Bilinear transformation method, Im) Tj
+(" Syllabus Scope: Analog Butterworth and Chebyshev filter approximations, Bilinear Transformation, Impuls) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1850 >>
+<< /Length 1892 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(EC301: Digital Signal Processing - Advanced Topics & Assessment) Tj
+(EC301: Digital Signal Processing & Filter Design - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Electronics and Communication Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,44 +90,44 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Finite Impulse Response FIR Filters) Tj
+(Unit 3: Finite Impulse Response FIR Filter Design) Tj
 0 -11 Td
 /F2 8 Tf
-(" Linear phase FIR filter characteristics, Symmetric and antisymmetric impulse response, Windowing techniques ) Tj
+(" Linear phase conditions, symmetric/antisymmetric impulse responses, windowing methods Rectangular, Hamming, ) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Realization of Digital Filters) Tj
+(Unit 4: Digital Filter Realization Structures) Tj
 0 -11 Td
 /F2 8 Tf
-(" Direct Form I, Direct Form II, Cascade, Parallel, and Lattice ladder realizations for IIR and FIR filter arc) Tj
+(" Direct Form I, Direct Form II, Cascade, Parallel, and Lattice ladder realizations for IIR and FIR architectu) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: Finite Word Length Effects) Tj
+(Unit 5: Finite Word Length Effects in DSP) Tj
 0 -11 Td
 /F2 8 Tf
-(" Fixed-point and floating-point representations, ADC quantization noise, Coefficient quantization, Round-off ) Tj
+(" Fixed vs floating-point representations, ADC quantization noise, coefficient round-off error, limit cycle os) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(Lab 1: Computation of N-Point DFT and IDFT and Verification of Circular Convolution in MATLAB/Python) Tj
+(Lab 1: Computation of N-Point DFT and Verification of Circular Convolution in Python) Tj
 0 -11 Td
-(Lab 2: Implementation of Radix-2 Decimation-in-Time FFT Algorithm) Tj
+(Lab 2: Implementation of Radix-2 DIT-FFT Butterfly Algorithm from Scratch) Tj
 0 -11 Td
-(Lab 3: Design and Magnitude Response Verification of IIR Butterworth Low-Pass and High-Pass Filters) Tj
+(Lab 3: Design and Magnitude Response Verification of IIR Low-Pass Butterworth Filter) Tj
 0 -11 Td
-(Lab 4: Design of Linear Phase FIR Filters using Rectangular and Hamming Windows) Tj
+(Lab 4: Design and Spectral Analysis of Linear Phase FIR Filter using Windowing Methods) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
 (IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
 /F2 8 Tf
 0 -12 Td
-(* Alan V. Oppenheim, Ronald W. Schafer - Discrete-Time Signal Processing Pearson 3rd Ed) Tj
+(* John G. Proakis, Dimitris G. Manolakis - Digital Signal Processing: Principles, Algorithms, and Applica) Tj
 0 -11 Td
-(* John G. Proakis, Dimitris G. Manolakis - Digital Signal Processing Pearson 4th Ed) Tj
+(* Alan V. Oppenheim, Ronald W. Schafer - Discrete-Time Signal Processing Pearson 3rd Ed) Tj
 0 -11 Td
 0 -10 Td
 /F3 8 Tf
@@ -145,10 +145,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001666 00000 n 
-0000001812 00000 n 
+0000001684 00000 n 
+0000001830 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3714
+3774
 %%EOF

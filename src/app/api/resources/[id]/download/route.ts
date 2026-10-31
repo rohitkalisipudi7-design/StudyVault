@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'node:fs';
 import path from 'node:path';
-import { getAuthenticatedUser, createErrorResponse } from '@/server/middleware/guard';
+import { getAuthenticatedUser, createErrorResponse, AuthError } from '@/server/middleware/guard';
 import { ResourceService } from '@/server/services/resource.service';
 import { buildAcademicPdf } from '@/server/utils/pdf-generator';
+import { getDb } from '@/server/db';
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
@@ -14,7 +15,20 @@ export async function GET(
 ) {
   try {
     const { id } = await params;
-    const user = getAuthenticatedUser(req);
+
+    let user;
+    try {
+      user = getAuthenticatedUser(req);
+    } catch (authErr: any) {
+      // If browser navigation without auth, redirect smoothly to login
+      const acceptHeader = req.headers.get('accept') || '';
+      if (acceptHeader.includes('text/html')) {
+        const loginUrl = new URL('/login', req.url);
+        loginUrl.searchParams.set('redirect', `/api/resources/${id}/download`);
+        return NextResponse.redirect(loginUrl);
+      }
+      throw authErr;
+    }
 
     // Enforce multi-tenant institution scoping (returns 403 if cross-college)
     const resource = ResourceService.getResourceById(id, user.institutionId);
@@ -55,8 +69,8 @@ export async function GET(
       }
     }
 
-    // If file does not exist or was a corrupted/dummy placeholder, generate a clean valid PDF
-    if (!fileBuffer) {
+    // 3. Fallback: Always generate a valid high-yield academic PDF dynamically
+    if (!fileBuffer || fileBuffer.length < 300) {
       fileBuffer = buildAcademicPdf({
         institution: user.institutionName || 'NoteVault Academic Repository',
         branch: resource.branch_name || resource.branch_code || 'Engineering Department',
@@ -66,7 +80,13 @@ export async function GET(
         description: resource.description,
       });
 
-      // Also persist to public/uploads so future direct requests are fast
+      // Persist to database BLOB storage for immediate subsequent requests
+      try {
+        const db = getDb();
+        db.prepare('UPDATE resources SET file_data = ? WHERE id = ?').run(fileBuffer, id);
+      } catch {}
+
+      // Try persisting to public/uploads on disk
       try {
         const uploadDir = path.resolve(process.cwd(), 'public', 'uploads');
         if (!fs.existsSync(uploadDir)) {
@@ -78,13 +98,16 @@ export async function GET(
       }
     }
 
+    const safeName = fileName.replace(/[^\w\s.-]/g, '_');
+    const encodedName = encodeURIComponent(fileName);
+
     return new NextResponse(fileBuffer, {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': `attachment; filename="${encodeURIComponent(fileName)}"`,
+        'Content-Disposition': `attachment; filename="${safeName}"; filename*=UTF-8''${encodedName}`,
         'Content-Length': fileBuffer.length.toString(),
-        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800',
       },
     });
   } catch (error: any) {

@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1119 >>
+<< /Length 1120 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(GITAM Deemed to be University) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Electronics and Communication Engineering | Course Code: EC305) Tj
 /F1 13 Tf
 0 -22 Td
-(Electromagnetic Waves & Transmission Lines - Comprehensive Syllabus Lect) Tj
+(Communication Systems & Modulation Protocols - Comprehensive Syllabus Le) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -41,23 +41,23 @@ BT
 45 712 Td
 (Syllabus Focus: EC305 Full Syllabus Comprehensive Lecture Notes Units 1-5) Tj
 0 -15 Td
-(Summary: Complete syllabus lecture notes covering Electromagnetic Waves & Transmission Lines. I) Tj
+(Summary: Complete syllabus lecture notes covering Communication Systems & Modulation Protocols.) Tj
 0 -22 Td
 /F1 11 Tf
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Maxwell Equations & Electromagnetic Statics) Tj
+(Unit 1: Amplitude Modulation & Detection) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Gauss, Faraday, and Ampere laws in differential and integral forms, Displacement curren) Tj
+(" Syllabus Scope: Double Sideband Full Carrier DSB-FC, DSB-SC, Single Sideband SSB-SC, Vestigial Sideband) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Uniform Plane Wave Propagation) Tj
+(Unit 2: Frequency & Phase Modulation) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Helmholtz wave equation, Propagation constant, Attenuation and phase constants, Intrins) Tj
+(" Syllabus Scope: Narrowband and wideband FM, Carsons bandwidth rule, indirect FM Armstrong method, phase) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1825 >>
+<< /Length 1829 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(EC305: Electromagnetic Waves & Transmission Lines - Advanced Topics & Assessment) Tj
+(EC305: Communication Systems & Modulation Protocols - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Electronics and Communication Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,42 +90,42 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Reflection & Refraction at Media Boundaries) Tj
+(Unit 3: Pulse Modulation & Baseband Transmission) Tj
 0 -11 Td
 /F2 8 Tf
-(" Normal and oblique incidence, Snell law, Fresnel reflection and transmission coefficients, Brewster angle, T) Tj
+(" Sampling theorem, PAM, PWM, PPM, Pulse Code Modulation PCM, uniform and non-uniform quantization A-law, mu-l) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Transmission Line Equations) Tj
+(Unit 4: Digital Bandpass Modulation Schemes) Tj
 0 -11 Td
 /F2 8 Tf
-(" Transmission line differential equations, Characteristic impedance Z0, Propagation constant, Reflection coef) Tj
+(" Geometric signal representation, Binary Phase Shift Keying BPSK, QPSK, M-ary QAM, constellation diagrams, ma) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: Smith Chart & Impedance Matching) Tj
+(Unit 5: Noise Analysis & Information Theory) Tj
 0 -11 Td
 /F2 8 Tf
-(" Smith chart coordinate geometry, Input impedance computation, Quarter-wave transformers, Single and double s) Tj
+(" Thermal noise, SNR in AM/FM receivers, Shannon channel capacity theorem, entropy, source coding Huffman, Sha) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(1. Derive the wave equation in a conducting medium from Maxwell equations and obtain expressions for alph) Tj
+(1. Derive the power efficiency equation for conventional Amplitude Modulation AM and calculate efficiency) Tj
 0 -11 Td
-(2. Using a Smith chart, design a single-stub parallel tuner to match a load of Z_L = 100 + j80 ohms to a ) Tj
+(2. State and prove Carsons rule for the transmission bandwidth of a frequency modulated FM wave with modu) Tj
 0 -11 Td
-(3. State and prove Poynting Theorem for electromagnetic energy conservation in a finite volume.) Tj
+(3. Derive the bit error rate BER expression for Binary Phase Shift Keying BPSK over an Additive White Gau) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
 (IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
 /F2 8 Tf
 0 -12 Td
-(* Matthew N.O. Sadiku - Elements of Electromagnetics Oxford University Press 7th Ed) Tj
+(* Simon Haykin - Communication Systems Wiley 4th Ed) Tj
 0 -11 Td
-(* E.C. Jordan, K.G. Balmain - Electromagnetic Waves and Radiating Systems Prentice Hall) Tj
+(* B.P. Lathi, Zhi Ding - Modern Digital and Analog Communication Systems Oxford University Press 4th Ed) Tj
 0 -11 Td
 0 -10 Td
 /F3 8 Tf
@@ -143,10 +143,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001671 00000 n 
-0000001817 00000 n 
+0000001672 00000 n 
+0000001818 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3694
+3699
 %%EOF

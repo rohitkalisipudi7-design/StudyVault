@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1130 >>
+<< /Length 1126 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(Gayatri Vidya Parishad College of Engineering Autonomous) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Electrical and Electronics Engineering | Course Code: EE201) Tj
 /F1 13 Tf
 0 -22 Td
-(Electrical Circuit Analysis - Comprehensive Syllabus Lecture Notes) Tj
+(Electric Circuit Analysis & Network Theorems - Comprehensive Syllabus Le) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -41,23 +41,23 @@ BT
 45 712 Td
 (Syllabus Focus: EE201 Full Syllabus Comprehensive Lecture Notes Units 1-5) Tj
 0 -15 Td
-(Summary: Complete syllabus lecture notes covering Electrical Circuit Analysis. Includes detaile) Tj
+(Summary: Complete syllabus lecture notes covering Electric Circuit Analysis & Network Theorems.) Tj
 0 -22 Td
 /F1 11 Tf
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Network Theorems DC & AC) Tj
+(Unit 1: Circuit Topologies & Systematic Analysis) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Thevenin, Norton, Superposition, Maximum Power Transfer, Reciprocity, and Millman theor) Tj
+(" Syllabus Scope: KCL, KVL, graph theory incidence, tie-set, cut-set matrices, nodal and mesh analysis wi) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Transient Response of First-Order Circuits) Tj
+(Unit 2: Network Theorems in DC and AC) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Natural and forced response of RL and RC circuits, Differential equations, Time constan) Tj
+(" Syllabus Scope: Superposition theorem, Thevenin theorem, Norton theorem, Maximum Power Transfer theorem) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1832 >>
+<< /Length 1853 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(EE201: Electrical Circuit Analysis - Advanced Topics & Assessment) Tj
+(EE201: Electric Circuit Analysis & Network Theorems - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Electrical and Electronics Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,33 +90,33 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Transient Response of Second-Order RLC Circuits) Tj
+(Unit 3: Transient Response of Dynamic Circuits) Tj
 0 -11 Td
 /F2 8 Tf
-(" Series and parallel RLC transient response, Overdamped, critically damped, and underdamped response regimes,) Tj
+(" First-order RL and RC circuits, step and impulse response, second-order RLC circuits, overdamped/critically ) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Laplace Transform in Circuit Analysis) Tj
+(Unit 4: Sinusoidal Steady-State & Resonant Circuits) Tj
 0 -11 Td
 /F2 8 Tf
-(" Transformed circuit impedance models of R, L, and C, Initial and final value theorems, Complex frequency s-p) Tj
+(" Phasor concepts, impedance and admittance, series and parallel resonance, quality factor Q, bandwidth, 3-pha) Tj
 0 -12 Td
 /F1 9 Tf
 (Unit 5: Two-Port Network Parameters) Tj
 0 -11 Td
 /F2 8 Tf
-(" Impedance Z, Admittance Y, Hybrid H, and Transmission ABCD parameters, Interconnection of two-port networks ) Tj
+(" Impedance Z, Admittance Y, Hybrid h, Transmission ABCD parameters, interrelationships, reciprocal and symmet) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(1. Find the Thevenin equivalent circuit across terminals containing both independent and voltage-controll) Tj
+(1. Find the Thevenin equivalent circuit across terminals A-B for a bridged-T network with dependent volta) Tj
 0 -11 Td
-(2. Solve for the transient current it in an underdamped series RLC circuit excited by a DC step voltage u) Tj
+(2. Derive the second-order differential equation and transient current response it for a series RLC circu) Tj
 0 -11 Td
-(3. Derive the relationship between Z-parameters and ABCD transmission parameters for a reciprocal two-por) Tj
+(3. Formulate the ABCD transmission parameters for a symmetrical pi-network in terms of its branch impedan) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
@@ -125,7 +125,7 @@ BT
 0 -12 Td
 (* William H. Hayt, Jack E. Kemmerly - Engineering Circuit Analysis McGraw-Hill 8th Ed) Tj
 0 -11 Td
-(* Charles K. Alexander, Matthew N.O. Sadiku - Fundamentals of Electric Circuits McGraw-Hill) Tj
+(* Charles K. Alexander, Matthew N.O. Sadiku - Fundamentals of Electric Circuits McGraw-Hill 5th Ed) Tj
 0 -11 Td
 0 -10 Td
 /F3 8 Tf
@@ -143,10 +143,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001682 00000 n 
-0000001828 00000 n 
+0000001678 00000 n 
+0000001824 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3712
+3729
 %%EOF

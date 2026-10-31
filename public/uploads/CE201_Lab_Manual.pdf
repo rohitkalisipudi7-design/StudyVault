@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1094 >>
+<< /Length 1116 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(Gayatri Vidya Parishad College of Engineering Autonomous) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Civil Engineering | Course Code: CE201) Tj
 /F1 13 Tf
 0 -22 Td
-(Surveying & Geomatics - Laboratory Manual & Practical Guide) Tj
+(Surveying, Geomatics & Remote Sensing - Laboratory Manual & Practical Gu) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -47,17 +47,17 @@ BT
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Linear Measurements & Compass Surveying) Tj
+(Unit 1: Fundamental Surveying Principles & Chain Survey) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Chain and tape surveying, Magnetic declination, Whole circle bearing vs reduced bearing) Tj
+(" Syllabus Scope: Principles of surveying, scales, error propagation, chain surveying, ranging, obstacles) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Levelling & Contouring) Tj
+(Unit 2: Compass Surveying & Leveling Methods) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Differential levelling, Collimation and Rise-and-Fall computation methods, Reciprocal l) Tj
+(" Syllabus Scope: Prismatic compass, magnetic declination, local attraction, differential leveling, rise ) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1809 >>
+<< /Length 1873 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(CE201: Surveying & Geomatics - Advanced Topics & Assessment) Tj
+(CE201: Surveying, Geomatics & Remote Sensing - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Civil Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,44 +90,44 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Theodolite Traversing & Computation) Tj
+(Unit 3: Theodolite Traversing & Curve Setting) Tj
 0 -11 Td
 /F2 8 Tf
-(" Vernier transit theodolite, Measurement of horizontal and vertical angles, Gale traverse table, Bowditch and) Tj
+(" Vernier theodolite, horizontal and vertical angles, latitude and departure, Gales traverse table, simple cir) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Curve Setting Horizontal & Vertical) Tj
+(Unit 4: Tacheometry & Modern Total Station) Tj
 0 -11 Td
 /F2 8 Tf
-(" Circular and transition curves, Elements of simple curves, Setting out curves by offsets from chord produced) Tj
+(" Stadia tacheometry principle, tangential tacheometry, electronic distance measurement EDM, Total Station com) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: Modern Geomatics & Total Station) Tj
+(Unit 5: Global Positioning Systems & GIS Analysis) Tj
 0 -11 Td
 /F2 8 Tf
-(" Electronic Distance Measurement EDM, Total Station operations, Global Positioning System GPS/GNSS surveying,) Tj
+(" GPS segments space, control, user, satellite trilateration, pseudo-range errors, Geographic Information Syst) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(Lab 1: Differential Levelling and Fly Levelling Exercise across Building Benchmarks) Tj
+(Lab 1: Chain Traversing and Plotting of an Irregular Field Boundary with Obstacle Clearance) Tj
 0 -11 Td
-(Lab 2: Measurement of Horizontal Angles by Repetition and Reiteration Methods using Vernier Theodolite) Tj
+(Lab 2: Differential and Profile Leveling with Longitudinal and Cross-Sectional Plotting) Tj
 0 -11 Td
-(Lab 3: Setting Out a Simple Circular Curve on the Field using Rankine Deflection Angle Method) Tj
+(Lab 3: Measurement of Horizontal Angles by Repetition and Reiteration Methods using Vernier Theodolite) Tj
 0 -11 Td
-(Lab 4: Topographical Surveying and Area Computation using Electronic Total Station) Tj
+(Lab 4: Topographical Feature Survey and Coordinate Mapping using Electronic Total Station) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
 (IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
 /F2 8 Tf
 0 -12 Td
-(* B.C. Punmia, Ashok Kumar Jain - Surveying Vol. I & II Laxmi Publications) Tj
+(* B.C. Punmia, Ashok K. Jain - Surveying Vol. I & II Laxmi Publications) Tj
 0 -11 Td
-(* K.R. Arora - Surveying Vol. 1 & 2 Standard Book House) Tj
+(* T.P. Kanetkar, S.V. Kulkarni - Surveying and Levelling Pune Vidyarthi Griha Prakashan) Tj
 0 -11 Td
 0 -10 Td
 /F3 8 Tf
@@ -145,10 +145,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001646 00000 n 
-0000001792 00000 n 
+0000001668 00000 n 
+0000001814 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3653
+3739
 %%EOF

@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1131 >>
+<< /Length 1113 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(Gayatri Vidya Parishad College of Engineering Autonomous) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Electronics and Communication Engineering | Course Code: EC202) Tj
 /F1 13 Tf
 0 -22 Td
-(Analog Electronic Circuits - Comprehensive Syllabus Lecture Notes) Tj
+(Signals and Systems - Comprehensive Syllabus Lecture Notes) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -41,23 +41,23 @@ BT
 45 712 Td
 (Syllabus Focus: EC202 Full Syllabus Comprehensive Lecture Notes Units 1-5) Tj
 0 -15 Td
-(Summary: Complete syllabus lecture notes covering Analog Electronic Circuits. Includes detailed) Tj
+(Summary: Complete syllabus lecture notes covering Signals and Systems. Includes detailed unit-b) Tj
 0 -22 Td
 /F1 11 Tf
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Small-Signal BJT & MOSFET Amplifiers) Tj
+(Unit 1: Signal Classifications & System Properties) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Hybrid-pi model, Common Emitter, Common Collector, High-frequency response, Miller effe) Tj
+(" Syllabus Scope: Continuous vs discrete time, energy vs power signals, linearity, time-invariance, causa) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Feedback Amplifier Topologies) Tj
+(Unit 2: LTI Systems & Convolution) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Voltage-series, Voltage-shunt, Current-series, Current-shunt feedback, Desensitivity fa) Tj
+(" Syllabus Scope: Convolution integral, convolution sum, impulse response, step response, cascade and par) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1802 >>
+<< /Length 1753 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(EC202: Analog Electronic Circuits - Advanced Topics & Assessment) Tj
+(EC202: Signals and Systems - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Electronics and Communication Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,42 +90,42 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Sinusoidal Oscillators) Tj
+(Unit 3: Fourier Analysis of Continuous-Time Signals) Tj
 0 -11 Td
 /F2 8 Tf
-(" Barkhausen criterion, RC phase-shift oscillator, Wien bridge oscillator, Hartley, Colpitts, and Quartz cryst) Tj
+(" Continuous-Time Fourier Series CTFS, Dirichlet conditions, Continuous-Time Fourier Transform CTFT, duality, ) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Operational Amplifiers & Comparators) Tj
+(Unit 4: Laplace Transform & System Stability) Tj
 0 -11 Td
 /F2 8 Tf
-(" Differential amplifier, CMRR, Slew rate, Inverting and non-inverting configurations, Schmitt trigger, Precis) Tj
+(" Region of Convergence ROC properties, unilateral and bilateral Laplace transforms, transfer functions, pole-) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: Active Filters & Power Amplifiers) Tj
+(Unit 5: Z-Transform & Discrete-Time Analysis) Tj
 0 -11 Td
 /F2 8 Tf
-(" First and second order Sallen-Key low-pass and high-pass Butterworth filters, Class A, Class B push-pull, Cl) Tj
+(" Z-Transform definition, ROC properties, inverse Z-Transform partial fractions, residue, stability and causal) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(1. Derive the voltage gain, input impedance, and output impedance of a CE amplifier using the low-frequen) Tj
+(1. Convolve two continuous-time rectangular pulses xt = ut - ut-2 and ht = ut - ut-1 analytically.) Tj
 0 -11 Td
-(2. State Barkhausen criterion and derive the frequency of oscillation and minimum amplifier gain for a Wi) Tj
+(2. State and prove the Nyquist Sampling Theorem, explaining aliasing distortion and anti-aliasing filter ) Tj
 0 -11 Td
-(3. Design a second-order low-pass Sallen-Key active filter with a cutoff frequency of 5 kHz and Butterwor) Tj
+(3. Find the Laplace transform and ROC of signal xt = e^-3tut + e^-2tu-t.) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
 (IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
 /F2 8 Tf
 0 -12 Td
-(* Adel S. Sedra, Kenneth C. Smith - Microelectronic Circuits Oxford University Press 7th Ed) Tj
+(* Alan V. Oppenheim, Alan S. Willsky - Signals and Systems Pearson 2nd Ed) Tj
 0 -11 Td
-(* Jacob Millman, Christos C. Halkias - Integrated Electronics McGraw-Hill) Tj
+(* Simon Haykin, Barry Van Veen - Signals and Systems Wiley 2nd Ed) Tj
 0 -11 Td
 0 -10 Td
 /F3 8 Tf
@@ -143,10 +143,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001683 00000 n 
-0000001829 00000 n 
+0000001665 00000 n 
+0000001811 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3683
+3616
 %%EOF

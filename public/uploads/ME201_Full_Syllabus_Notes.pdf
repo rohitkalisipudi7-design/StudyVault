@@ -19,18 +19,18 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 7 0 obj
-<< /Length 1111 >>
+<< /Length 1116 >>
 stream
 BT
 /F1 15 Tf
 45 785 Td
-(Gayatri Vidya Parishad College of Engineering Autonomous) Tj
+(VNR Vignana Jyothi Institute of Engineering) Tj
 /F2 10.5 Tf
 0 -18 Td
 (Mechanical Engineering | Course Code: ME201) Tj
 /F1 13 Tf
 0 -22 Td
-(Mechanics of Solids - Comprehensive Syllabus Lecture Notes) Tj
+(Mechanics of Solids & Strength of Materials - Comprehensive Syllabus Lec) Tj
 0 -8 Td
 ET
 0.7 0.7 0.7 RG
@@ -41,23 +41,23 @@ BT
 45 712 Td
 (Syllabus Focus: ME201 Full Syllabus Comprehensive Lecture Notes Units 1-5) Tj
 0 -15 Td
-(Summary: Complete syllabus lecture notes covering Mechanics of Solids. Includes detailed unit-b) Tj
+(Summary: Complete syllabus lecture notes covering Mechanics of Solids & Strength of Materials. ) Tj
 0 -22 Td
 /F1 11 Tf
 (I. UNIT-BY-UNIT COMPREHENSIVE SYLLABUS CONTENT) Tj
 0 -16 Td
 /F1 9.5 Tf
-(Unit 1: Stress, Strain & Elastic Constants) Tj
+(Unit 1: Simple Stresses, Strains & Elastic Moduli) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: Hooke law, Poisson ratio, Modulus of elasticity, Bulk modulus, Shear modulus, Thermal s) Tj
+(" Syllabus Scope: Normal and shear stress, Hookes law, stress-strain curves for ductile and brittle mater) Tj
 0 -12 Td
 0 -6 Td
 /F1 9.5 Tf
-(Unit 2: Shear Force & Bending Moment Diagrams) Tj
+(Unit 2: Compound Stresses & 2D Mohr Circle) Tj
 0 -13 Td
 /F2 8.5 Tf
-(" Syllabus Scope: SFD and BMD for cantilevers, simply supported and overhanging beams under concentrated ) Tj
+(" Syllabus Scope: Stresses on inclined planes, principal stresses, principal planes, maximum shear stress) Tj
 0 -12 Td
 0 -6 Td
 0 -12 Td
@@ -70,12 +70,12 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 9 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> >>
 endobj
 9 0 obj
-<< /Length 1765 >>
+<< /Length 1837 >>
 stream
 BT
 /F1 13 Tf
 45 785 Td
-(ME201: Mechanics of Solids - Advanced Topics & Assessment) Tj
+(ME201: Mechanics of Solids & Strength of Materials - Advanced Topics & Assessment) Tj
 /F2 9.5 Tf
 0 -16 Td
 (Academic Track: Mechanical Engineering - Units 3, 4, 5 & Examination Matrix) Tj
@@ -90,42 +90,42 @@ BT
 (II. ADVANCED SYLLABUS UNITS (UNITS 3 TO 5)) Tj
 0 -14 Td
 /F1 9 Tf
-(Unit 3: Flexural & Shear Stresses in Beams) Tj
+(Unit 3: Shear Force & Bending Moment in Beams) Tj
 0 -11 Td
 /F2 8 Tf
-(" Theory of simple bending, Flexure formula sigma/y = M/I = E/R, Section modulus, Shear stress distribution ac) Tj
+(" Beam support classifications, point loads, uniformly distributed loads UDL, uniformly varying loads UVL, SFD) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 4: Torsion of Circular Shafts & Springs) Tj
+(Unit 4: Flexural Stresses, Shear Stresses & Deflection) Tj
 0 -11 Td
 /F2 8 Tf
-(" Torsion formula T/J = tau/r = G*theta/L, Polar section modulus, Power transmission in solid and hollow shaft) Tj
+(" Pure bending theory Euler-Bernoulli, section modulus, shear stress distribution across I and T sections, dou) Tj
 0 -12 Td
 /F1 9 Tf
-(Unit 5: Principal Stresses & Column Buckling) Tj
+(Unit 5: Torsion of Circular Shafts & Column Buckling) Tj
 0 -11 Td
 /F2 8 Tf
-(" Mohr circle of plane stress, Principal stresses and planes, Maximum shear stress, Euler buckling formula for) Tj
+(" Torsion formula for solid and hollow shafts, polar modulus, angle of twist, Eulers column buckling theory, R) Tj
 0 -12 Td
 0 -6 Td
 /F1 10.5 Tf
 (III. HIGH-YIELD SEMESTER EXAM QUESTION BANK & SOLUTIONS) Tj
 /F2 8 Tf
 0 -13 Td
-(1. Plot SFD and BMD for a simply supported beam with a uniformly distributed load and calculate the point) Tj
+(1. Draw the Shear Force Diagram SFD and Bending Moment Diagram BMD for an overhanging beam subjected to c) Tj
 0 -11 Td
-(2. Derive the Euler critical buckling load P_cr = pi^2 * E * I / L_eff^2 for a column with one end fixed ) Tj
+(2. Given a 2D stress element with sigma_x = 80 MPa, sigma_y = -40 MPa, and tau_xy = 30 MPa, construct Moh) Tj
 0 -11 Td
-(3. Draw Mohr Circle for an element subjected to sigma_x = 80 MPa, sigma_y = -40 MPa, and tau_xy = 30 MPa,) Tj
+(3. Derive the Euler column buckling load P_cr for a slender column with one end fixed and the other end p) Tj
 0 -11 Td
 0 -6 Td
 /F1 10.5 Tf
 (IV. PRESCRIBED TEXTBOOKS & REPOSITORY CITATIONS) Tj
 /F2 8 Tf
 0 -12 Td
-(* S. Timoshenko - Strength of Materials CBS Publishers) Tj
-0 -11 Td
 (* Ferdinand P. Beer, E. Russell Johnston - Mechanics of Materials McGraw-Hill 7th Ed) Tj
+0 -11 Td
+(* James M. Gere, Barry J. Goodno - Mechanics of Materials Cengage Learning 8th Ed) Tj
 0 -11 Td
 0 -10 Td
 /F3 8 Tf
@@ -143,10 +143,10 @@ xref
 0000000276 00000 n 
 0000000354 00000 n 
 0000000500 00000 n 
-0000001663 00000 n 
-0000001809 00000 n 
+0000001668 00000 n 
+0000001814 00000 n 
 trailer
 << /Size 10 /Root 1 0 R >>
 startxref
-3626
+3703
 %%EOF

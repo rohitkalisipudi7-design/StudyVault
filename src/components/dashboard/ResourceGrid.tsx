@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { Loader2, FileText, Link as LinkIcon, Sparkles, Download, ExternalLink, AlertCircle } from 'lucide-react';
 import { ResourceItem } from '@/server/services/resource.service';
 
@@ -22,6 +23,47 @@ export function ResourceGrid({
   onResetFilters,
   onRetry,
 }: ResourceGridProps) {
+  const [downloadingId, setDownloadingId] = useState<string | null>(null);
+
+  const handleDownloadFile = async (e: React.MouseEvent, res: ResourceItem) => {
+    e.preventDefault();
+    setDownloadingId(res.id);
+
+    try {
+      const token = typeof window !== 'undefined' ? localStorage.getItem('auth_token') : null;
+      const downloadUrl = `/api/resources/${res.id}/download${token ? `?token=${encodeURIComponent(token)}` : ''}`;
+
+      const response = await fetch(downloadUrl, {
+        headers: token ? { Authorization: `Bearer ${token}` } : {},
+        credentials: 'include',
+      });
+
+      if (!response.ok) {
+        if (response.status === 401) {
+          window.location.href = `/login?redirect=${encodeURIComponent(window.location.pathname)}`;
+          return;
+        }
+        const errorData = await response.json().catch(() => null);
+        throw new Error(errorData?.error || `Download failed (HTTP ${response.status})`);
+      }
+
+      const blob = await response.blob();
+      const objectUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = objectUrl;
+      link.download = res.file_name || `${res.course_code || 'Academic'}_Notes.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(objectUrl);
+    } catch {
+      // Fallback: direct navigation with token query param
+      const token = typeof window !== 'undefined' ? localStorage.getItem('auth_token') : null;
+      window.location.href = `/api/resources/${res.id}/download${token ? `?token=${encodeURIComponent(token)}` : ''}`;
+    } finally {
+      setDownloadingId(null);
+    }
+  };
   if (isLoading) {
     return (
       <div className="py-16 text-center space-y-3 bg-white rounded-2xl border border-[#b19681]/30">
@@ -138,14 +180,16 @@ export function ResourceGrid({
 
             <div className="flex items-center gap-2">
               {res.type === 'file' ? (
-                <a
-                  href={`/api/resources/${res.id}/download`}
-                  download={res.file_name || `${res.course_code}_Notes.pdf`}
-                  className="px-4 py-2 min-h-[38px] rounded-xl bg-[#2D3822] hover:bg-[#3D4D2F] text-white font-serif font-bold text-xs shadow-xs transition-all flex items-center gap-1.5 active:scale-95 cursor-pointer"
+                <button
+                  type="button"
+                  onClick={(e) => handleDownloadFile(e, res)}
+                  disabled={downloadingId === res.id}
+                  className="px-4 py-2 min-h-[38px] rounded-xl bg-[#2D3822] hover:bg-[#3D4D2F] text-white font-serif font-bold text-xs shadow-xs transition-all flex items-center gap-1.5 active:scale-95 cursor-pointer disabled:opacity-60"
+                  title="Download verified academic PDF notes"
                 >
-                  <Download className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>Download</span>
-                </a>
+                  <Download className={`w-3.5 h-3.5 text-[#D4AF37] ${downloadingId === res.id ? 'animate-bounce' : ''}`} />
+                  <span>{downloadingId === res.id ? 'Downloading...' : 'Download'}</span>
+                </button>
               ) : (
                 <a
                   href={res.url}
