@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 8004",
     "db:init": "npx tsx src/server/db/init.ts",
-    "test": "npx tsx --test tests/security.test.ts tests/tenancy.test.ts tests/db.test.ts tests/ai.test.ts tests/routes.test.ts tests/storage.test.ts",
+    "test": "npx tsx --test tests/security.test.ts tests/tenancy.test.ts tests/db.test.ts tests/ai.test.ts tests/routes.test.ts tests/storage.test.ts tests/qa-checklist.test.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
