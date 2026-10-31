@@ -101,6 +101,43 @@ test('4. Access Control: Strict Cross-College Isolation (Enforce 403)', () => {
   // Same institution access must succeed
   const allowed = ResourceService.getResourceById(gvpceRes.id, 'inst-gvpce');
   assert.equal(allowed.id, gvpceRes.id);
+
+  // Cross-college resource creation attempt: attach AU resource to GVPCE course
+  assert.throws(
+    () => {
+      ResourceService.createResource({
+        institutionId: 'inst-au',
+        branchId: gvpceCourse.branch_id,
+        courseId: gvpceCourse.id,
+        title: 'Malicious Cross-College Upload',
+        type: 'link',
+        description: 'Should fail immediately',
+        url: 'https://example.com/exploit',
+        uploaderId: 'user-au-admin',
+        uploaderName: 'AU Admin',
+      });
+    },
+    /Branch does not belong to the selected institution|Course does not belong/
+  );
+
+  // Cross-college update attempt: AU admin tries to edit GVPCE resource
+  assert.throws(
+    () => {
+      ResourceService.updateResource(gvpceRes.id, 'inst-au', {
+        title: 'Hacked Title',
+        description: 'Hacked Description',
+      });
+    },
+    (err: any) => err.status === 403
+  );
+
+  // Cross-college delete attempt: AU admin tries to delete GVPCE resource
+  assert.throws(
+    () => {
+      ResourceService.deleteResource(gvpceRes.id, 'inst-au');
+    },
+    (err: any) => err.status === 403
+  );
 });
 
 test('5. AI Provider Abstraction: Extensible Multi-Provider Layer', () => {

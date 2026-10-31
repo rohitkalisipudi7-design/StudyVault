@@ -13,82 +13,45 @@ export const config = {
   ],
 };
 
-const INSTITUTION_NAMES: Record<string, string> = {
-  jntuh: 'JNTU Hyderabad (R22/R20)',
-  vtu: 'Visvesvaraya Technological University (CBCS)',
-  anna: 'Anna University (CBCS)',
-  mit: 'MIT OpenCourseWare Archive',
-  global: 'EduFind Global Consortium',
-};
+function parseJwtPayload(token: string): any | null {
+  try {
+    const parts = token.split('.');
+    if (parts.length !== 3) return null;
+    let base64 = parts[1].replace(/-/g, '+').replace(/_/g, '/');
+    while (base64.length % 4) {
+      base64 += '=';
+    }
+    const jsonStr = atob(base64);
+    return JSON.parse(jsonStr);
+  } catch {
+    return null;
+  }
+}
 
 export function middleware(req: NextRequest) {
   const url = req.nextUrl;
-  const hostname = req.headers.get('host') || '';
 
-  // 1. Detect Subdomain from Hostname, Cookie, or Query Param
-  let subdomain = 'jntuh'; // Default institution
-
-  // Check query parameter override: ?inst=vtu
-  const instQuery = url.searchParams.get('inst');
-  if (instQuery) {
-    subdomain = instQuery.toLowerCase();
-  } else {
-    // Check hostname: [subdomain].edufind.ai OR [subdomain].localhost:9002
-    const cleanHost = hostname.split(':')[0]; // strip port
-    const parts = cleanHost.split('.');
-
-    // e.g. jntuh.edufind.ai -> parts = ['jntuh', 'edufind', 'ai']
-    // e.g. jntuh.localhost -> parts = ['jntuh', 'localhost']
-    if (parts.length > 2 && !cleanHost.includes('vercel.app')) {
-      subdomain = parts[0].toLowerCase();
-    } else if (parts.length === 2 && parts[1] === 'localhost') {
-      subdomain = parts[0].toLowerCase();
-    } else {
-      // Fallback to cookie if present
-      const cookieSubdomain = req.cookies.get('edufind_subdomain')?.value;
-      if (cookieSubdomain) {
-        subdomain = cookieSubdomain;
-      }
-    }
-  }
-
-  // Sanitize
-  if (!INSTITUTION_NAMES[subdomain]) {
-    subdomain = 'jntuh';
-  }
-
-  const institutionName = INSTITUTION_NAMES[subdomain] || 'JNTU Hyderabad';
-
-  // 2. Role-Based Access Control (RBAC) Protection for /admin routes
+  // Protect /admin routes
   if (url.pathname.startsWith('/admin')) {
-    const userRole = req.cookies.get('edufind_role')?.value;
-    const isLegacyAuth = req.cookies.get('edufind_session')?.value === 'true';
-
-    // If not faculty or admin, redirect to login tab for faculty
-    if (userRole !== 'faculty' && userRole !== 'admin' && !isLegacyAuth) {
+    const token = req.cookies.get('auth_token')?.value;
+    if (!token) {
       const loginUrl = new URL('/login', req.url);
-      loginUrl.searchParams.set('role', 'faculty');
+      loginUrl.searchParams.set('redirect', url.pathname);
+      return NextResponse.redirect(loginUrl);
+    }
+
+    const payload = parseJwtPayload(token);
+    const now = Math.floor(Date.now() / 1000);
+
+    if (!payload || payload.role !== 'admin' || (payload.exp && payload.exp < now)) {
+      const loginUrl = new URL('/login', req.url);
       loginUrl.searchParams.set('redirect', url.pathname);
       return NextResponse.redirect(loginUrl);
     }
   }
 
-  // 3. Clone request headers & pass subdomain telemetry
-  const requestHeaders = new Headers(req.headers);
-  requestHeaders.set('x-subdomain', subdomain);
-  requestHeaders.set('x-institution-name', institutionName);
-  requestHeaders.set('x-current-path', url.pathname);
-
-  const response = NextResponse.next({
-    request: {
-      headers: requestHeaders,
-    },
-  });
-
-  // Set cookie for client hydration if query param was used
-  if (instQuery) {
-    response.cookies.set('edufind_subdomain', subdomain, { path: '/', maxAge: 60 * 60 * 24 * 30 });
-  }
-
+  const response = NextResponse.next();
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
   return response;
 }

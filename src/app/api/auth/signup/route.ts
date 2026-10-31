@@ -48,6 +48,27 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Strict Multi-tenancy: Verify branch and course belong to this institution
+    if (branchId) {
+      const branch = db.prepare('SELECT id FROM branches WHERE id = ? AND institution_id = ?').get(branchId, institutionId);
+      if (!branch) {
+        return NextResponse.json(
+          { success: false, error: 'Selected branch does not belong to the selected institution.' },
+          { status: 400 }
+        );
+      }
+    }
+
+    if (courseId) {
+      const course = db.prepare('SELECT id FROM courses WHERE id = ? AND institution_id = ?').get(courseId, institutionId);
+      if (!course) {
+        return NextResponse.json(
+          { success: false, error: 'Selected course does not belong to the selected institution.' },
+          { status: 400 }
+        );
+      }
+    }
+
     const { hash, salt } = hashPassword(password);
     const userId = `user-${crypto.randomUUID()}`;
     const now = new Date().toISOString();

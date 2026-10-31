@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAuthenticatedUser, enforceAdmin, createErrorResponse } from '@/server/middleware/guard';
+import { getAuthenticatedUser, enforceAdmin, createErrorResponse, AuthError } from '@/server/middleware/guard';
 import { InstitutionService } from '@/server/services/institution.service';
 
 export const dynamic = 'force-dynamic';
@@ -11,11 +11,18 @@ export async function GET(req: NextRequest) {
     const institutionIdParam = searchParams.get('institutionId');
 
     let institutionId: string;
-    if (institutionIdParam) {
-      institutionId = institutionIdParam;
-    } else {
+    try {
       const user = getAuthenticatedUser(req);
+      if (institutionIdParam && institutionIdParam !== user.institutionId) {
+        throw new AuthError('Cross-college access forbidden.', 403);
+      }
       institutionId = user.institutionId;
+    } catch (err: any) {
+      if (err.status === 403) throw err;
+      if (!institutionIdParam) {
+        throw new AuthError('Authentication required.', 401);
+      }
+      institutionId = institutionIdParam;
     }
 
     const branches = InstitutionService.getBranches(institutionId);

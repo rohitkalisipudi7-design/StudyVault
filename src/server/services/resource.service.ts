@@ -136,7 +136,16 @@ export class ResourceService {
   static createResource(data: CreateResourceInput): ResourceItem {
     const db = getDb();
 
-    // 1. Validate branch and course belong to this institution
+    // 1. Validate branch belongs to this institution
+    const branch = db
+      .prepare('SELECT id FROM branches WHERE id = ? AND institution_id = ?')
+      .get(data.branchId, data.institutionId);
+
+    if (!branch) {
+      throw new Error('Branch does not belong to the selected institution.');
+    }
+
+    // 2. Validate course belongs to this branch and institution
     const course = db
       .prepare('SELECT id FROM courses WHERE id = ? AND branch_id = ? AND institution_id = ?')
       .get(data.courseId, data.branchId, data.institutionId);
