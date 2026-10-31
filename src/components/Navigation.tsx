@@ -14,7 +14,8 @@ import {
   X,
   Building2,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  UploadCloud
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -135,18 +136,23 @@ export function Navigation({
             </button>
           )}
 
-          {/* Admin Desk Link for Admins */}
-          {user?.role === 'admin' && (
+          {/* Upload / Admin Desk Link for Authenticated Users */}
+          {user && (
             <Link
               href="/admin"
-              className={`hidden md:flex items-center gap-1.5 px-3 min-h-[38px] rounded-lg text-xs font-bold transition-all shadow-xs ${
+              className={`flex items-center gap-1.5 px-3 min-h-[38px] rounded-lg text-xs font-bold transition-all shadow-xs ${
                 pathname.startsWith('/admin')
                   ? 'bg-[#2D3822] text-white shadow-xs'
                   : 'bg-white/80 hover:bg-white text-[#2D3822] border border-[#b19681]/40'
               }`}
             >
-              <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
-              <span>Admin Desk</span>
+              {user.role === 'admin' ? (
+                <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
+              ) : (
+                <UploadCloud className="w-4 h-4 text-[#D4AF37]" />
+              )}
+              <span className="hidden sm:inline">{user.role === 'admin' ? 'Admin Desk' : 'Upload Notes'}</span>
+              <span className="sm:hidden">Upload</span>
             </Link>
           )}
 

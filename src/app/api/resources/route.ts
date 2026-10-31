@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     const user = getAuthenticatedUser(req);
-    enforceAdmin(user);
+    // Authenticated students and admins can upload study resources to their own institution
 
     const contentType = req.headers.get('content-type') || '';
 
@@ -114,6 +114,7 @@ export async function POST(req: NextRequest) {
         filePath: relativeStoragePath,
         fileName: originalName,
         fileSize: fileSizeStr,
+        fileData: buffer,
         uploaderId: user.id,
         uploaderName: user.name,
       });

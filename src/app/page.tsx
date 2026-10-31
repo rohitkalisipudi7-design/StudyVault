@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/hooks/use-auth';
 import { Navigation } from '@/components/Navigation';
@@ -11,7 +12,7 @@ import { AiSearchSection } from '@/components/dashboard/AiSearchSection';
 import { ResourceFilterBar } from '@/components/dashboard/ResourceFilterBar';
 import { ResourceGrid } from '@/components/dashboard/ResourceGrid';
 import { ResourceItem } from '@/server/services/resource.service';
-import { Loader2, Sparkles } from 'lucide-react';
+import { Loader2, Sparkles, UploadCloud } from 'lucide-react';
 
 export default function StudentDashboardPage() {
   const router = useRouter();
@@ -301,13 +302,27 @@ export default function StudentDashboardPage() {
 
         {/* STUDY RESOURCES REPOSITORY LIST */}
         <section className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#2D3822]">
-              Study Materials & Resources
-            </h3>
-            <span className="font-mono text-xs bg-white text-[#2D3822] px-3 py-1 rounded-xl border border-[#b19681]/40 font-bold">
-              {resources.length} Found
-            </span>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#2D3822]">
+                Study Materials & Resources
+              </h3>
+              <p className="text-xs text-[#5c4b3e]/70">
+                Full syllabus notes, question banks, and lab manuals for {user?.institutionName || 'your college'}
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs bg-white text-[#2D3822] px-3 py-1.5 rounded-xl border border-[#b19681]/40 font-bold shadow-xs">
+                {resources.length} Found
+              </span>
+              <Link
+                href="/admin"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#2D3822] hover:bg-[#3D4D2F] text-white text-xs font-serif font-bold shadow-xs transition-all active:scale-95 min-h-[36px]"
+              >
+                <UploadCloud className="w-4 h-4 text-[#D4AF37]" />
+                <span>Upload Material</span>
+              </Link>
+            </div>
           </div>
 
           <ResourceGrid

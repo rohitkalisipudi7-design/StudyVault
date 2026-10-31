@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     const user = getAuthenticatedUser(req);
-    enforceAdmin(user);
+    // Authenticated students and admins can create courses for their own institution
 
     const body = await req.json();
     const { branchId, name, code, description = '' } = body;

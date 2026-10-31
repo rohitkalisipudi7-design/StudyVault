@@ -16,7 +16,8 @@ import {
   BookOpen, 
   Loader2, 
   AlertCircle, 
-  ArrowLeft 
+  ArrowLeft,
+  Check 
 } from 'lucide-react';
 
 export default function AdminPortalPage() {
@@ -60,25 +61,28 @@ export default function AdminPortalPage() {
 
   // Toast & Error Messages
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const showError = (msg: string) => {
     setErrorMessage(msg);
     setTimeout(() => setErrorMessage(null), 4000);
   };
+  const showSuccess = (msg: string) => {
+    setSuccessMessage(msg);
+    setTimeout(() => setSuccessMessage(null), 4000);
+  };
 
-  // 1. Verify Admin Session
+  // 1. Verify User Session (Open to institutional members)
   useEffect(() => {
     if (!isAuthLoading) {
       if (!user) {
         router.push('/login');
-      } else if (user.role !== 'admin') {
-        router.push('/');
       }
     }
   }, [isAuthLoading, user, router]);
 
-  // 2. Fetch Admin's Institution Data
+  // 2. Fetch User's Institution Data
   const refreshData = useCallback(async () => {
-    if (!user || user.role !== 'admin') return;
+    if (!user) return;
     try {
       const [bRes, cRes, rRes] = await Promise.all([
         fetch('/api/branches'),
@@ -116,6 +120,19 @@ export default function AdminPortalPage() {
   useEffect(() => {
     refreshData();
   }, [refreshData]);
+
+  // 3. Keep selected course synchronized when branch changes
+  useEffect(() => {
+    if (!selectedBranchId || courses.length === 0) return;
+    const branchCourses = courses.filter((c) => c.branch_id === selectedBranchId);
+    if (branchCourses.length > 0) {
+      if (!branchCourses.some((c) => c.id === selectedCourseId)) {
+        setSelectedCourseId(branchCourses[0].id);
+      }
+    } else {
+      setSelectedCourseId('');
+    }
+  }, [selectedBranchId, courses, selectedCourseId]);
 
   // Handler: Upload Resource
   const handleResourceSubmit = async (e: React.FormEvent) => {
@@ -187,7 +204,10 @@ export default function AdminPortalPage() {
   // Handler: Create Branch
   const handleCreateBranch = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newBranchName.trim() || !newBranchCode.trim()) return;
+    if (!newBranchName.trim() || !newBranchCode.trim()) {
+      showError('Please enter both branch name and branch code.');
+      return;
+    }
 
     try {
       const res = await fetch('/api/branches', {
@@ -200,6 +220,7 @@ export default function AdminPortalPage() {
 
       setNewBranchName('');
       setNewBranchCode('');
+      showSuccess(`Branch "${data.branch.code}" created successfully.`);
       refreshData();
     } catch (err: any) {
       showError(err.message);
@@ -209,7 +230,14 @@ export default function AdminPortalPage() {
   // Handler: Create Course
   const handleCreateCourse = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!courseBranchId || !newCourseName.trim() || !newCourseCode.trim()) return;
+    if (!courseBranchId) {
+      showError('Please select a parent branch for this course.');
+      return;
+    }
+    if (!newCourseName.trim() || !newCourseCode.trim()) {
+      showError('Please enter both course name and course code.');
+      return;
+    }
 
     try {
       const res = await fetch('/api/courses', {
@@ -228,6 +256,7 @@ export default function AdminPortalPage() {
       setNewCourseName('');
       setNewCourseCode('');
       setNewCourseDesc('');
+      showSuccess(`Course "${data.course.code}" created successfully.`);
       refreshData();
     } catch (err: any) {
       showError(err.message);
@@ -325,6 +354,13 @@ export default function AdminPortalPage() {
           <div className="p-4 bg-red-100 border border-red-300 rounded-xl text-xs text-red-900 flex items-center gap-2 animate-ink">
             <AlertCircle className="w-4 h-4 text-red-700 shrink-0" />
             <span>{errorMessage}</span>
+          </div>
+        )}
+
+        {successMessage && (
+          <div className="p-4 bg-emerald-50 border border-emerald-300 rounded-xl text-xs text-emerald-900 flex items-center gap-2 animate-ink">
+            <Check className="w-4 h-4 text-emerald-700 shrink-0" />
+            <span>{successMessage}</span>
           </div>
         )}
 

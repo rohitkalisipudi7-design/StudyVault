@@ -51,3 +51,6 @@ data/*.db
 data/*.db-wal
 data/*.db-shm
 data/app.db
+
+# tools
+cloudflared.exe
