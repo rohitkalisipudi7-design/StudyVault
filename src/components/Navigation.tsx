@@ -23,9 +23,9 @@ interface NavigationProps {
     name: string;
     email: string;
     role: 'student' | 'admin';
-    institutionName?: string;
-    branchName?: string;
-    courseName?: string;
+    institutionName?: string | null;
+    branchName?: string | null;
+    courseName?: string | null;
   } | null;
   hasApiKey?: boolean;
   onOpenAiSettings?: () => void;

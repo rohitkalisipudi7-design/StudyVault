@@ -135,7 +135,7 @@ export function AiSettingsModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-lg bg-[#e7dbbf] text-[#5c4b3e] border border-[#b19681] p-6 rounded-2xl shadow-xl">
+      <DialogContent onEscapeKeyDown={onClose} className="max-w-lg bg-[#e7dbbf] text-[#5c4b3e] border border-[#b19681] p-6 rounded-2xl shadow-xl">
         <DialogHeader className="space-y-1">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-[#2D3822] text-[#fdfbf6] flex items-center justify-center">
@@ -236,7 +236,8 @@ export function AiSettingsModal({
               <button
                 type="button"
                 onClick={() => setShowKey(!showKey)}
-                className="absolute right-3 text-[#5c4b3e]/60 hover:text-[#2D3822]"
+                aria-label={showKey ? 'Hide API key' : 'Show API key'}
+                className="absolute right-3 text-[#5c4b3e]/60 hover:text-[#2D3822] cursor-pointer"
                 tabIndex={-1}
               >
                 {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}

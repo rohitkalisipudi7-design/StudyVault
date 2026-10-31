@@ -93,7 +93,7 @@ export function AiSummarizeModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-2xl bg-[#e7dbbf] text-[#5c4b3e] border border-[#b19681] p-6 rounded-2xl shadow-xl max-h-[85vh] overflow-y-auto">
+      <DialogContent onEscapeKeyDown={onClose} className="max-w-2xl bg-[#e7dbbf] text-[#5c4b3e] border border-[#b19681] p-6 rounded-2xl shadow-xl max-h-[85vh] overflow-y-auto">
         <DialogHeader className="space-y-1">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-[#2D3822] text-[#fdfbf6] flex items-center justify-center">

@@ -1,18 +1,20 @@
 'use client';
 
-import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
+import { useState, useEffect, createContext, useContext, ReactNode, useCallback } from 'react';
 
 export interface UserProfile {
-  userId: number;
-  institutionId: number;
-  institutionName: string;
-  branchId?: number | null;
-  branchName?: string | null;
-  courseId?: number | null;
-  courseName?: string | null;
+  id: string;
   email: string;
-  role: 'student' | 'admin';
   name: string;
+  role: 'student' | 'admin';
+  institutionId: string;
+  institutionName?: string;
+  branchId?: string | null;
+  branchName?: string | null;
+  branchCode?: string | null;
+  courseId?: string | null;
+  courseName?: string | null;
+  courseCode?: string | null;
 }
 
 interface AuthContextType {
@@ -32,12 +34,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchCurrentUser = async () => {
+  const fetchCurrentUser = useCallback(async () => {
     try {
       const res = await fetch('/api/auth/me');
       if (res.ok) {
         const data = await res.json();
-        if (data.authenticated && data.user) {
+        if (data.success && data.user) {
           setUser(data.user);
         } else {
           setUser(null);
@@ -50,11 +52,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     fetchCurrentUser();
-  }, []);
+  }, [fetchCurrentUser]);
 
   const login = async (email: string, password: string): Promise<UserProfile> => {
     const res = await fetch('/api/auth/login', {
@@ -64,7 +66,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     const data = await res.json();
-    if (!res.ok) {
+    if (!res.ok || !data.success) {
       throw new Error(data.error || 'Authentication failed');
     }
 
